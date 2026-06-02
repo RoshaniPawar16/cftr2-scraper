@@ -90,7 +90,8 @@ AlphaMissense scores protein-level pathogenicity only. High quantile scores on A
 ## Rescue Variant Analysis (Full 1,278 Ambiguous VUS)
 
 Source: `results/alphagenome/alphagenome_full_cftr_results.csv`  
-Full table: `results/alphagenome/alphagenome_rescue_variants.csv`
+Full table: `results/alphagenome/alphagenome_rescue_variants.csv`  
+Note: Groups below use AlphaGenome scores only. For rescue analysis incorporating CADD v1.7 and SpliceAI v1.3 comparators, see `docs/comparator_analysis_report.md`.
 
 These groups identify variants where AlphaGenome finds functional evidence that AlphaMissense (protein-level) does not flag. All variants have `am_pathogenicity < 0.56` (ambiguous class) but show strong DNA-level signals in lung tissue.
 

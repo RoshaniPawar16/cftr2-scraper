@@ -1,6 +1,6 @@
 # Comparator Analysis: AlphaGenome vs CADD v1.7 vs SpliceAI
 
-**Dataset:** 1278 ambiguous-class CFTR missense variants (AlphaMissense score 0.34–0.564)
+**Dataset:** 1,278 ambiguous-class CFTR missense variants (AlphaMissense score 0.34–0.564)
 **Genome build:** hg38  |  **Tissue:** Lung (UBERON:0002048)
 **AlphaGenome version:** v0.6.1  |  **CADD version:** v1.7 (GRCh38)  |  **SpliceAI version:** v1.3 (precomputed, Ensembl VEP plugin)
 
@@ -10,33 +10,35 @@
 
 | Tool | Variants scored | Coverage |
 |------|----------------|----------|
-| AlphaGenome ATAC quantile   | 1278 | 100% |
-| AlphaGenome SPLICE quantile | 1278 | 100% |
-| CADD PHRED                  | 1278 | 100% |
-| SpliceAI max delta          | 1278 | 100% |
+| AlphaGenome ATAC quantile   | 1,278 | 100% |
+| AlphaGenome SPLICE quantile | 1,278 | 100% |
+| CADD PHRED                  | 1,278 | 100% |
+| SpliceAI max delta          | 1,278 | 100% |
 
 ---
 
 ## 2. Score Distributions
 
-| Tool | Score | Mean | p25 | p50 | p75 | p95 |
-|------|-------|------|-----|-----|-----|-----|
-| CADD PHRED | n=1278 | 24.496 | 23.100 | 24.900 | 26.400 | 28.615 |
-| SpliceAI max delta | n=1278 | 0.037 | 0.000 | 0.000 | 0.020 | 0.161 |
-| AlphaGenome ATAC q | n=1278 | 0.618 | 0.412 | 0.668 | 0.837 | 0.963 |
-| AlphaGenome SPLICE q | n=1278 | 0.927 | 0.908 | 0.957 | 0.992 | 0.999 |
+| Tool | n | Mean | p25 | p50 | p75 | p95 |
+|------|---|------|-----|-----|-----|-----|
+| CADD PHRED           | 1,278 | 24.5  | 23.1  | 24.9  | 26.4  | 28.6  |
+| SpliceAI max delta   | 1,278 | 0.037 | 0.000 | 0.000 | 0.020 | 0.161 |
+| AlphaGenome ATAC q   | 1,278 | 0.618 | 0.412 | 0.668 | 0.837 | 0.963 |
+| AlphaGenome SPLICE q | 1,278 | 0.927 | 0.908 | 0.957 | 0.992 | 0.999 |
 
 ---
 
 ## 3. Classification Thresholds
 
 | Tool | Threshold | Count | Fraction |
-|------|-----------|-------|----------|
-| CADD PHRED ≥ 20 (top 1% most deleterious)  | ≥20  | 1164 | 91.1% |
-| CADD PHRED ≥ 30 (top 0.1%)                 | ≥30  | 40 | 3.1% |
-| SpliceAI delta > 0.2 (potentially altering) | >0.2 | 52   | 4.1% |
-| SpliceAI delta > 0.5 (high confidence)      | >0.5 | 19   | 1.5% |
-| AlphaGenome ATAC or SPLICE q > 0.95         | >0.95| 778   | 60.9% |
+|------|-----------|------:|--------:|
+| CADD PHRED ≥ 20 (top 1% most deleterious)   | ≥ 20  | 1,164 | 91.1% |
+| CADD PHRED ≥ 30 (top 0.1%)                  | ≥ 30  |    40 |  3.1% |
+| SpliceAI delta > 0.2 (potentially altering)  | > 0.2 |    52 |  4.1% |
+| SpliceAI delta > 0.5 (high confidence)       | > 0.5 |    19 |  1.5% |
+| AlphaGenome ATAC or SPLICE q > 0.95          | > 0.95|   778 | 60.9% |
+
+**Note on CADD discrimination:** 91.1% of all 1,278 ambiguous variants have CADD PHRED ≥ 20. Because CADD flags nearly the entire class as deleterious, it cannot discriminate within the ambiguous group. The CADD < 20 threshold used to define the AlphaGenome rescue group therefore captures only the 8.9% of variants CADD considers genuinely low-impact.
 
 ---
 
@@ -50,20 +52,20 @@
 
 These variants carry strong DNA regulatory or splicing signals in AlphaGenome that are not flagged by either CADD or SpliceAI. If these signals reflect real biology, they represent variants that current clinical in silico tools would classify as low-risk but which AlphaGenome suggests merit functional follow-up.
 
-**Top 10 by ATAC quantile:**
+**Top 10 by ATAC quantile** (deduplicated by protein variant; multiple genomic variants encoding the same amino acid substitution are collapsed to the highest-scoring entry):
 
 | Rank | Variant | AM Score | ATAC q | SPLICE q | CADD PHRED | SpliceAI |
-|------|---------|----------|--------|----------|------------|----------|
-| 1 | F1413I | 0.487 | 0.999 | 0.996 | 19.2 | 0.000 |
-| 2 | Q1411H | 0.357 | 0.999 | 0.960 | 9.2 | 0.000 |
-| 3 | Q1411H | 0.357 | 0.999 | 0.960 | 9.2 | 0.000 |
-| 4 | Q1412P | 0.548 | 0.995 | 0.960 | 17.1 | 0.000 |
-| 5 | H950P | 0.485 | 0.988 | 0.991 | 19.0 | 0.000 |
-| 6 | H954P | 0.367 | 0.985 | 0.992 | 19.6 | 0.000 |
-| 7 | N965K | 0.422 | 0.977 | 0.996 | 19.7 | 0.000 |
-| 8 | N965K | 0.422 | 0.977 | 0.996 | 19.7 | 0.080 |
-| 9 | I215F | 0.477 | 0.963 | 0.940 | 18.1 | 0.000 |
-| 10 | T940I | 0.351 | 0.958 | 0.964 | 19.7 | 0.010 |
+|------|---------|:--------:|:------:|:--------:|:----------:|:--------:|
+|  1 | F1413I | 0.487 | 0.999 | 0.996 | 19.2 | 0.000 |
+|  2 | Q1411H | 0.357 | 0.999 | 0.960 |  9.2 | 0.000 |
+|  3 | Q1412P | 0.548 | 0.995 | 0.960 | 17.1 | 0.000 |
+|  4 | H950P  | 0.485 | 0.988 | 0.991 | 19.0 | 0.000 |
+|  5 | H954P  | 0.367 | 0.985 | 0.992 | 19.6 | 0.000 |
+|  6 | N965K  | 0.422 | 0.977 | 0.996 | 19.7 | 0.080 |
+|  7 | I215F  | 0.477 | 0.963 | 0.940 | 18.1 | 0.000 |
+|  8 | T940I  | 0.351 | 0.958 | 0.964 | 19.7 | 0.010 |
+|  9 | G970C  | 0.491 | 0.933 | 1.000 | 19.8 | 0.860 |
+| 10 | I1366L | 0.418 | 0.938 | 1.000 | 19.8 | 0.000 |
 
 ### 4.2 Multi-Tool Confirmed
 

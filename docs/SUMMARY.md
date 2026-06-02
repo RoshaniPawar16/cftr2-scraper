@@ -41,4 +41,4 @@ AlphaMissense is a credible tool for prioritising unclassified CFTR variants. It
 
 ## Full documentation
 
-See `README.md` for complete results, methods, and file descriptions.
+See `docs/REPORT.md` for the full academic paper with methods, results, and references.
