@@ -1,0 +1,65 @@
+claim_id,source_file,source_line,claim_text_verbatim,claim_type,asserted_value,evidence_file,evidence_line_or_query,recomputed_value,status
+C01,README.md,5,"The CFTR2 pipeline matched 656 of 3,220 variants.",count,656/3220,notebooks/alphamissense.ipynb,cell 7 stored output (source: result=cftr2_merge),656/3220,VERIFIED
+C02,README.md,5,"80% had no clinical classification.",percentage,80%,notebooks/alphamissense.ipynb,cell 7 (2564/3220=79.6%),79.6%,VERIFIED_ROUNDED
+C03,README.md,13,"AUC 0.946 on 292 labelled CFTR variants.",AUC,0.946,notebooks/alphamissense.ipynb,cell 9 stored output,0.946,VERIFIED
+C04,README.md,39,"AUC | 0.946",AUC,0.946,notebooks/alphamissense.ipynb,cell 9 stored output,0.946,VERIFIED
+C05,README.md,39,"Accuracy | 0.94",accuracy,0.94,notebooks/alphamissense.ipynb,cell 9 stored output (classification_report),0.94,VERIFIED
+C06,README.md,39,"CF-causing F1 | 0.96",F1,0.96,notebooks/alphamissense.ipynb,cell 9 stored output (classification_report),0.96,VERIFIED
+C07,README.md,39,"Non CF-causing F1 | 0.77",F1,0.77,notebooks/alphamissense.ipynb,cell 9 stored output (classification_report),0.77,VERIFIED
+C08,README.md,38,"Variants used | 292",count,292,notebooks/alphamissense.ipynb,cell 9 stored output,292,VERIFIED
+C09,README.md,43,"253 CF-causing vs 39 Non CF-causing",count,253/39,notebooks/alphamissense.ipynb,cell 9 stored output,253/39,VERIFIED
+C10,README.md,52,"AlphaMissense | 0.946 | 0.990",AUC+AP,0.946/0.990,notebooks/comparison.ipynb,cells 12+15 stored output (286 variants),0.946/0.990,VERIFIED
+C11,README.md,53,"PolyPhen | 0.826 | 0.959",AUC+AP,0.826/0.959,notebooks/comparison.ipynb,cells 12+15 stored output,0.826/0.959,VERIFIED
+C12,README.md,54,"CADD | 0.776 | 0.939",AUC+AP,0.776/0.939,notebooks/comparison.ipynb,cells 12+15 stored output,0.776/0.939,VERIFIED
+C13,README.md,55,"SIFT | 0.678 | 0.909",AUC+AP,0.678/0.909,notebooks/comparison.ipynb,cells 12+15 stored output,0.678/0.909,VERIFIED
+C14,README.md,49,"We benchmarked AlphaMissense against three predictors on 286 variants with all four scores available.",count,286,notebooks/comparison.ipynb,cell 12 stored output: 'Variants used: 286',286,VERIFIED
+C15,README.md,72,"Ensemble (AM + CADD + PolyPhen) | 0.927 | 0.983",AUC+AP,0.927/0.983,notebooks/ensemble.ipynb,cell 9 stored output,0.927/0.983,VERIFIED
+C16,README.md,75,"Feature weights after scaling: AlphaMissense +1.907, CADD +0.279, PolyPhen -0.117.",weights,+1.907/+0.279/-0.117,notebooks/ensemble.ipynb,cell 13 stored output,+1.907/+0.279/-0.117,VERIFIED
+C17,README.md,83,"Of the 2,564 variants not in CFTR2, 2,411 had AlphaMissense scores.",count,2411,notebooks/alphamissense.ipynb,cell 10 stored output,2411,VERIFIED
+C18,README.md,87,"likely_benign | 1,349",count,1349,notebooks/alphamissense.ipynb,cell 10 stored output,1349,VERIFIED
+C19,README.md,87,"likely_pathogenic | 705",count,705,notebooks/alphamissense.ipynb,cell 10 stored output,705,VERIFIED
+C20,README.md,87,"ambiguous | 357",count,357,notebooks/alphamissense.ipynb,cell 10 stored output,357,VERIFIED
+C21,README.md,92,"Of the 705 flagged, only 7 had gnomAD population frequency data in the VCF.",count,7,data/priority_candidates.csv,row count,7,VERIFIED
+C22,README.md,97,"Leu49Pro | 0.976 | 0.0002",AM_score+AF,0.976/0.0002,data/priority_candidates.csv,row Leu49Pro,0.9757/0.0002,VERIFIED_ROUNDED
+C23,README.md,98,"His1054Gln | 0.901 | 0.0002",AM_score+AF,0.901/0.0002,data/priority_candidates.csv,row His1054Gln,0.901/0.0002,VERIFIED
+C24,README.md,99,"Leu986Pro | 0.869 | 0.0004",AM_score+AF,0.869/0.0004,data/priority_candidates.csv,row Leu986Pro,0.8685/0.0004,VERIFIED_ROUNDED
+C25,README.md,100,"Pro355Leu | 0.858 | 0.0002",AM_score+AF,0.858/0.0002,data/priority_candidates.csv,row Pro355Leu,0.858/0.0002,VERIFIED
+C26,README.md,101,"Phe650Leu | 0.846 | 0.0002",AM_score+AF,0.846/0.0002,data/priority_candidates.csv,row Phe650Leu,0.8455/0.0002,VERIFIED_ROUNDED
+C27,README.md,102,"Arg104Gly | 0.845 | 0.0002",AM_score+AF,0.845/0.0002,data/priority_candidates.csv,row Arg104Gly,0.8448/0.0002,VERIFIED_ROUNDED
+C28,README.md,103,"Arg1097Cys | 0.651 | 0.0002",AM_score+AF,0.651/0.0002,data/priority_candidates.csv,row Arg1097Cys,0.6513/0.0002,VERIFIED_ROUNDED
+C29,README.md,115,"72 variants in CFTR2 are marked as 'varying clinical consequence'.",count,72,data/cftr2_results.csv,"determination_2026='Varying clinical consequence' count",72,VERIFIED
+C30,README.md,119,"likely_pathogenic | 41",count,41,data/varying_consequence_am.csv,am_class='likely_pathogenic' row count,41,VERIFIED
+C31,README.md,120,"ambiguous | 19",count,19,data/varying_consequence_am.csv,am_class='ambiguous' count,19,VERIFIED
+C32,README.md,121,"likely_benign | 12",count,12,data/varying_consequence_am.csv,am_class='likely_benign' count,12,VERIFIED
+C33,README.md,134-140,"MSD1 | 13; NBD1 | 6; R-domain | 0; MSD2 | 17; NBD2 | 5",domain_counts,13/6/0/17/5,data/varying_consequence_am.csv,domain mapping using published residue boundaries,13/6/0/17/5,VERIFIED
+C34,README.md,141,"73% cluster in the membrane-spanning domains.",percentage,73%,data/varying_consequence_am.csv,30/41 = 73.2%,73.2%,VERIFIED_ROUNDED
+C35,README.md,141,"The R-domain has zero.",count,0,data/varying_consequence_am.csv,R-domain count (residues 647-835),0,VERIFIED
+C36,README.md,147,"311 variants could not be matched to AlphaMissense because they are nonsense mutations.",count,311,notebooks/alphamissense.ipynb,cell 7 stored output,311,VERIFIED
+C37,README.md,148,"232 of 311 matched CFTR2.",count,232,notebooks/alphamissense.ipynb,cell 35 stored output,232,VERIFIED
+C38,README.md,148,"225 are CF-causing",count,225,notebooks/alphamissense.ipynb,cell 35 stored output,225,VERIFIED
+C39,README.md,153,"89 nonsense variants have no CFTR2 classification.",count,89,notebooks/alphamissense.ipynb,cell 35 stored output,89,VERIFIED
+C40,docs/REPORT.md,95-96,"AlphaMissense achieves AUC 0.946 and MCC 0.689 on 292 labelled CFTR variants.",AUC+MCC,0.946/0.689,notebooks/alphamissense.ipynb,"AUC: cell 9 ec=6 (verified). MCC: cell 48 ec=2 (separate kernel session; 292-variant context not confirmed from stored output alone)","0.946 / 0.689 (MCC unverifiable from current artifacts)",NOT_CHECKABLE
+C41,docs/REPORT.md,96,"Average Precision | 0.990 [in 292-variant validation table]",AP,0.990,notebooks/comparison.ipynb,cell 15 stored output shows AP 0.990 for AlphaMissense on 286-variant set; alphamissense.ipynb cell 9 does not compute AP,0.990 on 286 variants (not 292),NO_EVIDENCE
+C42,docs/REPORT.md,116,"AlphaMissense vs PolyPhen-2 | Z=2.88 | p=0.0040",DeLong,Z=2.88/p=0.0040,notebooks/comparison.ipynb,cell 16 stored output,Z=2.88/p=0.0040,VERIFIED
+C43,docs/REPORT.md,117,"AlphaMissense vs CADD | Z=3.28 | p=0.0011",DeLong,Z=3.28/p=0.0011,notebooks/comparison.ipynb,cell 16 stored output,Z=3.28/p=0.0011,VERIFIED
+C44,docs/REPORT.md,118,"AlphaMissense vs SIFT | Z=5.87 | p<0.0001",DeLong,Z=5.87/p<0.0001,notebooks/comparison.ipynb,cell 16 stored output (shows 0.0000 to 4 dp),Z=5.87/p=0.0000,VERIFIED_ROUNDED
+C45,docs/alphagenome_batch_report.md,30,"Leu49Pro: RNA q=0.999 / ATAC q=0.081 / Splice q=0.821",quantiles,0.999/0.081/0.821,results/alphagenome/alphagenome_batch_results.csv,row L49P,0.9993/0.0806/0.8209,VERIFIED_ROUNDED
+C46,docs/alphagenome_batch_report.md,31,"Arg104Gly: RNA q=0.974 / ATAC q=0.699 / Splice q=0.993",quantiles,0.974/0.699/0.993,results/alphagenome/alphagenome_batch_results.csv,row R104G,0.9736/0.6989/0.9934,VERIFIED_ROUNDED
+C47,docs/alphagenome_batch_report.md,32,"Pro355Leu: RNA q=0.965 / ATAC q=0.537 / Splice q=0.635",quantiles,0.965/0.537/0.635,results/alphagenome/alphagenome_batch_results.csv,row P355L,0.9645/0.5370/0.6350,VERIFIED_ROUNDED
+C48,docs/alphagenome_batch_report.md,33,"Phe650Leu: RNA q=0.957 / ATAC q=0.693 / Splice q=0.640",quantiles,0.957/0.693/0.640,results/alphagenome/alphagenome_batch_results.csv,row F650L,0.9565/0.6930/0.6403,VERIFIED_ROUNDED
+C49,docs/alphagenome_batch_report.md,34,"Leu986Pro: RNA q=0.958 / ATAC q=0.675 / Splice q=0.931",quantiles,0.958/0.675/0.931,results/alphagenome/alphagenome_batch_results.csv,row L986P,0.9585/0.6746/0.9313,VERIFIED_ROUNDED
+C50,docs/alphagenome_batch_report.md,35,"His1054Gln: RNA q=0.991 / ATAC q=0.950 / Splice q=0.948",quantiles,0.991/0.950/0.948,results/alphagenome/alphagenome_batch_results.csv,row H1054Q,0.9906/0.9502/0.9482,VERIFIED_ROUNDED
+C51,docs/alphagenome_batch_report.md,36,"Arg1097Cys: RNA q=0.968 / ATAC q=0.905 / Splice q=0.720",quantiles,0.968/0.905/0.720,results/alphagenome/alphagenome_batch_results.csv,row R1097C,0.9676/0.9051/0.7203,VERIFIED_ROUNDED
+C52,docs/alphagenome_batch_report.md,98,"Regulatory Rescue — 87 variants",count,87,results/alphagenome/alphagenome_rescue_variants.csv,rescue_group='regulatory_rescue' count (recomputable from alphagenome_full_cftr_results.csv with ATAC>0.95 AND AM<0.56),87,VERIFIED
+C53,docs/alphagenome_batch_report.md,112,"Splicing Rescue — 728 variants",count,728,results/alphagenome/alphagenome_rescue_variants.csv,rescue_group='splicing_rescue' count (recomputable),728,VERIFIED
+C54,docs/alphagenome_batch_report.md,113,"57% of all 1,278 ambiguous variants",percentage,57%,results/alphagenome/alphagenome_full_cftr_results.csv,728/1278=56.96%,56.96%,VERIFIED_ROUNDED
+C55,docs/alphagenome_batch_report.md,114,"Using a stricter threshold (SPLICE q > 0.99) yields 361 variants.",count,361,results/alphagenome/alphagenome_full_cftr_results.csv,SPLICE_SITE_USAGE_quantile_max>0.99 AND am_pathogenicity<0.56,361,VERIFIED
+C56,docs/alphagenome_batch_report.md,127,"Dual Mechanism — 56 variants",count,56,results/alphagenome/alphagenome_rescue_variants.csv,rescue_group='dual_mechanism' count (recomputable),56,VERIFIED
+C57,docs/comparator_analysis_report.md,24,"CADD PHRED: n=1278 mean=24.5",mean,24.5,results/comparator_analysis.csv,mean(CADD_PHRED) over 1278 rows,24.496,VERIFIED_ROUNDED
+C58,docs/comparator_analysis_report.md,37,"SpliceAI delta > 0.2 (potentially altering) | 52",count,52,results/comparator_analysis.csv,SpliceAI_max_delta>0.2 count,52,VERIFIED
+C59,docs/comparator_analysis_report.md,38,"SpliceAI delta > 0.5 (high confidence) | 19",count,19,results/comparator_analysis.csv,SpliceAI_max_delta>0.5 count,19,VERIFIED
+C60,docs/comparator_analysis_report.md,51,"Count: 58 variants [AlphaGenome rescue]",count,58,results/rescue_analysis.csv,rescue_group='alphagenome_rescue' count,58,VERIFIED
+C61,docs/comparator_analysis_report.md,74,"Count: 18 variants [Multi-tool confirmed]",count,18,results/rescue_analysis.csv,rescue_group='multi_tool_confirmed' count,18,VERIFIED
+C62,docs/comparator_analysis_report.md,92,"Count: 693 variants [Discordant]",count,693,results/rescue_analysis.csv,rescue_group='discordant_ag_high_splice_low' count,693,VERIFIED
+C63,docs/comparator_analysis_report.md,92,"54.2% of all 1,278",percentage,54.2%,results/rescue_analysis.csv,693/1278=54.225%,54.225%,VERIFIED_ROUNDED
+C64,notebooks/alphamissense.ipynb (cell 20 STORED OUTPUT),20,"Total varying clinical consequence: 82 [with 50 likely_pathogenic 19 ambiguous 13 likely_benign]",count,82 VCC / 50 LP,data/cftr2_results.csv,"determination_2026='Varying clinical consequence' count",72 VCC (not 82),CONTRADICTED
