@@ -365,6 +365,110 @@ Phase 2 (AlphaGenome rescue analysis) remains clean and is unaffected by this pa
 
 ---
 
+## Part A5 — Cohort Provenance
+**Date:** 2026-07-31  
+**Full detail:** `audit/COHORT_PROVENANCE.md`
+
+### A5.1 — Population of the 1,278
+
+**Source file:** `data/cftr_alphamissense.tsv`  
+**Row count:** 9,721 data rows (9,722 lines with header)  
+**Header (verbatim):** `CHROM\tPOS\tREF\tALT\tgenome\tuniprot_id\ttranscript_id\tprotein_variant\tam_pathogenicity\tam_class`  
+**Three verbatim rows:**
+```
+chr7	117480098	C	G	hg38	P13569	ENST00000003084.10	Q2E	0.1434	likely_benign
+chr7	117480098	C	A	hg38	P13569	ENST00000003084.10	Q2K	0.183	likely_benign
+chr7	117480099	A	G	hg38	P13569	ENST00000003084.10	Q2R	0.1896	likely_benign
+```
+
+**What it contains:** All single-nucleotide missense substitutions achievable by a single SNV in CFTR that AlphaMissense has pre-scored. 9,721 variants at 1,479 residue positions, 8,597 unique protein changes. This is the full pre-computed AlphaMissense database for UniProt P13569, with no ClinVar filter, no patient-observation filter, and no gnomAD filter.
+
+**AM class distribution:** likely_benign: 5,375 / ambiguous: 1,278 / likely_pathogenic: 3,068
+
+**Generating filter** (`scripts/alphagenome_full_cftr.py:61–62`):
+```python
+vus = am[am['am_class'] == 'ambiguous'].copy().reset_index(drop=True)
+log.info('Ambiguous (VUS-equivalent) variants: %d', len(vus))
+```
+No ClinVar operation exists anywhere in the path (`scripts/alphagenome_full_cftr.py`, `scripts/alphagenome_batch.py`, `scripts/fetch_comparator_scores.py`, `scripts/build_comparator_analysis.py`). ClinVar was queried only in `notebooks/alphamissense.ipynb` for the 7 priority variants.
+
+**Observation status of the 1,278:**
+- In patient VCF (observed in ≥1 patient in this cohort): **322 (25.2%)**
+- Not in patient VCF (never observed in this cohort): **956 (74.8%)**
+- With gnomAD allele frequency > 0: **0 (0%)**
+
+**CFTR2 status of the 1,278:**
+- CF-causing: 12 (AlphaMissense misclassified these as ambiguous)
+- Non-CF-causing: 1
+- Varying clinical consequence: 19
+- No interpretation available: 42
+- No CFTR2 record at all: 1,204 (94.2%)
+
+**The 12 CFTR2 CF-causing variants in the set:** H954P, Y913C, A613T, Q30P, P1021L, I601F, I148N, N1088D, I506L, Q359R, H139L, V1240G. Any AlphaGenome "rescue" signal for these is not a finding — they are already confirmed pathogenic. Their presence in Phase 2 is a confound.
+
+**Accurate description:** The 1,278 are the AM-ambiguous subset of all theoretically possible CFTR missense single-nucleotide variants. 74.8% have never been observed in any patient in this study's cohort, 0% have population frequency data, and 94.2% have no CFTR2 record. They are not variants of uncertain significance in any clinical sense.
+
+**The coincidence:** McDonald reports 1,277 ClinVar CFTR VUS. Our 1,278 and their 1,277 are unrelated sets that happen to differ by one.
+
+---
+
+### A5.2 — The 7 and the 1,278 are disjoint
+
+**Overlap:** 0. Confirmed directly: 7 have AM scores 0.651–0.976 (likely_pathogenic class); 1,278 have AM scores 0.340–0.564 (ambiguous class). They are disjoint by AlphaMissense class definition.
+
+**Pipeline divergence:** Both start from `data/cftr_alphamissense.tsv`.
+- For the 7: filter `am_class == 'likely_pathogenic'`, then cross-reference patient VCF for gnomAD AF > 0
+- For the 1,278: filter `am_class == 'ambiguous'`, no further filter
+
+**Text implying scale-up (do not edit yet):**
+- `docs/alphagenome_batch_report.md:90`: Heading "Rescue Variant Analysis (Full 1,278 Ambiguous VUS)" appears directly after the 7-variant section with no statement that the populations are disjoint or drawn from different AM score classes. The word "Full" implies the 1,278 is a widened version of the 7.
+
+---
+
+### A5.3 — Cohort description reproducibility
+
+All 13 counted cohorts reproduce correctly from committed data (full table in `audit/COHORT_PROVENANCE.md`). The only failure is the qualitative description of the 1,278: every prose description using "VUS," "unclassified," or "ClinVar" language is wrong for 74.8% of the set.
+
+---
+
+### A5.4 — CFTR2 access date
+
+`docs/REPORT.md:19` states "The January 2026 release used in this study." The file `data/cftr2_results.csv` has a disk modification date of May 14, 2026 (local), which is consistent with a May 2026 download of a January 2026 CFTR2 release but does not prove it. Neither file is tracked by git; no download log is committed.
+
+The cohort-size explanation for 0.9338 (McDonald, 2023 snapshot) versus 0.946 (ours) depends on our snapshot being later. This is plausible but currently a hypothesis. Methods must either state the access date with a source or state that it is unrecorded. "January 2026 release" without a sourced access date is unverifiable.
+
+---
+
+### A5.5 — The ten bad claims (as requested)
+
+**CONTRADICTED (6):**
+
+| claim_id | verbatim text | source file:line | documented | actual | fix |
+|---|---|---|---|---|---|
+| C05 | "Accuracy \| 0.94" | README.md:39 | 0.94 | 0.9384 at thr=0.5 / 0.9247 at thr=0.564 | Fix threshold to 0.564 throughout; update README.md and REPORT.md §3.2 to 0.92 |
+| C07 | "Non CF-causing F1 \| 0.77" | README.md:39 | 0.77 | 0.7692 at thr=0.5 / 0.7317 at thr=0.564 | Same threshold fix; update to 0.73 at thr=0.564 |
+| C42 | "AlphaMissense vs PolyPhen-2 \| Z=2.88 \| p=0.0040" | docs/REPORT.md:116 | Z=2.88, p=0.0040 | Corrected DeLong (Sun & Xu 2014): Z=3.320, p=0.000900 | Replace with values from `results/phase1/delong_tests.csv` |
+| C43 | "AlphaMissense vs CADD \| Z=3.28 \| p=0.0011" | docs/REPORT.md:117 | Z=3.28, p=0.0011 | Corrected: Z=3.557, p=0.000375 | Same |
+| C44 | "AlphaMissense vs SIFT \| Z=5.87 \| p<0.0001" | docs/REPORT.md:118 | Z=5.87, p<0.0001 | Corrected: Z=6.777, p<0.000001 | Same. All three remain significant at p<0.001 |
+| C64 | "Total varying clinical consequence: 82 [50 LP / 19 ambiguous / 13 LB]" | notebooks/alphamissense.ipynb cell 20 stored output | 82 VCC / 50 LP | 72 VCC / 41 LP (cftr2_results.csv) | Stale notebook output; documented values are correct; re-run notebook to clear |
+
+**NOT_REPRODUCIBLE (4):**
+
+| claim_id | verbatim text | source file:line | documented | fix |
+|---|---|---|---|---|
+| C36 | "311 variants could not be matched to AlphaMissense because they are nonsense mutations." | README.md:147 | 311 | Write `scripts/phase1_nonsense_analysis.py`: read cftr2_results_annotated.csv variants, count Ter-suffix conversion failures |
+| C37 | "232 of 311 matched CFTR2." | README.md:148 | 232 | Same script: cross-reference the 311 against cftr2_results.csv determinations |
+| C38 | "225 are CF-causing" | README.md:148 | 225 | Same script: count CF-causing among the 232 matched |
+| C39 | "89 nonsense variants have no CFTR2 classification." | README.md:153 | 89 | Same script: 311 − 232 = 89 (if consistent). One script resolves all four |
+
+---
+
+### A5 closing note
+
+The 1,278-variant Phase 2 analysis is methodologically valid as "a scan of the AM-ambiguous subset of all theoretically possible CFTR missense SNVs using AlphaGenome in lung tissue." That is a legitimate sequence-space exploration. It is not a scan of clinically unclassified variants, variants of uncertain significance, or ClinVar VUS. The 12 known CF-causing variants in the set (AM misclassified) are a confound in any clinical framing. The framing must be corrected before any text goes to a co-author or reviewer.
+
+---
+
 ## Part A4 — Reconciliation Correction and Cohort Description Audit
 **Date:** 2026-07-31
 
