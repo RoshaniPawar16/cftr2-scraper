@@ -1,0 +1,129 @@
+protein_name,legacy_name,determination,label,am_score,am_prediction_mcdonald
+p.Gly551Asp,G551D,CF-causing,1,0.9897,pathogenic
+p.Asn1303Lys,N1303K,CF-causing,1,0.9907,pathogenic
+p.Gly85Glu,G85E,CF-causing,1,0.9881,pathogenic
+p.Arg347Pro,R347P,CF-causing,1,0.9925,pathogenic
+p.Ala455Glu,A455E,CF-causing,1,0.9484,pathogenic
+p.Arg334Trp,R334W,CF-causing,1,0.6563,pathogenic
+p.Arg560Thr,R560T,CF-causing,1,0.9846,pathogenic
+p.Leu206Trp,L206W,CF-causing,1,0.6236,pathogenic
+p.Pro67Leu,P67L,CF-causing,1,0.6516,pathogenic
+p.Met1101Lys,M1101K,CF-causing,1,0.7987,pathogenic
+p.Arg1066Cys,R1066C,CF-causing,1,0.9239,pathogenic
+p.Ser549Asn,S549N,CF-causing,1,0.9503,pathogenic
+p.Arg347His,R347H,CF-causing,1,0.8454,pathogenic
+p.Ser945Leu,S945L,CF-causing,1,0.8322,pathogenic
+p.Val520Phe,V520F,CF-causing,1,0.8789,pathogenic
+p.Ile148Thr,I148T,Non CF-causing,0,0.1225,benign
+p.Arg117Cys,R117C,CF-causing,1,0.6159,pathogenic
+p.Ser1251Asn,S1251N,CF-causing,1,0.9332,pathogenic
+p.Leu997Phe,L997F,Non CF-causing,0,0.7409,pathogenic
+p.Ser1235Arg,S1235R,Non CF-causing,0,0.1926,benign
+p.Gly1244Glu,G1244E,CF-causing,1,0.9886,pathogenic
+p.Arg352Gln,R352Q,CF-causing,1,0.6256,pathogenic
+p.Arg1066His,R1066H,CF-causing,1,0.7951,pathogenic
+p.Leu1077Pro,L1077P,CF-causing,1,0.9761,pathogenic
+p.Ile1027Thr,I1027T,Non CF-causing,0,0.3126,benign
+p.Ser549Arg,S549R,CF-causing,1,0.9948,pathogenic
+p.Ala559Thr,A559T,CF-causing,1,0.9317,pathogenic
+p.Gly178Arg,G178R,CF-causing,1,0.7577,pathogenic
+p.Gly576Ala,G576A,Non CF-causing,0,0.1868,benign
+p.Arg75Gln,R75Q,Non CF-causing,0,0.1994,benign
+p.Arg668Cys,R668C,Non CF-causing,0,0.104,benign
+p.Asp110His,D110H,CF-causing,1,0.6356,pathogenic
+p.Ile336Lys,I336K,CF-causing,1,0.9829,pathogenic
+p.Thr338Ile,T338I,CF-causing,1,0.8347,pathogenic
+p.Glu92Lys,E92K,CF-causing,1,0.9443,pathogenic
+p.Tyr569Asp,Y569D,CF-causing,1,0.9964,pathogenic
+p.Leu1065Pro,L1065P,CF-causing,1,0.9848,pathogenic
+p.Val232Asp,V232D,CF-causing,1,0.885,pathogenic
+p.Leu467Pro,L467P,CF-causing,1,0.9858,pathogenic
+p.Leu558Ser,L558S,CF-causing,1,0.9666,pathogenic
+p.Tyr563Asn,Y563N,CF-causing,1,0.963,pathogenic
+p.Ile1234Val,I1234V,CF-causing,1,0.0772,benign
+p.Pro205Ser,P205S,CF-causing,1,0.7814,pathogenic
+p.Leu927Pro,L927P,CF-causing,1,0.9259,pathogenic
+p.Leu227Arg,L227R,CF-causing,1,0.9673,pathogenic
+p.Val456Ala,V456A,CF-causing,1,0.6758,pathogenic
+p.?,M1V,CF-causing,1,0.1779,benign
+p.Val754Met,V754M,Non CF-causing,0,0.0728,benign
+p.Pro574His,P574H,CF-causing,1,0.982,pathogenic
+p.Ser492Phe,S492F,CF-causing,1,0.6378,pathogenic
+p.Ser341Pro,S341P,CF-causing,1,0.9537,pathogenic
+p.Gly1061Arg,G1061R,CF-causing,1,0.9912,pathogenic
+p.Arg31Cys,R31C,Non CF-causing,0,0.1079,benign
+p.Gly1349Asp,G1349D,CF-causing,1,0.9801,pathogenic
+p.His199Tyr,H199Y,CF-causing,1,0.7924,pathogenic
+p.Leu165Ser,L165S,CF-causing,1,0.9669,pathogenic
+p.Val562Ile,V562I,Non CF-causing,0,0.074,benign
+p.Gly551Ser ,G551S,CF-causing,1,0.878,pathogenic
+p.Leu1335Pro,L1335P,CF-causing,1,0.8177,pathogenic
+p.Ala561Glu,A561E,CF-causing,1,0.9846,pathogenic
+p.Gln98Arg,Q98R,CF-causing,1,0.9376,pathogenic
+p.Arg1162Leu,R1162L,Non CF-causing,0,0.8935,pathogenic
+p.Arg334Leu,R334L,CF-causing,1,0.8846,pathogenic
+p.Ile502Thr,I502T,CF-causing,1,0.8924,pathogenic
+p.Arg560Lys,R560K,CF-causing,1,0.7883,pathogenic
+p.Ser1159Phe,S1159F,CF-causing,1,0.933,pathogenic
+p.Thr1036Asn,T1036N,CF-causing,1,0.7714,pathogenic
+p.Gly126D,G126D,CF-causing,1,0.9772,pathogenic
+p.Gly970Arg,G970R,CF-causing,1,0.6568,pathogenic
+p.His1054Asp ,H1054D,CF-causing,1,0.9454,pathogenic
+p.Ile1269Asn,I1269N,CF-causing,1,0.9156,pathogenic
+p.Gly628Arg,G628R,CF-causing,1,0.877,pathogenic
+p.Trp1098Arg,W1098R,CF-causing,1,0.9798,pathogenic
+p.Arg170His,R170H,Non CF-causing,0,0.1611,benign
+p.Trp57Gly,W57G,CF-causing,1,0.956,pathogenic
+p.His609Arg,H609R,CF-causing,1,0.7838,pathogenic
+p.Gly970Asp,G970D,CF-causing,1,0.7638,pathogenic
+p.Ser1255Pro,S1255P,CF-causing,1,0.7872,pathogenic
+p.Phe311Leu,F311L,CF-causing,1,0.9751,pathogenic
+p.Ser1159Pro,S1159P,CF-causing,1,0.801,pathogenic
+p.His139Arg,H139R,CF-causing,1,0.903,pathogenic
+p.Ile807Met,I807M,Non CF-causing,0,0.1612,benign
+p.Asp836Tyr,D836Y,Non CF-causing,0,0.1673,benign
+p.Thr1053Ile,T1053I,Non CF-causing,0,0.3548,ambiguous
+p.Ala1006Glu,A1006E,CF-causing,1,0.7961,pathogenic
+p.Glu116Lys,E116K,CF-causing,1,0.8451,pathogenic
+p.Val470Met,V470M,Non CF-causing,0,0.0489,benign
+p.Phe508Cys,F508C,Non CF-causing,0,0.8735,pathogenic
+p.Leu346Pro,L346P,CF-causing,1,0.9915,pathogenic
+p.Asp513Gly,D513G,CF-causing,1,0.8753,pathogenic
+p.Tyr563Asp,Y563D,CF-causing,1,0.9955,pathogenic
+p.Glu60Lys,E60K,CF-causing,1,0.9595,pathogenic
+p.Pro99Leu,P99L,CF-causing,1,0.9651,pathogenic
+p.Ser1118Phe,S1118F,CF-causing,1,0.9112,pathogenic
+p.Gly1249Arg,G1249R,CF-causing,1,0.9533,pathogenic
+p.Arg1283Met,R1283M,CF-causing,1,0.9709,pathogenic
+p.His1375Pro,H1375P,CF-causing,1,0.6197,pathogenic
+p.Phe191Val,F191V,CF-causing,1,0.5931,pathogenic
+p.Leu320Val,L320V,Non CF-causing,0,0.1641,benign
+p.Arg516Gly,R516G,CF-causing,1,0.9156,pathogenic
+p.Arg560Ser,R560S,CF-causing,1,0.9892,pathogenic
+p.Ala613Thr,A613T,CF-causing,1,0.3927,ambiguous
+p.Gly149Arg,G149R,CF-causing,1,0.9869,pathogenic
+p.Glu474Lys,E474K,CF-causing,1,0.9308,pathogenic
+p.Glu56Lys,E56K,CF-causing,1,0.8802,pathogenic
+p.Ile601Phe,I601F,CF-causing,1,0.4904,ambiguous
+p.Gly91Arg,G91R,CF-causing,1,0.9474,pathogenic
+p.Arg117Pro,R117P,CF-causing,1,0.9687,pathogenic
+p.Ile1366Asn,I1366N,CF-causing,1,0.9528,pathogenic
+p.Glu193Lys,E193K,CF-causing,1,0.684,pathogenic
+p.Leu453Ser,L453S,CF-causing,1,0.8487,pathogenic
+p.Val456Phe,V456F,CF-causing,1,0.5745,pathogenic
+p.Ala46Asp,A46D,CF-causing,1,0.9842,pathogenic
+p.Leu102Arg,L102R,CF-causing,1,0.952,pathogenic
+p.His1085Pro,H1085P,CF-causing,1,0.9469,pathogenic
+p.Trp1098Cys,W1098C,CF-causing,1,0.8684,pathogenic
+p.Met1101Arg,M1101R,CF-causing,1,0.7663,pathogenic
+p.Leu1324Pro,L1324P,CF-causing,1,0.996,pathogenic
+p.Leu15Pro,L15P,CF-causing,1,0.7627,pathogenic
+p.Tyr161Asp,Y161D,CF-causing,1,0.9903,pathogenic
+p.Asp979Val,D979V,CF-causing,1,0.9887,pathogenic
+p.Val1240Gly,V1240G,CF-causing,1,0.5637,ambiguous
+p.Ser13Phe,S13F,CF-causing,1,0.7624,pathogenic
+p.Asp192Gly,D192G,CF-causing,1,0.8915,pathogenic
+p.Gly194Arg,G194R,CF-causing,1,0.9755,pathogenic
+p.Gly27Arg,G27R,CF-causing,1,0.9823,pathogenic
+p.Met1?,M1L,CF-causing,1,0.2572,benign
+p.Met1?,M1K,CF-causing,1,0.7547,pathogenic

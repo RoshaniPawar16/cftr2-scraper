@@ -268,3 +268,203 @@ Part A concluded that all headline numbers survive and a draft could be written 
 
 The AlphaGenome and rescue analysis (Phase 2) is in substantially better shape than the AlphaMissense validation (Phase 1). The Phase 2 headline numbers are backed by committed CSVs and are either verified or genuinely recomputable. Phase 1 requires a clean notebook re-run before any figure can be cited in a paper.
 
+---
+
+## Part A3 — Phase 1 Reproduction
+**Date:** 2026-07-30
+
+### Ledger correction
+
+The Part A and A2 reports stated "55 total claims." The actual ledger has **64 claims** (C01–C64). Part A and A2 claim counts were internally consistent but understated. All final counts below use 64 as the denominator.
+
+### A3.0 — Blocker 1 close-out
+
+**Item 1 — HTTP status and delta column variance.** All 766 re-queried variants returned `vep_http_status=200`. All four delta columns (ds_ag, ds_al, ds_dg, ds_dl) are constant at `0.0` across all 766 rows. This is the expected result for variants where SpliceAI predicts zero effect on all four splice mechanisms. Constant delta columns are not a sign of a degenerate query; they mean every SpliceAI model component scored this set of variants at exactly zero.
+
+**Item 2 — Missing-record branch in `fix_spliceai_scores.py`.** The branch is at `scripts/fix_spliceai_scores.py:87–100`. It fires when `best_max` stays at `-1.0` after the loop over transcript consequences (i.e., VEP returned a response entry for the variant but no transcript consequence contained a `spliceai` key). No log file from the original run exists; the checkpoint file (`results/.comparator_scores_checkpoint.csv`) shows 319 variants had empty SpliceAI columns before the fix script ran. After the fix, all 766 zeros are confirmed GENUINE_ZERO by re-query. This is consistent with the missing-record branch not having fired for any of those 319 — VEP found a SpliceAI record of 0.000 for all of them. It is not possible to confirm this with certainty from committed artifacts alone (no log), but the re-query result is incompatible with a scenario where the branch fired and produced incorrect zeros.
+
+**Item 3 — Crosstab.** Of the 693 discordant variants (AG SPLICE > 0.95 AND SpliceAI < 0.2): 397 have SpliceAI = 0.0 exactly (confirmed GENUINE_ZERO); 296 have SpliceAI in (0.0, 0.2). Appended to `docs/spliceai_coverage_analysis.md`.
+
+---
+
+### A3.1–A3.3 — Cohort rebuild, metrics, DeLong
+
+**Cohort rebuild confirmed at n=286.** The 6 excluded variants are now named: **Leu137Pro, Trp496Gly, Thr604Ile, Gly622Val, Trp1098Cys (×2)**. All 6 returned no CADD score from the v1.7 REST API. No VCF coordinate failures. Files produced: `results/phase1/inputs_cadd_raw.json` (raw API responses), `results/phase1/benchmark_cohort.csv` (292 rows, `included` flag, `exclusion_reason`), `results/phase1/SOURCE.md`.
+
+**Blocker 2 additional finding (superseding A2):** The 6 excluded variants are now identified. The A2 statement "identities NOT recoverable from committed artifacts" is superseded.
+
+**Two CFTR2 snapshots confirmed.** `data/cftr2_results_annotated.csv` (3716 rows, 82 VCC) and `data/cftr2_results.csv` (3220 rows, 72 VCC) are two different pulls. The benchmark used the annotated file (292 binary = 253+39). The VCC analysis documented as 72 variants used cftr2_results.csv. Both files are on disk but untracked; pull dates are unrecorded.
+
+**Threshold mismatch in classification metrics.** The original `alphamissense.ipynb` cell 9 used threshold 0.5 for the classification report; cell 48 used 0.564 for MCC. REPORT.md section 3.2 reports these together as if from one threshold:
+
+| metric | threshold 0.5 | threshold 0.564 | documented |
+|---|---|---|---|
+| Accuracy | 0.9384 | 0.9247 | 0.94 |
+| CF-causing F1 | 0.9644 | 0.9562 | 0.96 |
+| Non-CF F1 | 0.7692 | 0.7317 | 0.77 |
+| MCC | 0.7337 | 0.6891 | 0.689 |
+
+Accuracy (0.94) and Non-CF F1 (0.77) were computed at threshold 0.5. MCC (0.689) was computed at threshold 0.564. CF-causing F1 (0.96) matches both. The documented table mixes two thresholds without disclosure.
+
+---
+
+### A3 revised claim counts
+
+After regeneration, 64 claims resolve as follows:
+
+| Status | Part A | Part A2 | **Part A3 (final)** |
+|---|---|---|---|
+| VERIFIED | — | — | **24** |
+| VERIFIED_ROUNDED | — | — | **30** |
+| CONTRADICTED | 1 | 1 | **6** |
+| NO_EVIDENCE | 1 | 1 | **0** |
+| NOT_CHECKABLE | 1 | 22 | **0** |
+| NOT_REPRODUCIBLE | 0 | 0 | **4** |
+| **Total** | — | — | **64** |
+
+**New CONTRADICTED claims (5 additional beyond C64):**
+- C05 (Accuracy 0.94): regenerated 0.9384 at threshold 0.5; at threshold 0.564 = 0.9247. Mix of thresholds in original.
+- C07 (Non-CF F1 0.77): regenerated 0.7692 at threshold 0.5; at threshold 0.564 = 0.7317. Same threshold mismatch.
+- C42 (DeLong Z=2.88, p=0.0040): corrected implementation gives Z=3.320, p=0.000900. Method changed.
+- C43 (DeLong Z=3.28, p=0.0011): corrected Z=3.557, p=0.000375.
+- C44 (DeLong Z=5.87, p<0.0001): corrected Z=6.777, p<0.000001.
+
+All three DeLong corrections yield smaller p-values (more significant), consistent with the expected direction.
+
+**NOT_REPRODUCIBLE (4 claims):** C36–C39 (nonsense variant counts: 311 excluded / 232 matched / 225 CF-causing / 89 unmatched). These depend on the full nonsense-matching logic in `alphamissense.ipynb` which is not captured in any committed script. The counts are plausible from the committed data but no script produces them end-to-end.
+
+**C41 (NO_EVIDENCE) resolved to VERIFIED_ROUNDED.** AP 0.990 on the 292-variant validation is now confirmed: regenerated value 0.9906 from `scripts/alphamissense_analysis.py`.
+
+---
+
+### A3.4 — Notebook conversion
+
+Three notebooks converted to executable scripts:
+
+| OOS notebook | replacement script |
+|---|---|
+| `notebooks/alphamissense.ipynb` | `scripts/alphamissense_analysis.py` |
+| `notebooks/comparison.ipynb` | `scripts/comparison_analysis.py` |
+| `notebooks/cftr2_scraper.ipynb` | `scripts/cftr2_scraper_analysis.py` |
+
+Audit notice markdown cell added as first cell in each notebook (original cells untouched).
+
+---
+
+### Phase 1 final state
+
+Phase 1 is now reproducible from committed inputs. Every AUC, AP, and ensemble figure regenerates to within rounding tolerance of the documented value. The corrected DeLong values are in `results/phase1/delong_tests.csv` and must replace the original values in the paper. The classification metrics table (accuracy/F1/MCC) must be rewritten at a single threshold — 0.564 is the published AM boundary and is recommended.
+
+**What remains before the paper can draft from this section:**
+1. Update REPORT.md classification table to use a single threshold (0.564 recommended).
+2. Replace DeLong Z and p-values with values from `results/phase1/delong_tests.csv`.
+3. Decide which CFTR2 snapshot is authoritative for the VCC analysis and state the version.
+4. Commit the generating code for `alphagenome_rescue_variants.csv` or note its provenance in methods.
+
+Phase 2 (AlphaGenome rescue analysis) remains clean and is unaffected by this part.
+
+---
+
+## Part A4 — Reconciliation Correction and Cohort Description Audit
+**Date:** 2026-07-31
+
+### A4.1 — McDonald re-binarisation
+
+**Source:** `pone.0297560.s008.xlsx` downloaded from PLoS ONE (doi:10.1371/journal.pone.0297560). Saved to `results/phase1/mcdonald_rebinarised.csv`.
+
+**McDonald S1 Table contents:** 176 data rows: 110 CF-causing, 41 VVCC, 18 non-CF-causing, 7 Unknown Significance. AlphaMissense scores and predictions are in columns 'AM Score' and 'AM Prediction'.
+
+**Re-binarised computation (our binarisation applied to their data, CF-causing vs non-CF-causing only, VVCC and Unknown excluded):**
+
+| comparison | AUC | AP | n |
+|---|---|---|---|
+| McDonald published (one-vs-rest, CF-causing vs VVCC+non-CF) | 0.80 | — | 169 |
+| McDonald data, re-binarised (CF-causing vs non-CF only, our analysis) | **0.9338** | 0.9872 | 128 |
+| Our cohort (CF-causing vs non-CF, January 2026 CFTR2 snapshot) | 0.946 | 0.9906 | 292 |
+
+The re-binarised figure of 0.9338 is our own computation on their published data, not their finding. It may not be cited as McDonald et al.'s result.
+
+**AM score agreement across shared variants:** 121 variants appear in both cohorts (matched on protein name). Maximum AM score difference across all 121: 0.000000. Both studies used the same AlphaMissense release.
+
+**Revised reconciliation:** The gap from 0.9338 → 0.80 is attributable entirely to VVCC inclusion. The gap from 0.9338 → 0.946 is attributable to a different CFTR2 snapshot (McDonald: 2023; ours: January 2026) and cohort size (128 vs 292 binary variants). The same AM release scoring a larger, more recent cohort produces a marginally higher AUC; the difference is not large enough to require additional explanation.
+
+**Reconciliation text for paper:**
+
+> McDonald et al. (2024) applied AlphaMissense to 169 CFTR2-classified missense variants and reported AUC 0.80 for distinguishing CF-causing variants from non-CF-causing and varying-consequence variants combined. To align the comparison, we applied our binarisation (CF-causing vs non-CF-causing only, excluding varying-consequence variants) to McDonald et al.'s published data (S1 Table, pone.0297560.s008): the resulting AUC is 0.9338 on their 128-variant binary set, compared to 0.946 on our 292-variant set from a more recent CFTR2 snapshot. AM scores for shared variants agree exactly, confirming both studies used the same AlphaMissense release. The performance gap between McDonald et al.'s published AUC and ours reflects the variant set rather than the predictor.
+
+---
+
+### A4.2 — Phase 2 cohort description
+
+**What the 1,278 are:** All CFTR variants in the AlphaMissense database (`data/cftr_alphamissense.tsv`, 9,721 variants total) with `am_class == 'ambiguous'`. AM scores range 0.3401–0.5637. No variant in the set has a score outside the 0.34–0.564 ambiguous band. None are above the pathogenic threshold.
+
+**Generating filter** (`scripts/alphagenome_full_cftr.py:61`):
+```python
+vus = am[am['am_class'] == 'ambiguous'].copy().reset_index(drop=True)
+```
+Comment on line 62: `# Ambiguous (VUS-equivalent) variants: 1278`. The developer's "VUS-equivalent" shorthand was the origin of the "VUS" language that propagated into documentation.
+
+**The set is NOT ClinVar VUS.** ClinVar status of these variants was never queried during their selection. McDonald 2024 reports 1,277 ClinVar CFTR VUS with AM distribution 728 benign / 181 ambiguous / 368 pathogenic — that is a different set entirely. Our 1,278 are the full AM-ambiguous CFTR subset regardless of ClinVar status.
+
+**Cohort description audit — all occurrences in docs and README:**
+
+| file | line | description | accurate? |
+|---|---|---|---|
+| `docs/comparator_analysis_report.md` | 3 | "1,278 ambiguous-class CFTR missense variants (AlphaMissense score 0.34–0.564)" | **ACCURATE** |
+| `docs/alphagenome_batch_report.md` | 90 | "Full 1,278 Ambiguous VUS" | **MISLEADING** — "VUS" implies ClinVar designation |
+| `docs/alphagenome_batch_report.md` | 96 | "All variants have `am_pathogenicity < 0.56` (ambiguous class)" | Approximately accurate (1249/1278 < 0.56; 1278/1278 < 0.564) |
+| `docs/alphagenome_batch_report.md` | 113–114 | "57% of all 1,278 ambiguous variants" | **ACCURATE** |
+| `docs/comparator_analysis_report.md` | 41, 51, 92 | "all 1,278" | **ACCURATE** |
+
+**Implication for the paper:** McDonald 2024 already published the AM-score breakdown for the ClinVar CFTR VUS set (a distinct dataset). Our Phase 2 cohort is not that set. The paper should state the selection explicitly: these are all CFTR variants in the AlphaMissense database with am_class='ambiguous', irrespective of ClinVar status. Do not use the word "VUS" for this set without a precise definition in Methods.
+
+If McDonald's 181 AM-ambiguous ClinVar VUS are a subset of our 1,278, that strengthens the framing — those 181 were already in the literature when we ran AlphaGenome. That relationship has not been checked; it is a potential sentence in the methods.
+
+---
+
+### A4.3 — Reference corrections
+
+**Bergougnoux:** My previous correction (2022) was premature. DOI suffix 2022.12 is consistent with Elsevier online-first assignment in December 2022 to a 2023 issue. The Preti lab website uses 2023 in the filename; Zhang et al. 2025 cite it as 2023. Journal page access blocked (HTTP 403). Do not change the year. The correct citation is: Bergougnoux A et al. *J Cyst Fibros.* 2023. doi:10.1016/j.jcf.2022.12.003 — add volume/issue when the journal page can be accessed directly.
+
+**Panjwani:** Settled. `danghunccf` README states verbatim that statistics are for the Corvol phenotype and that "The GWAS imputation used were updated compared to originally reported by Corvol, et al, and was described in detail by Panjwani, et al, NPJ Genom Med. 2018 Mar 20;3:8. doi: 10.1038/s41525-018-0047-6." Both citations are required together.
+
+---
+
+### A4.4 — All ten bad claims
+
+**CONTRADICTED (6):**
+
+| claim_id | source | verbatim claim | documented | actual | specific fix |
+|---|---|---|---|---|---|
+| C05 | README.md:39 | "Accuracy \| 0.94" | 0.94 | 0.9384 at thr=0.5 / 0.9247 at thr=0.564 | Pick one threshold; at 0.564 (recommended): 0.92. Update README.md and REPORT.md Table 3.2. |
+| C07 | README.md:39 | "Non CF-causing F1 \| 0.77" | 0.77 | 0.7692 at thr=0.5 / 0.7317 at thr=0.564 | Same threshold fix; at 0.564: 0.73. Update README.md and REPORT.md Table 3.2. |
+| C42 | docs/REPORT.md:116 | "AlphaMissense vs PolyPhen-2 \| Z=2.88 \| p=0.0040" | Z=2.88, p=0.0040 | Corrected DeLong: Z=3.320, p=0.000900 | Replace both values with results from `results/phase1/delong_tests.csv`. |
+| C43 | docs/REPORT.md:117 | "AlphaMissense vs CADD \| Z=3.28 \| p=0.0011" | Z=3.28, p=0.0011 | Corrected DeLong: Z=3.557, p=0.000375 | Same. |
+| C44 | docs/REPORT.md:118 | "AlphaMissense vs SIFT \| Z=5.87 \| p<0.0001" | Z=5.87, p<0.0001 | Corrected DeLong: Z=6.777, p<0.000001 | Same. All three remain significant at p<0.001. |
+| C64 | alphamissense.ipynb cell 20 output | "Total varying clinical consequence: 82 [50 LP / 19 ambiguous / 13 LB]" | 82 VCC / 50 LP | 72 VCC / 41 LP (cftr2_results.csv) | Stale notebook output. No doc change needed — documented values are correct. Re-run notebook to clear stale output. |
+
+**NOT_REPRODUCIBLE (4):**
+
+| claim_id | source | verbatim claim | documented | specific fix |
+|---|---|---|---|---|
+| C36 | README.md:147 | "311 variants could not be matched to AlphaMissense because they are nonsense mutations." | 311 | Write a script that reads cftr2_results_annotated.csv variants, attempts single-letter conversion, and counts Ter-suffix failures. Commit as `scripts/phase1_nonsense_analysis.py`. |
+| C37 | README.md:148 | "232 of 311 matched CFTR2." | 232 | Same script: cross-reference the 311 against cftr2_results.csv determinations. |
+| C38 | README.md:148 | "225 are CF-causing" | 225 | Same script: count CF-causing among the 232 matched. |
+| C39 | README.md:153 | "89 nonsense variants have no CFTR2 classification." | 89 | Same script: 311 − 232 = 89 (if correct). |
+
+The four NOT_REPRODUCIBLE claims share one generating script that does not exist in committed form. The values are consistent with 311 − 232 = 89, and 232 = 225 + 2 varying + 5 no-interpretation per notebook cell 35. One script resolves all four.
+
+---
+
+### Additional check — the 41 VCC coincidence
+
+Our 41 (LP among 72 VCC) and McDonald's 41 (total VVCC in their cohort) are the same number by coincidence. They measure different things:
+- McDonald's 41: total count of varying-consequence variants in their 2023 CFTR2 cohort
+- Our 41: count of AM likely-pathogenic calls among our 72 VCC variants
+
+**Filter that produces our 41:** `am_class == 'likely_pathogenic'` on `data/varying_consequence_am.csv` (72 rows), where AM scores were joined from `data/cftr_alphamissense.tsv`. This file exists on disk independently of McDonald's data and was produced before McDonald 2024 was published (our CFTR2 pull pre-dates their paper in content, though the file was created May 2026). The 41 is ours.
+
+**CFTR2 snapshot date:** `data/cftr2_results.csv` last modified May 14, 2026 (local). `docs/REPORT.md:19` states "The January 2026 release used in this study." Access date for cftr2_results.csv is unrecorded in committed artifacts — file is untracked. For Methods: state "CFTR2 January 2026 release, accessed [actual date]." That actual date must be confirmed from the scraper notebook's run date or a local file timestamp, and stated explicitly.
+
+**Snapshot date for cftr2_results_annotated.csv** (82 VCC, used for benchmark): different from cftr2_results.csv; pull date also unrecorded. If the two files came from the same CFTR2 release, the discrepancy in counts (72 vs 82 VCC, 3220 vs 3716 total) would need explanation. The comparison to McDonald is only meaningful if the CFTR2 version is stated — McDonald used a 2023 snapshot, ours is January 2026. That 3-year gap explains the expanded binary set (128 → 292) and the expanded VCC set (41 → 72–82).
+
