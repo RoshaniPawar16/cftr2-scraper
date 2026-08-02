@@ -1,0 +1,4878 @@
+{
+  "Ser13Phe": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "29.4",
+        "Pos": "117480132",
+        "RawScore": "5.238939",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117480132",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Arg31Cys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "28.1",
+        "Pos": "117504290",
+        "RawScore": "5.034318",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117504290",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Trp57Gly": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "26.0",
+        "Pos": "117509038",
+        "RawScore": "4.630796",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117509038",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Pro67Leu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "26.7",
+        "Pos": "117509069",
+        "RawScore": "4.770310",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117509069",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Arg75Gln": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "29.7",
+        "Pos": "117509093",
+        "RawScore": "5.286198",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117509093",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Gly85Glu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.5",
+        "Pos": "117509123",
+        "RawScore": "5.090872",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117509123",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Gly91Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "32",
+        "Pos": "117509140",
+        "RawScore": "5.468262",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117509140",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Glu92Lys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "33",
+        "Pos": "117530899",
+        "RawScore": "5.909653",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530899",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Gln98Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "26.7",
+        "Pos": "117530918",
+        "RawScore": "4.774650",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530918",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Tyr109Cys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "26.3",
+        "Pos": "117530951",
+        "RawScore": "4.701619",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530951",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Asp110His": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.5",
+        "Pos": "117530953",
+        "RawScore": "4.744947",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530953",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Arg117Cys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "27.4",
+        "Pos": "117530974",
+        "RawScore": "4.909650",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530974",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Arg117Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.3",
+        "Pos": "117530975",
+        "RawScore": "4.689763",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530975",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "His139Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "24.5",
+        "Pos": "117531041",
+        "RawScore": "4.191373",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531041",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Ala141Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "24.5",
+        "Pos": "117531047",
+        "RawScore": "4.157591",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531047",
+      "ref": "C",
+      "alt": "A"
+    }
+  },
+  "Ile148Thr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "24.0",
+        "Pos": "117531068",
+        "RawScore": "3.972076",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531068",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Gly149Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "33",
+        "Pos": "117531070",
+        "RawScore": "5.707946",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531070",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Arg170His": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "33",
+        "Pos": "117534295",
+        "RawScore": "5.642669",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117534295",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Gly178Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "32",
+        "Pos": "117534318",
+        "RawScore": "5.623958",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117534318",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Glu193Lys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "34",
+        "Pos": "117534363",
+        "RawScore": "5.988707",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117534363",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "His199Tyr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "26.6",
+        "Pos": "117535263",
+        "RawScore": "4.761010",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117535263",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "His199Gln": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "23.8",
+        "Pos": "117535265",
+        "RawScore": "3.906814",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117535265",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Pro205Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "25.8",
+        "Pos": "117535281",
+        "RawScore": "4.566173",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117535281",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Leu206Trp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "28.3",
+        "Pos": "117535285",
+        "RawScore": "5.069159",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117535285",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Arg297Gln": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "21.8",
+        "Pos": "117540120",
+        "RawScore": "3.205375",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540120",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Phe311Leu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "24.1",
+        "Pos": "117540163",
+        "RawScore": "4.018633",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540163",
+      "ref": "C",
+      "alt": "G"
+    }
+  },
+  "Gly314Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "29.3",
+        "Pos": "117540170",
+        "RawScore": "5.216891",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540170",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Arg334Trp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "26.0",
+        "Pos": "117540230",
+        "RawScore": "4.625022",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540230",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Ile336Lys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "24.5",
+        "Pos": "117540237",
+        "RawScore": "4.172214",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540237",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "Thr338Ile": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "24.8",
+        "Pos": "117540243",
+        "RawScore": "4.281604",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540243",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Leu346Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "28.0",
+        "Pos": "117540267",
+        "RawScore": "5.006312",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540267",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Arg347His": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "32",
+        "Pos": "117540270",
+        "RawScore": "5.487182",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540270",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Arg347Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "29.3",
+        "Pos": "117540270",
+        "RawScore": "5.214387",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540270",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Arg352Gln": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "31",
+        "Pos": "117540285",
+        "RawScore": "5.407153",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540285",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Ala455Glu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "26.1",
+        "Pos": "117548795",
+        "RawScore": "4.654276",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117548795",
+      "ref": "C",
+      "alt": "A"
+    }
+  },
+  "Val456Phe": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "24.0",
+        "Pos": "117548797",
+        "RawScore": "3.970660",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117548797",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Gly458Val": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "30",
+        "Pos": "117548804",
+        "RawScore": "5.336936",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117548804",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Val470Met": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "13.72",
+        "Pos": "117559479",
+        "RawScore": "1.423841",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559479",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Gly480Cys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "29.2",
+        "Pos": "117559509",
+        "RawScore": "5.202484",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559509",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Ser492Phe": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "34",
+        "Pos": "117559546",
+        "RawScore": "6.127309",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559546",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Ile506Val": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "24.9",
+        "Pos": "117559587",
+        "RawScore": "4.317261",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559587",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Phe508Cys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "28.3",
+        "Pos": "117559594",
+        "RawScore": "5.063738",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559594",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Asp513Gly": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "26.9",
+        "Pos": "117559609",
+        "RawScore": "4.814238",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559609",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Val520Phe": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "24.1",
+        "Pos": "117559629",
+        "RawScore": "4.029020",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559629",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Ser549Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "27.1",
+        "Pos": "117587799",
+        "RawScore": "4.860377",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117587799",
+      "ref": "A",
+      "alt": "C"
+    }
+  },
+  "Ser549Asn": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "27.7",
+        "Pos": "117587800",
+        "RawScore": "4.959278",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117587800",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Ser549Ile": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "29.3",
+        "Pos": "117587800",
+        "RawScore": "5.220369",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117587800",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Gly551Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.3",
+        "Pos": "117587805",
+        "RawScore": "5.061868",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117587805",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Gly551Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.2",
+        "Pos": "117587806",
+        "RawScore": "5.045756",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117587806",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Leu558Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "27.7",
+        "Pos": "117587827",
+        "RawScore": "4.960667",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117587827",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Ala559Thr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.5",
+        "Pos": "117587829",
+        "RawScore": "5.094781",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117587829",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Arg560Lys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "34",
+        "Pos": "117587833",
+        "RawScore": "6.343112",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117587833",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Arg560Thr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "34",
+        "Pos": "117587833",
+        "RawScore": "6.274308",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117587833",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Val562Ile": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "22.6",
+        "Pos": "117590357",
+        "RawScore": "3.472402",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590357",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Tyr563Asn": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "29.2",
+        "Pos": "117590360",
+        "RawScore": "5.197665",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590360",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "Tyr569Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "33",
+        "Pos": "117590378",
+        "RawScore": "5.758325",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590378",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Tyr569Cys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "28.4",
+        "Pos": "117590379",
+        "RawScore": "5.081955",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590379",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Leu571Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "32",
+        "Pos": "117590385",
+        "RawScore": "5.453263",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590385",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Asp572Asn": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "32",
+        "Pos": "117590387",
+        "RawScore": "5.475631",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590387",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Pro574His": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "27.3",
+        "Pos": "117590394",
+        "RawScore": "4.885078",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590394",
+      "ref": "C",
+      "alt": "A"
+    }
+  },
+  "Gly576Ala": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "24.8",
+        "Pos": "117590400",
+        "RawScore": "4.267024",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590400",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Ile601Phe": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "24.9",
+        "Pos": "117591968",
+        "RawScore": "4.317511",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117591968",
+      "ref": "A",
+      "alt": "T"
+    }
+  },
+  "Leu610Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "27.9",
+        "Pos": "117591996",
+        "RawScore": "4.989248",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117591996",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Ala613Thr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "29.6",
+        "Pos": "117592004",
+        "RawScore": "5.263559",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117592004",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Ile618Thr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "25.6",
+        "Pos": "117592020",
+        "RawScore": "4.515245",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117592020",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Leu619Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.7",
+        "Pos": "117592023",
+        "RawScore": "4.783856",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117592023",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "His620Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "27.0",
+        "Pos": "117592026",
+        "RawScore": "4.839175",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117592026",
+      "ref": "A",
+      "alt": "C"
+    }
+  },
+  "Gly628Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "29.1",
+        "Pos": "117592049",
+        "RawScore": "5.196750",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117592049",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Leu633Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "27.5",
+        "Pos": "117592065",
+        "RawScore": "4.926777",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117592065",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Arg668Cys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "29.3",
+        "Pos": "117592169",
+        "RawScore": "5.220392",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117592169",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Val754Met": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "0.172",
+        "Pos": "117592427",
+        "RawScore": "-0.466418",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117592427",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Ile807Met": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "21.8",
+        "Pos": "117592588",
+        "RawScore": "3.214389",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117592588",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Tyr913Cys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "16.52",
+        "Pos": "117603612",
+        "RawScore": "1.951215",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117603612",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Tyr917Cys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "26.6",
+        "Pos": "117603624",
+        "RawScore": "4.761276",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117603624",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Met952Ile": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "24.8",
+        "Pos": "117603730",
+        "RawScore": "4.294402",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117603730",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Leu967Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "24.7",
+        "Pos": "117603774",
+        "RawScore": "4.259130",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117603774",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Leu997Phe": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "22.3",
+        "Pos": "117610521",
+        "RawScore": "3.349901",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117610521",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Ile1005Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "25.9",
+        "Pos": "117610544",
+        "RawScore": "4.597109",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117610544",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Ala1006Glu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "14.42",
+        "Pos": "117610547",
+        "RawScore": "1.540405",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117610547",
+      "ref": "C",
+      "alt": "A"
+    }
+  },
+  "Pro1013Leu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "25.6",
+        "Pos": "117610568",
+        "RawScore": "4.534087",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117610568",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Gly1061Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "32",
+        "Pos": "117611622",
+        "RawScore": "5.530037",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611622",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Leu1065Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "29.9",
+        "Pos": "117611635",
+        "RawScore": "5.311191",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611635",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Leu1065Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "29.3",
+        "Pos": "117611635",
+        "RawScore": "5.225052",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611635",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Arg1066Cys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "33",
+        "Pos": "117611637",
+        "RawScore": "5.715478",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611637",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Arg1066His": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "32",
+        "Pos": "117611638",
+        "RawScore": "5.596980",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611638",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Arg1066Leu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "32",
+        "Pos": "117611638",
+        "RawScore": "5.432332",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611638",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Arg1070Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "32",
+        "Pos": "117611650",
+        "RawScore": "5.535945",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611650",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Leu1077Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "27.6",
+        "Pos": "117611671",
+        "RawScore": "4.944126",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611671",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Trp1098Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "27.8",
+        "Pos": "117611733",
+        "RawScore": "4.975000",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611733",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Met1101Lys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "25.9",
+        "Pos": "117611743",
+        "RawScore": "4.598137",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611743",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "Met1101Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "26.0",
+        "Pos": "117611743",
+        "RawScore": "4.613801",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611743",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Arg1162Leu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "32",
+        "Pos": "117627538",
+        "RawScore": "5.518035",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117627538",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Ile1234Val": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "23.0",
+        "Pos": "117627753",
+        "RawScore": "3.585556",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117627753",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Ser1235Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "20.5",
+        "Pos": "117627758",
+        "RawScore": "2.831550",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117627758",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Gly1244Glu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "29.3",
+        "Pos": "117642451",
+        "RawScore": "5.225238",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117642451",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Gly1249Glu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.0",
+        "Pos": "117642466",
+        "RawScore": "5.006652",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117642466",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Ser1251Asn": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.1",
+        "Pos": "117642472",
+        "RawScore": "5.027263",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117642472",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Ser1255Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "23.1",
+        "Pos": "117642483",
+        "RawScore": "3.632515",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117642483",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Trp1282Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.5",
+        "Pos": "117642564",
+        "RawScore": "4.733300",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117642564",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Arg1283Met": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "28.3",
+        "Pos": "117642568",
+        "RawScore": "5.067457",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117642568",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Asn1303Lys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "22.2",
+        "Pos": "117652877",
+        "RawScore": "3.340727",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117652877",
+      "ref": "C",
+      "alt": "G"
+    }
+  },
+  "Gly1349Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.7",
+        "Pos": "117664770",
+        "RawScore": "5.129765",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117664770",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Leu15Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.2",
+        "Pos": "117480138",
+        "RawScore": "4.665516",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117480138",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Gly27Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.6",
+        "Pos": "117504278",
+        "RawScore": "5.109495",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117504278",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Gly27Glu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "27.1",
+        "Pos": "117504279",
+        "RawScore": "4.848549",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117504279",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Gln30Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "23.2",
+        "Pos": "117504288",
+        "RawScore": "3.680000",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117504288",
+      "ref": "A",
+      "alt": "C"
+    }
+  },
+  "Ala46Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "26.2",
+        "Pos": "117504336",
+        "RawScore": "4.680119",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117504336",
+      "ref": "C",
+      "alt": "A"
+    }
+  },
+  "Ser50Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.5",
+        "Pos": "117504347",
+        "RawScore": "4.732592",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117504347",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Glu56Lys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "33",
+        "Pos": "117509035",
+        "RawScore": "5.931366",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117509035",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Trp57Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "28.3",
+        "Pos": "117509038",
+        "RawScore": "5.067749",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117509038",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Glu60Lys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.9",
+        "Pos": "117509047",
+        "RawScore": "5.152526",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117509047",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Ala72Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "26.9",
+        "Pos": "117509084",
+        "RawScore": "4.819265",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117509084",
+      "ref": "C",
+      "alt": "A"
+    }
+  },
+  "Arg74Gln": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "21.8",
+        "Pos": "117509090",
+        "RawScore": "3.209233",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117509090",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Gly85Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "28.0",
+        "Pos": "117509122",
+        "RawScore": "5.014699",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117509122",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Gly85Val": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "28.2",
+        "Pos": "117509123",
+        "RawScore": "5.042430",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117509123",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Tyr89Cys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "25.4",
+        "Pos": "117509135",
+        "RawScore": "4.474158",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117509135",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Ala96Glu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "26.8",
+        "Pos": "117530912",
+        "RawScore": "4.794132",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530912",
+      "ref": "C",
+      "alt": "A"
+    }
+  },
+  "Gln98Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "27.1",
+        "Pos": "117530918",
+        "RawScore": "4.857224",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530918",
+      "ref": "A",
+      "alt": "C"
+    }
+  },
+  "Pro99Leu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "27.7",
+        "Pos": "117530921",
+        "RawScore": "4.969012",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530921",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Leu102Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "28.1",
+        "Pos": "117530930",
+        "RawScore": "5.026608",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530930",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Leu102Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "27.9",
+        "Pos": "117530930",
+        "RawScore": "5.005080",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530930",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Ile105Asn": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.5",
+        "Pos": "117530939",
+        "RawScore": "5.091331",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530939",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "Ser108Phe": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "26.9",
+        "Pos": "117530948",
+        "RawScore": "4.812338",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530948",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Tyr109Asn": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "26.5",
+        "Pos": "117530950",
+        "RawScore": "4.737721",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530950",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "Tyr109His": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.5",
+        "Pos": "117530950",
+        "RawScore": "4.738903",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530950",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Asp110Tyr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "27.2",
+        "Pos": "117530953",
+        "RawScore": "4.872689",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530953",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Glu116Lys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "25.4",
+        "Pos": "117530971",
+        "RawScore": "4.461442",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530971",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Ile125Thr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "22.4",
+        "Pos": "117530999",
+        "RawScore": "3.381036",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117530999",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Gly126Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.3",
+        "Pos": "117531002",
+        "RawScore": "5.066819",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531002",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Leu137Pro": {
+    "status": 200,
+    "data": [],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531034",
+      "ref": "CTCCTACA",
+      "alt": "C"
+    }
+  },
+  "His139Leu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "25.4",
+        "Pos": "117531041",
+        "RawScore": "4.472980",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531041",
+      "ref": "A",
+      "alt": "T"
+    }
+  },
+  "His147Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "22.0",
+        "Pos": "117531065",
+        "RawScore": "3.283880",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531065",
+      "ref": "A",
+      "alt": "C"
+    }
+  },
+  "Ile148Asn": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "24.2",
+        "Pos": "117531068",
+        "RawScore": "4.067259",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531068",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "Met150Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "26.9",
+        "Pos": "117531074",
+        "RawScore": "4.819152",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531074",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Met150Lys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "26.8",
+        "Pos": "117531074",
+        "RawScore": "4.807146",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531074",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "Met152Leu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "23.1",
+        "Pos": "117531079",
+        "RawScore": "3.641230",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531079",
+      "ref": "A",
+      "alt": "T"
+    }
+  },
+  "Ala155Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "29.3",
+        "Pos": "117531088",
+        "RawScore": "5.219436",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531088",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Tyr161Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "28.4",
+        "Pos": "117531106",
+        "RawScore": "5.074464",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531106",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Lys162Glu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "26.5",
+        "Pos": "117531109",
+        "RawScore": "4.744487",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117531109",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Thr164Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "29.9",
+        "Pos": "117534276",
+        "RawScore": "5.322990",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117534276",
+      "ref": "A",
+      "alt": "C"
+    }
+  },
+  "Leu165Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "27.9",
+        "Pos": "117534280",
+        "RawScore": "4.997050",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117534280",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Leu167Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "28.5",
+        "Pos": "117534286",
+        "RawScore": "5.098141",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117534286",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Phe191Val": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "26.4",
+        "Pos": "117534357",
+        "RawScore": "4.719706",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117534357",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Asp192Asn": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "31",
+        "Pos": "117534360",
+        "RawScore": "5.407423",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117534360",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Asp192Gly": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "31",
+        "Pos": "117534361",
+        "RawScore": "5.368164",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117534361",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Gly194Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "33",
+        "Pos": "117535248",
+        "RawScore": "5.843587",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117535248",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "His199Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "25.9",
+        "Pos": "117535264",
+        "RawScore": "4.604607",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117535264",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Phe200Ile": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "27.0",
+        "Pos": "117535266",
+        "RawScore": "4.843610",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117535266",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "Pro205Leu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "26.7",
+        "Pos": "117535282",
+        "RawScore": "4.772221",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117535282",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Glu217Gly": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "25.0",
+        "Pos": "117535318",
+        "RawScore": "4.344888",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117535318",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Gly226Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "31",
+        "Pos": "117535344",
+        "RawScore": "5.378987",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117535344",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Leu227Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "29.0",
+        "Pos": "117535348",
+        "RawScore": "5.176138",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117535348",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Val232Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "24.8",
+        "Pos": "117535363",
+        "RawScore": "4.286380",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117535363",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "Ala234Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "23.2",
+        "Pos": "117535369",
+        "RawScore": "3.688459",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117535369",
+      "ref": "C",
+      "alt": "A"
+    }
+  },
+  "Gln237His": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "21.9",
+        "Pos": "117535379",
+        "RawScore": "3.250128",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117535379",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Glu292Lys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "30",
+        "Pos": "117540104",
+        "RawScore": "5.327690",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540104",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Leu293Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "29.9",
+        "Pos": "117540108",
+        "RawScore": "5.316420",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540108",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Leu320Val": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "16.74",
+        "Pos": "117540188",
+        "RawScore": "1.996716",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540188",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Arg334Leu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "24.5",
+        "Pos": "117540231",
+        "RawScore": "4.158908",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540231",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Ser341Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.6",
+        "Pos": "117540251",
+        "RawScore": "4.761047",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540251",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Gln359Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "25.6",
+        "Pos": "117540306",
+        "RawScore": "4.527058",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540306",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Trp361Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "34",
+        "Pos": "117540311",
+        "RawScore": "6.441390",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540311",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "Ser364Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "25.1",
+        "Pos": "117540320",
+        "RawScore": "4.365615",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117540320",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Val392Gly": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "26.4",
+        "Pos": "117542074",
+        "RawScore": "4.716050",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117542074",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Gly424Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "16.62",
+        "Pos": "117548701",
+        "RawScore": "1.970962",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117548701",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Ile444Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "28.7",
+        "Pos": "117548762",
+        "RawScore": "5.128054",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117548762",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Gln452Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "28.1",
+        "Pos": "117548786",
+        "RawScore": "5.022272",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117548786",
+      "ref": "A",
+      "alt": "C"
+    }
+  },
+  "Leu453Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "27.8",
+        "Pos": "117548789",
+        "RawScore": "4.986963",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117548789",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Val456Ala": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.8",
+        "Pos": "117548798",
+        "RawScore": "4.806358",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117548798",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Ala457Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "23.6",
+        "Pos": "117548800",
+        "RawScore": "3.826199",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117548800",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Gly463Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "33",
+        "Pos": "117548819",
+        "RawScore": "5.892998",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117548819",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Lys464Glu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "29.3",
+        "Pos": "117548821",
+        "RawScore": "5.224734",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117548821",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Lys464Asn": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "34",
+        "Pos": "117548823",
+        "RawScore": "6.277636",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117548823",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Thr465Asn": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.9",
+        "Pos": "117559465",
+        "RawScore": "5.160727",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559465",
+      "ref": "C",
+      "alt": "A"
+    }
+  },
+  "Leu467Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "28.5",
+        "Pos": "117559471",
+        "RawScore": "5.093222",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559471",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Glu474Lys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.6",
+        "Pos": "117559491",
+        "RawScore": "5.115311",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559491",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Gly480Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.1",
+        "Pos": "117559509",
+        "RawScore": "5.025337",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559509",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Gly480Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "27.9",
+        "Pos": "117559510",
+        "RawScore": "5.004960",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559510",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Gln493Leu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "26.7",
+        "Pos": "117559549",
+        "RawScore": "4.779591",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559549",
+      "ref": "A",
+      "alt": "T"
+    }
+  },
+  "Gln493Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "25.9",
+        "Pos": "117559549",
+        "RawScore": "4.595891",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559549",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Trp496Gly": {
+    "status": 200,
+    "data": [],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559556",
+      "ref": "CT",
+      "alt": "C"
+    }
+  },
+  "Trp496Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "28.1",
+        "Pos": "117559557",
+        "RawScore": "5.029222",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559557",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Ile497Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "27.8",
+        "Pos": "117559561",
+        "RawScore": "4.975411",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559561",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Gly500Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "27.7",
+        "Pos": "117559570",
+        "RawScore": "4.958728",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559570",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Thr501Ile": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "24.1",
+        "Pos": "117559573",
+        "RawScore": "4.019140",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559573",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Ile502Thr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.8",
+        "Pos": "117559576",
+        "RawScore": "4.788696",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559576",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Ile506Leu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "25.7",
+        "Pos": "117559587",
+        "RawScore": "4.559725",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559587",
+      "ref": "A",
+      "alt": "C"
+    }
+  },
+  "Ile506Thr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.4",
+        "Pos": "117559588",
+        "RawScore": "4.725015",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559588",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Ile506Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "28.3",
+        "Pos": "117559588",
+        "RawScore": "5.062569",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559588",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Arg516Gly": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "24.7",
+        "Pos": "117559617",
+        "RawScore": "4.230462",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559617",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Tyr517Cys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "26.1",
+        "Pos": "117559621",
+        "RawScore": "4.646483",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559621",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Cys524Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "28.9",
+        "Pos": "117559641",
+        "RawScore": "5.158555",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117559641",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Gln552Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "28.0",
+        "Pos": "117587809",
+        "RawScore": "5.016334",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117587809",
+      "ref": "A",
+      "alt": "C"
+    }
+  },
+  "Arg555Gly": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "24.8",
+        "Pos": "117587817",
+        "RawScore": "4.272944",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117587817",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Arg560Gly": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "33",
+        "Pos": "117587832",
+        "RawScore": "5.784576",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117587832",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Arg560Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "24.2",
+        "Pos": "117590353",
+        "RawScore": "4.070526",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590353",
+      "ref": "A",
+      "alt": "T"
+    }
+  },
+  "Ala561Glu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "31",
+        "Pos": "117590355",
+        "RawScore": "5.429303",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590355",
+      "ref": "C",
+      "alt": "A"
+    }
+  },
+  "Tyr563Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "31",
+        "Pos": "117590360",
+        "RawScore": "5.378089",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590360",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Tyr563His": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "27.6",
+        "Pos": "117590360",
+        "RawScore": "4.939316",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590360",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Ala566Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.4",
+        "Pos": "117590370",
+        "RawScore": "5.075136",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590370",
+      "ref": "C",
+      "alt": "A"
+    }
+  },
+  "Asp579Tyr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "31",
+        "Pos": "117590408",
+        "RawScore": "5.419429",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590408",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Phe587Ile": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "26.7",
+        "Pos": "117590432",
+        "RawScore": "4.786345",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117590432",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "Cys590Tyr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.2",
+        "Pos": "117591936",
+        "RawScore": "5.041392",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117591936",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Leu594Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "28.0",
+        "Pos": "117591948",
+        "RawScore": "5.018011",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117591948",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Ile601Thr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.7",
+        "Pos": "117591969",
+        "RawScore": "4.785649",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117591969",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Val603Phe": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "24.7",
+        "Pos": "117591974",
+        "RawScore": "4.233176",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117591974",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Thr604Ile": {
+    "status": 200,
+    "data": [],
+    "coord": {
+      "chrom": "7",
+      "pos": "117591977",
+      "ref": "AC",
+      "alt": "A"
+    }
+  },
+  "His609Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "23.9",
+        "Pos": "117591993",
+        "RawScore": "3.965813",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117591993",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Gly622Val": {
+    "status": 200,
+    "data": [],
+    "coord": {
+      "chrom": "7",
+      "pos": "117592030",
+      "ref": "AG",
+      "alt": "A"
+    }
+  },
+  "Gly628Ala": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "28.0",
+        "Pos": "117592050",
+        "RawScore": "5.018558",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117592050",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Asp836Tyr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "26.0",
+        "Pos": "117594945",
+        "RawScore": "4.628164",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117594945",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Val920Met": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "29.6",
+        "Pos": "117603632",
+        "RawScore": "5.263935",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117603632",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Leu927Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.2",
+        "Pos": "117603654",
+        "RawScore": "4.673530",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117603654",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Ser945Leu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "29.3",
+        "Pos": "117603708",
+        "RawScore": "5.222984",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117603708",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "His954Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "19.65",
+        "Pos": "117603735",
+        "RawScore": "2.652137",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117603735",
+      "ref": "A",
+      "alt": "C"
+    }
+  },
+  "Gly970Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "34",
+        "Pos": "117603782",
+        "RawScore": "6.242862",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117603782",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Gly970Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "32",
+        "Pos": "117606674",
+        "RawScore": "5.538140",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117606674",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Asp979Val": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "28.4",
+        "Pos": "117606701",
+        "RawScore": "5.079581",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117606701",
+      "ref": "A",
+      "alt": "T"
+    }
+  },
+  "Asp993Tyr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "29.8",
+        "Pos": "117606742",
+        "RawScore": "5.291974",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117606742",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Asp993Gly": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "27.0",
+        "Pos": "117606743",
+        "RawScore": "4.843677",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117606743",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Gly1003Glu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "29.0",
+        "Pos": "117610538",
+        "RawScore": "5.174053",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117610538",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Val1008Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "26.7",
+        "Pos": "117610553",
+        "RawScore": "4.781658",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117610553",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "Pro1021Leu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "26.5",
+        "Pos": "117610592",
+        "RawScore": "4.747617",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117610592",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Ile1027Thr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "21.8",
+        "Pos": "117610610",
+        "RawScore": "3.204124",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117610610",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Thr1036Asn": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "26.3",
+        "Pos": "117610637",
+        "RawScore": "4.691678",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117610637",
+      "ref": "C",
+      "alt": "A"
+    }
+  },
+  "Glu1044Gly": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "29.6",
+        "Pos": "117610661",
+        "RawScore": "5.261099",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117610661",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Thr1053Ile": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "28.5",
+        "Pos": "117611599",
+        "RawScore": "5.100256",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611599",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "His1054Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "27.2",
+        "Pos": "117611601",
+        "RawScore": "4.882761",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611601",
+      "ref": "C",
+      "alt": "G"
+    }
+  },
+  "Ala1067Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "29.9",
+        "Pos": "117611640",
+        "RawScore": "5.315172",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611640",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Phe1078Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "27.9",
+        "Pos": "117611674",
+        "RawScore": "4.989050",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611674",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "His1085Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.5",
+        "Pos": "117611695",
+        "RawScore": "4.738651",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611695",
+      "ref": "A",
+      "alt": "C"
+    }
+  },
+  "Thr1086Ile": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "26.1",
+        "Pos": "117611698",
+        "RawScore": "4.647627",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611698",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Ala1087Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "28.2",
+        "Pos": "117611700",
+        "RawScore": "5.047785",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611700",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Asn1088Asp": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "22.6",
+        "Pos": "117611703",
+        "RawScore": "3.453018",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611703",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Trp1098Cys": {
+    "status": 200,
+    "data": [],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611733",
+      "ref": "TG",
+      "alt": "T"
+    }
+  },
+  "Gln1100Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "25.5",
+        "Pos": "117611740",
+        "RawScore": "4.495037",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611740",
+      "ref": "A",
+      "alt": "C"
+    }
+  },
+  "Glu1104Lys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.2",
+        "Pos": "117611751",
+        "RawScore": "5.049550",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611751",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Glu1104Val": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "28.0",
+        "Pos": "117611752",
+        "RawScore": "5.009890",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611752",
+      "ref": "A",
+      "alt": "T"
+    }
+  },
+  "Ser1118Phe": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "27.1",
+        "Pos": "117611794",
+        "RawScore": "4.849969",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117611794",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Ile1139Val": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "24.5",
+        "Pos": "117614660",
+        "RawScore": "4.186398",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117614660",
+      "ref": "A",
+      "alt": "G"
+    }
+  },
+  "Met1140Lys": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "24.7",
+        "Pos": "117614664",
+        "RawScore": "4.254744",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117614664",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "Ser1159Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "27.7",
+        "Pos": "117627528",
+        "RawScore": "4.954787",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117627528",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Ser1159Phe": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "29.0",
+        "Pos": "117627529",
+        "RawScore": "5.170010",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117627529",
+      "ref": "C",
+      "alt": "T"
+    }
+  },
+  "Val1240Gly": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "29.1",
+        "Pos": "117642439",
+        "RawScore": "5.182971",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117642439",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Gly1249Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.7",
+        "Pos": "117642465",
+        "RawScore": "5.125526",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117642465",
+      "ref": "G",
+      "alt": "A"
+    }
+  },
+  "Gly1265Val": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "28.3",
+        "Pos": "117642514",
+        "RawScore": "5.057684",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117642514",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Ile1269Asn": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "27.3",
+        "Pos": "117642526",
+        "RawScore": "4.889298",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117642526",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "Asp1270Tyr": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "29.3",
+        "Pos": "117642528",
+        "RawScore": "5.216508",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117642528",
+      "ref": "G",
+      "alt": "T"
+    }
+  },
+  "Trp1282Gly": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "28.4",
+        "Pos": "117642564",
+        "RawScore": "5.085168",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117642564",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Arg1283Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "22.6",
+        "Pos": "117642569",
+        "RawScore": "3.451558",
+        "Ref": "G"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117642569",
+      "ref": "G",
+      "alt": "C"
+    }
+  },
+  "Ala1319Glu": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "24.8",
+        "Pos": "117652924",
+        "RawScore": "4.289918",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117652924",
+      "ref": "C",
+      "alt": "A"
+    }
+  },
+  "Leu1324Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "29.0",
+        "Pos": "117664695",
+        "RawScore": "5.169107",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117664695",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Leu1335Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "28.3",
+        "Pos": "117664728",
+        "RawScore": "5.064271",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117664728",
+      "ref": "T",
+      "alt": "C"
+    }
+  },
+  "Met1354Arg": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "26.5",
+        "Pos": "117664785",
+        "RawScore": "4.747155",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117664785",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Ile1366Asn": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "28.3",
+        "Pos": "117664821",
+        "RawScore": "5.065849",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117664821",
+      "ref": "T",
+      "alt": "A"
+    }
+  },
+  "His1375Asn": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "A",
+        "Chrom": "7",
+        "PHRED": "21.5",
+        "Pos": "117664847",
+        "RawScore": "3.123489",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117664847",
+      "ref": "C",
+      "alt": "A"
+    }
+  },
+  "His1375Pro": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "C",
+        "Chrom": "7",
+        "PHRED": "26.1",
+        "Pos": "117664848",
+        "RawScore": "4.653197",
+        "Ref": "A"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117664848",
+      "ref": "A",
+      "alt": "C"
+    }
+  },
+  "Ile1398Ser": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "G",
+        "Chrom": "7",
+        "PHRED": "27.6",
+        "Pos": "117665515",
+        "RawScore": "4.945559",
+        "Ref": "T"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117665515",
+      "ref": "T",
+      "alt": "G"
+    }
+  },
+  "Ser1426Phe": {
+    "status": 200,
+    "data": [
+      {
+        "Alt": "T",
+        "Chrom": "7",
+        "PHRED": "27.6",
+        "Pos": "117666942",
+        "RawScore": "4.945742",
+        "Ref": "C"
+      }
+    ],
+    "coord": {
+      "chrom": "7",
+      "pos": "117666942",
+      "ref": "C",
+      "alt": "T"
+    }
+  }
+}

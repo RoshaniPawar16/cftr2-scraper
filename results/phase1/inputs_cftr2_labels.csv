@@ -1,0 +1,293 @@
+variant,protein_name,legacy_name,determination_2026,label,am_pathogenicity,am_class
+Ser13Phe,p.Ser13Phe,S13F,CF-causing,1,0.7624,likely_pathogenic
+Arg31Cys,p.Arg31Cys,R31C,Non CF-causing,0,0.1079,likely_benign
+Trp57Gly,p.Trp57Gly,W57G,CF-causing,1,0.956,likely_pathogenic
+Pro67Leu,p.Pro67Leu,P67L,CF-causing,1,0.6516,likely_pathogenic
+Arg75Gln,p.Arg75Gln,R75Q,Non CF-causing,0,0.1994,likely_benign
+Gly85Glu,p.Gly85Glu,G85E,CF-causing,1,0.9881,likely_pathogenic
+Gly91Arg,p.Gly91Arg,G91R,CF-causing,1,0.9474,likely_pathogenic
+Gly91Arg,p.Gly91Arg,G91R,CF-causing,1,0.9474,likely_pathogenic
+Glu92Lys,p.Glu92Lys,E92K,CF-causing,1,0.9443,likely_pathogenic
+Gln98Arg,p.Gln98Arg,Q98R,CF-causing,1,0.9376,likely_pathogenic
+Tyr109Cys,p.Tyr109Cys,Y109C,CF-causing,1,0.7257,likely_pathogenic
+Asp110His,p.Asp110His,D110H,CF-causing,1,0.6356,likely_pathogenic
+Arg117Cys,p.Arg117Cys,R117C,CF-causing,1,0.6159,likely_pathogenic
+Arg117Pro,p.Arg117Pro,R117P,CF-causing,1,0.9687,likely_pathogenic
+His139Arg,p.His139Arg,H139R,CF-causing,1,0.903,likely_pathogenic
+Ala141Asp,p.Ala141Asp,A141D,CF-causing,1,0.9608,likely_pathogenic
+Ile148Thr,p.Ile148Thr,I148T,Non CF-causing,0,0.1225,likely_benign
+Gly149Arg,p.Gly149Arg,G149R,CF-causing,1,0.9869,likely_pathogenic
+Gly149Arg,p.Gly149Arg,G149R,CF-causing,1,0.9869,likely_pathogenic
+Arg170His,p.Arg170His,R170H,Non CF-causing,0,0.1611,likely_benign
+Gly178Arg,p.Gly178Arg,G178R,CF-causing,1,0.7577,likely_pathogenic
+Gly178Arg,p.Gly178Arg,G178R,CF-causing,1,0.7577,likely_pathogenic
+Glu193Lys,p.Glu193Lys,E193K,CF-causing,1,0.684,likely_pathogenic
+His199Tyr,p.His199Tyr,H199Y,CF-causing,1,0.7924,likely_pathogenic
+His199Gln,p.His199Gln,H199Q,CF-causing,1,0.9222,likely_pathogenic
+His199Gln,p.His199Gln,H199Q,CF-causing,1,0.9222,likely_pathogenic
+Pro205Ser,p.Pro205Ser,P205S,CF-causing,1,0.7814,likely_pathogenic
+Leu206Trp,p.Leu206Trp,L206W,CF-causing,1,0.6236,likely_pathogenic
+Arg297Gln,p.Arg297Gln,R297Q,Non CF-causing,0,0.0677,likely_benign
+Phe311Leu,p.Phe311Leu,F311L,CF-causing,1,0.9751,likely_pathogenic
+Phe311Leu,p.Phe311Leu,F311L,CF-causing,1,0.9751,likely_pathogenic
+Phe311Leu,p.Phe311Leu,F311L,CF-causing,1,0.9751,likely_pathogenic
+Gly314Arg,p.Gly314Arg,G314R,CF-causing,1,0.9875,likely_pathogenic
+Gly314Arg,p.Gly314Arg,G314R,CF-causing,1,0.9875,likely_pathogenic
+Arg334Trp,p.Arg334Trp,R334W,CF-causing,1,0.6563,likely_pathogenic
+Ile336Lys,p.Ile336Lys,I336K,CF-causing,1,0.9829,likely_pathogenic
+Thr338Ile,p.Thr338Ile,T338I,CF-causing,1,0.8347,likely_pathogenic
+Leu346Pro,p.Leu346Pro,L346P,CF-causing,1,0.9915,likely_pathogenic
+Arg347His,p.Arg347His,R347H,CF-causing,1,0.8454,likely_pathogenic
+Arg347Pro,p.Arg347Pro,R347P,CF-causing,1,0.9925,likely_pathogenic
+Arg352Gln,p.Arg352Gln,R352Q,CF-causing,1,0.6256,likely_pathogenic
+Ala455Glu,p.Ala455Glu,A455E,CF-causing,1,0.9484,likely_pathogenic
+Val456Phe,p.Val456Phe,V456F,CF-causing,1,0.5745,likely_pathogenic
+Gly458Val,p.Gly458Val,G458V,CF-causing,1,0.9608,likely_pathogenic
+Val470Met,p.Val470Met,V470M,Non CF-causing,0,0.0489,likely_benign
+Gly480Cys,p.Gly480Cys,G480C,CF-causing,1,0.9265,likely_pathogenic
+Ser492Phe,p.Ser492Phe,S492F,CF-causing,1,0.6378,likely_pathogenic
+Ile506Val,p.Ile506Val,I506V,Non CF-causing,0,0.1397,likely_benign
+Phe508Cys,p.Phe508Cys,F508C,Non CF-causing,0,0.8735,likely_pathogenic
+Asp513Gly,p.Asp513Gly,D513G,CF-causing,1,0.8753,likely_pathogenic
+Val520Phe,p.Val520Phe,V520F,CF-causing,1,0.8789,likely_pathogenic
+Ser549Arg,p.Ser549Arg,S549R,CF-causing,1,0.9948,likely_pathogenic
+Ser549Arg,p.Ser549Arg,S549R,CF-causing,1,0.9948,likely_pathogenic
+Ser549Arg,p.Ser549Arg,S549R,CF-causing,1,0.9948,likely_pathogenic
+Ser549Asn,p.Ser549Asn,S549N,CF-causing,1,0.9503,likely_pathogenic
+Ser549Ile,p.Ser549Ile,S549I,CF-causing,1,0.9661,likely_pathogenic
+Gly551Ser,p.Gly551Ser,G551S,CF-causing,1,0.878,likely_pathogenic
+Gly551Asp,p.Gly551Asp,G551D,CF-causing,1,0.9897,likely_pathogenic
+Leu558Ser,p.Leu558Ser,L558S,CF-causing,1,0.9666,likely_pathogenic
+Ala559Thr,p.Ala559Thr,A559T,CF-causing,1,0.9317,likely_pathogenic
+Arg560Lys,p.Arg560Lys,R560K,CF-causing,1,0.7883,likely_pathogenic
+Arg560Thr,p.Arg560Thr,R560T,CF-causing,1,0.9846,likely_pathogenic
+Val562Ile,p.Val562Ile,V562I,Non CF-causing,0,0.074,likely_benign
+Tyr563Asn,p.Tyr563Asn,Y563N,CF-causing,1,0.963,likely_pathogenic
+Tyr569Asp,p.Tyr569Asp,Y569D,CF-causing,1,0.9964,likely_pathogenic
+Tyr569Cys,p.Tyr569Cys,Y569C,CF-causing,1,0.7605,likely_pathogenic
+Leu571Ser,p.Leu571Ser,L571S,CF-causing,1,0.9448,likely_pathogenic
+Asp572Asn,p.Asp572Asn,D572N,CF-causing,1,0.9336,likely_pathogenic
+Pro574His,p.Pro574His,P574H,CF-causing,1,0.982,likely_pathogenic
+Gly576Ala,p.Gly576Ala,G576A,Non CF-causing,0,0.1868,likely_benign
+Ile601Phe,p.Ile601Phe,I601F,CF-causing,1,0.4904,ambiguous
+Leu610Ser,p.Leu610Ser,L610S,CF-causing,1,0.9553,likely_pathogenic
+Ala613Thr,p.Ala613Thr,A613T,CF-causing,1,0.3927,ambiguous
+Ile618Thr,p.Ile618Thr,I618T,CF-causing,1,0.9243,likely_pathogenic
+Leu619Ser,p.Leu619Ser,L619S,CF-causing,1,0.9715,likely_pathogenic
+His620Pro,p.His620Pro,H620P,CF-causing,1,0.8136,likely_pathogenic
+Gly628Arg,p.Gly628Arg,G628R,CF-causing,1,0.877,likely_pathogenic
+Gly628Arg,p.Gly628Arg,G628R,CF-causing,1,0.877,likely_pathogenic
+Leu633Pro,p.Leu633Pro,L633P,CF-causing,1,0.9786,likely_pathogenic
+Arg668Cys,p.Arg668Cys,R668C,Non CF-causing,0,0.104,likely_benign
+Val754Met,p.Val754Met,V754M,Non CF-causing,0,0.0728,likely_benign
+Ile807Met,p.Ile807Met,I807M,Non CF-causing,0,0.1612,likely_benign
+Tyr913Cys,p.Tyr913Cys,Y913C,CF-causing,1,0.3786,ambiguous
+Tyr917Cys,p.Tyr917Cys,Y917C,CF-causing,1,0.5828,likely_pathogenic
+Met952Ile,p.Met952Ile,M952I,Non CF-causing,0,0.8752,likely_pathogenic
+Met952Ile,p.Met952Ile,M952I,Non CF-causing,0,0.8752,likely_pathogenic
+Met952Ile,p.Met952Ile,M952I,Non CF-causing,0,0.8752,likely_pathogenic
+Leu967Ser,p.Leu967Ser,L967S,Non CF-causing,0,0.2327,likely_benign
+Leu997Phe,p.Leu997Phe,L997F,Non CF-causing,0,0.7409,likely_pathogenic
+Leu997Phe,p.Leu997Phe,L997F,Non CF-causing,0,0.7409,likely_pathogenic
+Ile1005Arg,p.Ile1005Arg,I1005R,CF-causing,1,0.8886,likely_pathogenic
+Ala1006Glu,p.Ala1006Glu,A1006E,CF-causing,1,0.7961,likely_pathogenic
+Pro1013Leu,p.Pro1013Leu,P1013L,Non CF-causing,0,0.6299,likely_pathogenic
+Gly1061Arg,p.Gly1061Arg,G1061R,CF-causing,1,0.9912,likely_pathogenic
+Gly1061Arg,p.Gly1061Arg,G1061R,CF-causing,1,0.9912,likely_pathogenic
+Leu1065Pro,p.Leu1065Pro,L1065P,CF-causing,1,0.9848,likely_pathogenic
+Leu1065Arg,p.Leu1065Arg,L1065R,CF-causing,1,0.9598,likely_pathogenic
+Arg1066Cys,p.Arg1066Cys,R1066C,CF-causing,1,0.9239,likely_pathogenic
+Arg1066His,p.Arg1066His,R1066H,CF-causing,1,0.7951,likely_pathogenic
+Arg1066Leu,p.Arg1066Leu,R1066L,CF-causing,1,0.9731,likely_pathogenic
+Arg1070Pro,p.Arg1070Pro,R1070P,CF-causing,1,0.9907,likely_pathogenic
+Leu1077Pro,p.Leu1077Pro,L1077P,CF-causing,1,0.9761,likely_pathogenic
+Trp1098Arg,p.Trp1098Arg,W1098R,CF-causing,1,0.9798,likely_pathogenic
+Trp1098Arg,p.Trp1098Arg,W1098R,CF-causing,1,0.9798,likely_pathogenic
+Met1101Lys,p.Met1101Lys,M1101K,CF-causing,1,0.7987,likely_pathogenic
+Met1101Arg,p.Met1101Arg,M1101R,CF-causing,1,0.7663,likely_pathogenic
+Arg1162Leu,p.Arg1162Leu,R1162L,Non CF-causing,0,0.8935,likely_pathogenic
+Ile1234Val,p.Ile1234Val,I1234V,CF-causing,1,0.0772,likely_benign
+Ser1235Arg,p.Ser1235Arg,S1235R,Non CF-causing,0,0.1926,likely_benign
+Ser1235Arg,p.Ser1235Arg,S1235R,Non CF-causing,0,0.1926,likely_benign
+Ser1235Arg,p.Ser1235Arg,S1235R,Non CF-causing,0,0.1926,likely_benign
+Gly1244Glu,p.Gly1244Glu,G1244E,CF-causing,1,0.9886,likely_pathogenic
+Gly1249Glu,p.Gly1249Glu,G1249E,CF-causing,1,0.9876,likely_pathogenic
+Ser1251Asn,p.Ser1251Asn,S1251N,CF-causing,1,0.9332,likely_pathogenic
+Ser1255Pro,p.Ser1255Pro,S1255P,CF-causing,1,0.7872,likely_pathogenic
+Trp1282Arg,p.Trp1282Arg,W1282R,CF-causing,1,0.9934,likely_pathogenic
+Trp1282Arg,p.Trp1282Arg,W1282R,CF-causing,1,0.9934,likely_pathogenic
+Arg1283Met,p.Arg1283Met,R1283M,CF-causing,1,0.9709,likely_pathogenic
+Asn1303Lys,p.Asn1303Lys,N1303K,CF-causing,1,0.9907,likely_pathogenic
+Asn1303Lys,p.Asn1303Lys,N1303K,CF-causing,1,0.9907,likely_pathogenic
+Gly1349Asp,p.Gly1349Asp,G1349D,CF-causing,1,0.9801,likely_pathogenic
+Leu15Pro,p.Leu15Pro,L15P,CF-causing,1,0.7627,likely_pathogenic
+Gly27Arg,p.Gly27Arg,G27R,CF-causing,1,0.9823,likely_pathogenic
+Gly27Arg,p.Gly27Arg,G27R,CF-causing,1,0.9823,likely_pathogenic
+Gly27Glu,p.Gly27Glu,G27E,CF-causing,1,0.9746,likely_pathogenic
+Gln30Pro,p.Gln30Pro,Q30P,CF-causing,1,0.4124,ambiguous
+Ala46Asp,p.Ala46Asp,A46D,CF-causing,1,0.9842,likely_pathogenic
+Ser50Pro,p.Ser50Pro,S50P,CF-causing,1,0.9639,likely_pathogenic
+Glu56Lys,p.Glu56Lys,E56K,CF-causing,1,0.8802,likely_pathogenic
+Trp57Arg,p.Trp57Arg,W57R,CF-causing,1,0.997,likely_pathogenic
+Trp57Arg,p.Trp57Arg,W57R,CF-causing,1,0.997,likely_pathogenic
+Glu60Lys,p.Glu60Lys,E60K,CF-causing,1,0.9595,likely_pathogenic
+Ala72Asp,p.Ala72Asp,A72D,CF-causing,1,0.9863,likely_pathogenic
+Arg74Gln,p.Arg74Gln,R74Q,Non CF-causing,0,0.0821,likely_benign
+Gly85Arg,p.Gly85Arg,G85R,CF-causing,1,0.9897,likely_pathogenic
+Gly85Arg,p.Gly85Arg,G85R,CF-causing,1,0.9897,likely_pathogenic
+Gly85Val,p.Gly85Val,G85V,CF-causing,1,0.9376,likely_pathogenic
+Tyr89Cys,p.Tyr89Cys,Y89C,Non CF-causing,0,0.3394,likely_benign
+Ala96Glu,p.Ala96Glu,A96E,CF-causing,1,0.9475,likely_pathogenic
+Gln98Pro,p.Gln98Pro,Q98P,CF-causing,1,0.8579,likely_pathogenic
+Pro99Leu,p.Pro99Leu,P99L,CF-causing,1,0.9651,likely_pathogenic
+Leu102Pro,p.Leu102Pro,L102P,CF-causing,1,0.9848,likely_pathogenic
+Leu102Arg,p.Leu102Arg,L102R,CF-causing,1,0.952,likely_pathogenic
+Ile105Asn,p.Ile105Asn,I105N,CF-causing,1,0.9564,likely_pathogenic
+Ser108Phe,p.Ser108Phe,S108F,CF-causing,1,0.9321,likely_pathogenic
+Tyr109Asn,p.Tyr109Asn,Y109N,CF-causing,1,0.857,likely_pathogenic
+Tyr109His,p.Tyr109His,Y109H,CF-causing,1,0.8629,likely_pathogenic
+Asp110Tyr,p.Asp110Tyr,D110Y,CF-causing,1,0.6153,likely_pathogenic
+Glu116Lys,p.Glu116Lys,E116K,CF-causing,1,0.8451,likely_pathogenic
+Ile125Thr,p.Ile125Thr,I125T,Non CF-causing,0,0.1177,likely_benign
+Gly126Asp,p.Gly126Asp,G126D,CF-causing,1,0.9772,likely_pathogenic
+Leu137Pro,p.Leu137Pro,L137P,CF-causing,1,0.9444,likely_pathogenic
+His139Leu,p.His139Leu,H139L,CF-causing,1,0.5413,ambiguous
+His147Pro,p.His147Pro,H147P,CF-causing,1,0.8445,likely_pathogenic
+Ile148Asn,p.Ile148Asn,I148N,CF-causing,1,0.4954,ambiguous
+Met150Arg,p.Met150Arg,M150R,CF-causing,1,0.931,likely_pathogenic
+Met150Lys,p.Met150Lys,M150K,CF-causing,1,0.9308,likely_pathogenic
+Met152Leu,p.Met152Leu,M152L,Non CF-causing,0,0.1493,likely_benign
+Met152Leu,p.Met152Leu,M152L,Non CF-causing,0,0.1493,likely_benign
+Ala155Pro,p.Ala155Pro,A155P,CF-causing,1,0.9888,likely_pathogenic
+Tyr161Asp,p.Tyr161Asp,Y161D,CF-causing,1,0.9903,likely_pathogenic
+Lys162Glu,p.Lys162Glu,K162E,CF-causing,1,0.9093,likely_pathogenic
+Thr164Pro,p.Thr164Pro,T164P,CF-causing,1,0.8181,likely_pathogenic
+Leu165Ser,p.Leu165Ser,L165S,CF-causing,1,0.9669,likely_pathogenic
+Leu167Arg,p.Leu167Arg,L167R,CF-causing,1,0.936,likely_pathogenic
+Phe191Val,p.Phe191Val,F191V,CF-causing,1,0.5931,likely_pathogenic
+Asp192Asn,p.Asp192Asn,D192N,CF-causing,1,0.834,likely_pathogenic
+Asp192Gly,p.Asp192Gly,D192G,CF-causing,1,0.8915,likely_pathogenic
+Gly194Arg,p.Gly194Arg,G194R,CF-causing,1,0.9755,likely_pathogenic
+Gly194Arg,p.Gly194Arg,G194R,CF-causing,1,0.9755,likely_pathogenic
+His199Arg,p.His199Arg,H199R,CF-causing,1,0.9699,likely_pathogenic
+Phe200Ile,p.Phe200Ile,F200I,CF-causing,1,0.8274,likely_pathogenic
+Pro205Leu,p.Pro205Leu,P205L,CF-causing,1,0.5767,likely_pathogenic
+Glu217Gly,p.Glu217Gly,E217G,Non CF-causing,0,0.2334,likely_benign
+Gly226Arg,p.Gly226Arg,G226R,CF-causing,1,0.9886,likely_pathogenic
+Gly226Arg,p.Gly226Arg,G226R,CF-causing,1,0.9886,likely_pathogenic
+Leu227Arg,p.Leu227Arg,L227R,CF-causing,1,0.9673,likely_pathogenic
+Val232Asp,p.Val232Asp,V232D,CF-causing,1,0.885,likely_pathogenic
+Ala234Asp,p.Ala234Asp,A234D,CF-causing,1,0.9415,likely_pathogenic
+Gln237His,p.Gln237His,Q237H,CF-causing,1,0.9058,likely_pathogenic
+Gln237His,p.Gln237His,Q237H,CF-causing,1,0.9058,likely_pathogenic
+Glu292Lys,p.Glu292Lys,E292K,CF-causing,1,0.9477,likely_pathogenic
+Leu293Pro,p.Leu293Pro,L293P,CF-causing,1,0.9802,likely_pathogenic
+Leu320Val,p.Leu320Val,L320V,Non CF-causing,0,0.1641,likely_benign
+Arg334Leu,p.Arg334Leu,R334L,CF-causing,1,0.8846,likely_pathogenic
+Ser341Pro,p.Ser341Pro,S341P,CF-causing,1,0.9537,likely_pathogenic
+Gln359Arg,p.Gln359Arg,Q359R,CF-causing,1,0.5102,ambiguous
+Trp361Arg,p.Trp361Arg,W361R,CF-causing,1,0.9725,likely_pathogenic
+Trp361Arg,p.Trp361Arg,W361R,CF-causing,1,0.9725,likely_pathogenic
+Ser364Pro,p.Ser364Pro,S364P,CF-causing,1,0.9755,likely_pathogenic
+Val392Gly,p.Val392Gly,V392G,CF-causing,1,0.5825,likely_pathogenic
+Gly424Ser,p.Gly424Ser,G424S,Non CF-causing,0,0.076,likely_benign
+Ile444Ser,p.Ile444Ser,I444S,CF-causing,1,0.8193,likely_pathogenic
+Gln452Pro,p.Gln452Pro,Q452P,CF-causing,1,0.7846,likely_pathogenic
+Leu453Ser,p.Leu453Ser,L453S,CF-causing,1,0.8487,likely_pathogenic
+Val456Ala,p.Val456Ala,V456A,CF-causing,1,0.6758,likely_pathogenic
+Ala457Pro,p.Ala457Pro,A457P,CF-causing,1,0.961,likely_pathogenic
+Gly463Asp,p.Gly463Asp,G463D,CF-causing,1,0.9809,likely_pathogenic
+Lys464Glu,p.Lys464Glu,K464E,CF-causing,1,0.8962,likely_pathogenic
+Lys464Asn,p.Lys464Asn,K464N,CF-causing,1,0.9589,likely_pathogenic
+Lys464Asn,p.Lys464Asn,K464N,CF-causing,1,0.9589,likely_pathogenic
+Thr465Asn,p.Thr465Asn,T465N,CF-causing,1,0.7614,likely_pathogenic
+Leu467Pro,p.Leu467Pro,L467P,CF-causing,1,0.9858,likely_pathogenic
+Glu474Lys,p.Glu474Lys,E474K,CF-causing,1,0.9308,likely_pathogenic
+Gly480Ser,p.Gly480Ser,G480S,CF-causing,1,0.7429,likely_pathogenic
+Gly480Asp,p.Gly480Asp,G480D,CF-causing,1,0.9468,likely_pathogenic
+Gln493Leu,p.Gln493Leu,Q493L,CF-causing,1,0.7175,likely_pathogenic
+Gln493Arg,p.Gln493Arg,Q493R,CF-causing,1,0.7282,likely_pathogenic
+Trp496Gly,p.Trp496Gly,W496G,CF-causing,1,0.926,likely_pathogenic
+Trp496Arg,p.Trp496Arg,W496R,CF-causing,1,0.9959,likely_pathogenic
+Trp496Arg,p.Trp496Arg,W496R,CF-causing,1,0.9959,likely_pathogenic
+Ile497Ser,p.Ile497Ser,I497S,CF-causing,1,0.8501,likely_pathogenic
+Gly500Asp,p.Gly500Asp,G500D,CF-causing,1,0.8789,likely_pathogenic
+Thr501Ile,p.Thr501Ile,T501I,CF-causing,1,0.7825,likely_pathogenic
+Ile502Thr,p.Ile502Thr,I502T,CF-causing,1,0.8924,likely_pathogenic
+Ile506Leu,p.Ile506Leu,I506L,CF-causing,1,0.5066,ambiguous
+Ile506Thr,p.Ile506Thr,I506T,CF-causing,1,0.9378,likely_pathogenic
+Ile506Ser,p.Ile506Ser,I506S,CF-causing,1,0.9787,likely_pathogenic
+Arg516Gly,p.Arg516Gly,R516G,CF-causing,1,0.9156,likely_pathogenic
+Tyr517Cys,p.Tyr517Cys,Y517C,CF-causing,1,0.7606,likely_pathogenic
+Cys524Arg,p.Cys524Arg,C524R,CF-causing,1,0.9954,likely_pathogenic
+Gln552Pro,p.Gln552Pro,Q552P,CF-causing,1,0.9646,likely_pathogenic
+Arg555Gly,p.Arg555Gly,R555G,CF-causing,1,0.9801,likely_pathogenic
+Arg560Gly,p.Arg560Gly,R560G,CF-causing,1,0.9691,likely_pathogenic
+Arg560Ser,p.Arg560Ser,R560S,CF-causing,1,0.9892,likely_pathogenic
+Arg560Ser,p.Arg560Ser,R560S,CF-causing,1,0.9892,likely_pathogenic
+Ala561Glu,p.Ala561Glu,A561E,CF-causing,1,0.9846,likely_pathogenic
+Tyr563Asp,p.Tyr563Asp,Y563D,CF-causing,1,0.9955,likely_pathogenic
+Tyr563His,p.Tyr563His,Y563H,CF-causing,1,0.9676,likely_pathogenic
+Ala566Asp,p.Ala566Asp,A566D,CF-causing,1,0.9921,likely_pathogenic
+Asp579Tyr,p.Asp579Tyr,D579Y,CF-causing,1,0.9715,likely_pathogenic
+Phe587Ile,p.Phe587Ile,F587I,CF-causing,1,0.833,likely_pathogenic
+Cys590Tyr,p.Cys590Tyr,C590Y,CF-causing,1,0.9085,likely_pathogenic
+Leu594Pro,p.Leu594Pro,L594P,CF-causing,1,0.9646,likely_pathogenic
+Ile601Thr,p.Ile601Thr,I601T,CF-causing,1,0.9658,likely_pathogenic
+Val603Phe,p.Val603Phe,V603F,CF-causing,1,0.7814,likely_pathogenic
+Thr604Ile,p.Thr604Ile,T604I,CF-causing,1,0.9201,likely_pathogenic
+His609Arg,p.His609Arg,H609R,CF-causing,1,0.7838,likely_pathogenic
+Gly622Val,p.Gly622Val,G622V,CF-causing,1,0.8665,likely_pathogenic
+Gly628Ala,p.Gly628Ala,G628A,CF-causing,1,0.6588,likely_pathogenic
+Asp836Tyr,p.Asp836Tyr,D836Y,Non CF-causing,0,0.1673,likely_benign
+Val920Met,p.Val920Met,V920M,Non CF-causing,0,0.5981,likely_pathogenic
+Leu927Pro,p.Leu927Pro,L927P,CF-causing,1,0.9259,likely_pathogenic
+Ser945Leu,p.Ser945Leu,S945L,CF-causing,1,0.8322,likely_pathogenic
+His954Pro,p.His954Pro,H954P,CF-causing,1,0.367,ambiguous
+Gly970Arg,p.Gly970Arg,G970R,CF-causing,1,0.6568,likely_pathogenic
+Gly970Asp,p.Gly970Asp,G970D,CF-causing,1,0.7638,likely_pathogenic
+Asp979Val,p.Asp979Val,D979V,CF-causing,1,0.9887,likely_pathogenic
+Asp993Tyr,p.Asp993Tyr,D993Y,CF-causing,1,0.9339,likely_pathogenic
+Asp993Gly,p.Asp993Gly,D993G,CF-causing,1,0.9496,likely_pathogenic
+Gly1003Glu,p.Gly1003Glu,G1003E,CF-causing,1,0.9859,likely_pathogenic
+Val1008Asp,p.Val1008Asp,V1008D,CF-causing,1,0.9616,likely_pathogenic
+Pro1021Leu,p.Pro1021Leu,P1021L,CF-causing,1,0.4272,ambiguous
+Ile1027Thr,p.Ile1027Thr,I1027T,Non CF-causing,0,0.3126,likely_benign
+Thr1036Asn,p.Thr1036Asn,T1036N,CF-causing,1,0.7714,likely_pathogenic
+Glu1044Gly,p.Glu1044Gly,E1044G,CF-causing,1,0.8877,likely_pathogenic
+Thr1053Ile,p.Thr1053Ile,T1053I,Non CF-causing,0,0.3548,ambiguous
+His1054Asp,p.His1054Asp,H1054D,CF-causing,1,0.9454,likely_pathogenic
+Ala1067Pro,p.Ala1067Pro,A1067P,CF-causing,1,0.982,likely_pathogenic
+Phe1078Ser,p.Phe1078Ser,F1078S,CF-causing,1,0.9697,likely_pathogenic
+His1085Pro,p.His1085Pro,H1085P,CF-causing,1,0.9469,likely_pathogenic
+Thr1086Ile,p.Thr1086Ile,T1086I,CF-causing,1,0.9209,likely_pathogenic
+Ala1087Pro,p.Ala1087Pro,A1087P,CF-causing,1,0.9918,likely_pathogenic
+Asn1088Asp,p.Asn1088Asp,N1088D,CF-causing,1,0.4991,ambiguous
+Trp1098Cys,p.Trp1098Cys,W1098C,CF-causing,1,0.8684,likely_pathogenic
+Trp1098Cys,p.Trp1098Cys,W1098C,CF-causing,1,0.8684,likely_pathogenic
+Gln1100Pro,p.Gln1100Pro,Q1100P,CF-causing,1,0.9497,likely_pathogenic
+Glu1104Lys,p.Glu1104Lys,E1104K,CF-causing,1,0.9363,likely_pathogenic
+Glu1104Val,p.Glu1104Val,E1104V,CF-causing,1,0.9614,likely_pathogenic
+Ser1118Phe,p.Ser1118Phe,S1118F,CF-causing,1,0.9112,likely_pathogenic
+Ile1139Val,p.Ile1139Val,I1139V,Non CF-causing,0,0.2166,likely_benign
+Met1140Lys,p.Met1140Lys,M1140K,CF-causing,1,0.9266,likely_pathogenic
+Ser1159Pro,p.Ser1159Pro,S1159P,CF-causing,1,0.801,likely_pathogenic
+Ser1159Phe,p.Ser1159Phe,S1159F,CF-causing,1,0.933,likely_pathogenic
+Val1240Gly,p.Val1240Gly,V1240G,CF-causing,1,0.5637,ambiguous
+Gly1249Arg,p.Gly1249Arg,G1249R,CF-causing,1,0.9533,likely_pathogenic
+Gly1249Arg,p.Gly1249Arg,G1249R,CF-causing,1,0.9533,likely_pathogenic
+Gly1265Val,p.Gly1265Val,G1265V,CF-causing,1,0.9312,likely_pathogenic
+Ile1269Asn,p.Ile1269Asn,I1269N,CF-causing,1,0.9156,likely_pathogenic
+Asp1270Tyr,p.Asp1270Tyr,D1270Y,CF-causing,1,0.9129,likely_pathogenic
+Trp1282Gly,p.Trp1282Gly,W1282G,CF-causing,1,0.913,likely_pathogenic
+Arg1283Ser,p.Arg1283Ser,R1283S,CF-causing,1,0.9924,likely_pathogenic
+Arg1283Ser,p.Arg1283Ser,R1283S,CF-causing,1,0.9924,likely_pathogenic
+Ala1319Glu,p.Ala1319Glu,A1319E,CF-causing,1,0.885,likely_pathogenic
+Leu1324Pro,p.Leu1324Pro,L1324P,CF-causing,1,0.996,likely_pathogenic
+Leu1335Pro,p.Leu1335Pro,L1335P,CF-causing,1,0.8177,likely_pathogenic
+Met1354Arg,p.Met1354Arg,4193T->G,CF-causing,1,0.8922,likely_pathogenic
+Ile1366Asn,p.Ile1366Asn,I1366N,CF-causing,1,0.9528,likely_pathogenic
+His1375Asn,p.His1375Asn,H1375N,Non CF-causing,0,0.2025,likely_benign
+His1375Pro,p.His1375Pro,H1375P,CF-causing,1,0.6197,likely_pathogenic
+Ile1398Ser,p.Ile1398Ser,I1398S,CF-causing,1,0.931,likely_pathogenic
+Ser1426Phe,p.Ser1426Phe,S1426F,Non CF-causing,0,0.3171,likely_benign

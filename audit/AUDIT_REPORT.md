@@ -107,6 +107,171 @@ The **stale notebook cell 20** (82 vs 72 VCC variants) is more significant. `alp
 
 ---
 
+## Part A6 — Data Integrity and the Positive Control
+**Date:** 2026-08-01
+
+### A6.1 — gnomAD join: broken, now fixed
+
+**The original 0-result was a broken join.** The A5 check searched the ClinVar VCF using `AF=` as a top-level INFO field. The VCF has no top-level `AF=` field; gnomAD/population allele frequency is embedded in the VEP CSQ annotation at field index 34 (the VEP `--af` flag). When the join was re-run with the correct CSQ[34] extraction, by genomic coordinate (not protein name — a second format-mismatch error in the original join), the result is non-zero.
+
+**Join specification:**
+- Left side: 1,278 genomic variants from `results/alphagenome/alphagenome_full_cftr_results.csv`; identifier format: CHROM (with `chr` prefix) / POS / REF / ALT
+- Right side: ClinVar VCF `data/All_Variants_VEP.Gene.vcf`; identifier format: CHROM (without `chr` prefix) / POS / REF / ALT
+- AF field: VEP CSQ string, pipe-delimited, field index 34 (`AF` as named in the `##INFO=<ID=CSQ>` format string), populated by VEP's `--af` flag from 1000 Genomes Phase 3
+- Fix applied: strip `chr` prefix from both sides before matching
+
+**Corrected results (coordinate join):**
+- Of 1,278: **316 in ClinVar VCF** (matched by coordinate)
+- Of 316: **15 have population AF in CSQ[34]** (1000g Phase 3 AF, range 0.0002–0.0052)
+- Of 1,278: **962 not in ClinVar** (no ClinVar submission at any matching coordinate)
+
+**Verification against the 7 priority variants:** All 7 are in the ClinVar VCF at their expected coordinates; all have AF=0.0002–0.0004 in CSQ[34]. The AF values match `data/priority_candidates.csv` exactly. The join now works and the 7 pass through correctly.
+
+**Note on AF source:** The AF at CSQ[34] is from 1000 Genomes Project Phase 3 (via VEP `--af`). The VEP cache includes gnomAD v4.1 but that requires separate gnomAD-specific CSQ fields, not the global AF field. The README describes these as "gnomAD population frequency" but the values (0.0002–0.0004) come from AF_TGP (1000g) as confirmed by matching INFO field `AF_TGP` values in the VCF. The description should be corrected to "1000 Genomes Phase 3 allele frequency (AF_TGP)."
+
+---
+
+### A6.2 — VCF provenance
+
+**Full path:** `data/All_Variants_VEP.Gene.vcf`  
+**Row count:** 5,923 data rows  
+
+**Relevant metadata lines (verbatim):**
+```
+##fileDate=2026-04-15
+##source=ClinVar
+##reference=GRCh38
+##bcftools_viewCommand=view -r 7:117480000-117670000 -Oz -o cftr.clinvar.vcf.gz clinvar.vcf.gz; Date=Tue Apr 21 14:08:57 2026
+##bcftools_normCommand=norm -f Homo_sapiens.GRCh38.dna.chromosome.7.fa -m -both -Oz -o clinvar.norm.vcf.gz cftr.clinvar.vcf.gz; Date=Tue Apr 21 14:12:13 2026
+##VEP="v115.1" ... ClinVar="202502" ... gnomADe="v4.1" gnomADg="v4.1" ...
+##VEP-command-line='vep --af --appris ... --input_file [PATH]/clinvar.norm.vcf ... --vcf'
+#CHROM  POS  ID  REF  ALT  QUAL  FILTER  INFO
+```
+
+**This is the CFTR region of the ClinVar variant database (February 2025 release), not a patient cohort.** Pipeline: ClinVar download → bcftools extract chr7:117480000-117670000 → bcftools normalize → VEP v115.1 annotation (GRCh38.p14, Ensembl 115).
+
+**Samples:** None. Sites-only VCF, 8 columns (CHROM POS ID REF ALT QUAL FILTER INFO). No FORMAT column, no genotype columns, no individual-level data.
+
+**Consent and data-sharing obligations:** None. ClinVar is a public database (NCBI). All submitted variants are publicly accessible.
+
+**Added to git:** Untracked (no git commit). File creation date: April 15, 2026 (from ##fileDate). No accompanying README or download script found in the repository.
+
+**Corrections to Part A5:** The A5 report described this as a "patient VCF" and stated "the 322 figure does not enter the manuscript until provenance is confirmed." Both concerns are resolved: it is a public ClinVar database extract, and the 322→316 corrected figure carries no patient-data obligations.
+
+---
+
+### A6.3 — The 12 as positive control: negative result
+
+Full analysis in `docs/positive_control_analysis.md`. Summary:
+
+No AlphaGenome quantile (RNA, ATAC, SPLICE), CADD, or SpliceAI metric is significantly elevated in the 12 CF-causing variants relative to the 1,266 remaining variants. All Mann-Whitney p-values exceed 0.20. The 12 fall into the discordant group at the null rate (6/12 = 50%, expected 54.2%). Two (H954P, Y913C) appear in the 58-rescue group, 3.5× above the null expectation, but n=2 does not support an inferential claim.
+
+**The result is negative, not neutral.** AlphaGenome does not preferentially flag the known-pathogenic AM-ambiguous variants. This is a required disclosure in the paper. It does not invalidate the 693 or the rescue analysis, but it means those findings cannot be framed as validated against a positive control.
+
+**The 12 are not a confound.** They are a ground-truth subset. They must stay in the analysis. Results should be reported with and without them (removing 12 from 1278 changes headline percentages by < 1 percentage point).
+
+---
+
+### A6.4 — Stratification of 693 / 18 / 58
+
+Working at the genomic coordinate level. Strata are mutually exclusive.
+
+| Stratum | n | 693 discordant | 18 multi-tool | 58 rescue |
+|---|---|---|---|---|
+| CFTR2 CF-causing | 12 | 6 (50%) | 0 (0%) | 2 (16%) |
+| ClinVar + AF (1000g) | 14 | 8 (57%) | 1 (7%) | 0 (0%) |
+| ClinVar, no AF | 296 | 163 (55%) | 6 (2%) | 9 (3%) |
+| Not in ClinVar | 956 | 516 (53%) | 11 (1%) | 47 (4%) |
+| **Expected (null)** | | **54.2%** | **1.4%** | **4.5%** |
+
+**The headline finding:** Discordance between AlphaGenome and SpliceAI (693) is uniformly distributed across all four strata, from variants confirmed to cause CF (50%) to variants never submitted to ClinVar (53%). The discordance rate is indistinguishable from the null in every stratum. The 693 reflects a systematic measurement difference between AlphaGenome's gene-level masking approach and SpliceAI's ±50 nt window — it is not a signal that concentrates in clinically or observationally meaningful variants.
+
+The rescue group (58) shows slight under-representation in observed strata relative to the never-observed stratum, but the difference is not large and n per stratum is too small for inference.
+
+**Consequence for the paper:** The paper currently frames the 693 as a finding about unclassified CFTR variants. A reviewer who sees this table will ask why discordance is equally prevalent in CF-causing variants. The answer — that AlphaGenome's approach differs fundamentally from SpliceAI's in scope and mechanism — must be the leading explanation, not a caveat.
+
+---
+
+### A6.5 — The ten bad claims (sixth and final statement)
+
+CLAIM 1 — C05
+Verbatim: "Accuracy | 0.94"
+File/line: README.md:39
+Status: CONTRADICTED
+Documented: 0.94
+Actual: 0.9384 at threshold 0.5; 0.9247 at threshold 0.564
+Fix: Declare one threshold. At the published AlphaMissense boundary (0.564), accuracy = 0.92. Update README.md and REPORT.md §3.2.
+
+CLAIM 2 — C07
+Verbatim: "Non CF-causing F1 | 0.77"
+File/line: README.md:39
+Status: CONTRADICTED
+Documented: 0.77
+Actual: 0.7692 at threshold 0.5; 0.7317 at threshold 0.564
+Fix: Same threshold declaration. At 0.564, Non-CF F1 = 0.73. Update README.md and REPORT.md §3.2.
+
+CLAIM 3 — C42
+Verbatim: "AlphaMissense vs PolyPhen-2 | Z | p-value | 2.88 | 0.0040 | **"
+File/line: docs/REPORT.md:116
+Status: CONTRADICTED
+Documented: Z=2.88, p=0.0040
+Actual: Corrected DeLong (Sun & Xu 2014, covariance included): Z=3.320, p=0.000900
+Fix: Replace with values from results/phase1/delong_tests.csv. Significance direction unchanged.
+
+CLAIM 4 — C43
+Verbatim: "AlphaMissense vs CADD | Z | p-value | 3.28 | 0.0011 | **"
+File/line: docs/REPORT.md:117
+Status: CONTRADICTED
+Documented: Z=3.28, p=0.0011
+Actual: Corrected DeLong: Z=3.557, p=0.000375
+Fix: Same replacement from delong_tests.csv.
+
+CLAIM 5 — C44
+Verbatim: "AlphaMissense vs SIFT | Z | p-value | 5.87 | <0.0001 | ***"
+File/line: docs/REPORT.md:118
+Status: CONTRADICTED
+Documented: Z=5.87, p<0.0001
+Actual: Corrected DeLong: Z=6.777, p<0.000001
+Fix: Same replacement. All three comparisons remain significant at p<0.001.
+
+CLAIM 6 — C64
+Verbatim: "Total varying clinical consequence: 82 [with 50 likely_pathogenic 19 ambiguous 13 likely_benign]"
+File/line: notebooks/alphamissense.ipynb cell 20 stored output
+Status: CONTRADICTED
+Documented: 82 VCC / 50 LP (stale stored output)
+Actual: 72 VCC / 41 LP per cftr2_results.csv and varying_consequence_am.csv
+Fix: No doc change needed — the documented prose values (72, 41) are correct. Re-run the notebook to clear the stale output and update the stored result.
+
+CLAIM 7 — C36
+Verbatim: "311 variants could not be matched to AlphaMissense because they are nonsense mutations."
+File/line: README.md:147
+Status: NOT_REPRODUCIBLE
+Documented: 311
+Fix: Write scripts/phase1_nonsense_analysis.py: read cftr2_results_annotated.csv, attempt single-letter conversion of all variants, count Ter-suffix failures.
+
+CLAIM 8 — C37
+Verbatim: "232 of 311 matched CFTR2."
+File/line: README.md:148
+Status: NOT_REPRODUCIBLE
+Documented: 232
+Fix: Same script as C36: cross-reference the 311 against cftr2_results.csv determinations.
+
+CLAIM 9 — C38
+Verbatim: "225 are CF-causing"
+File/line: README.md:148
+Status: NOT_REPRODUCIBLE
+Documented: 225
+Fix: Same script as C36: count CF-causing among the 232 matched.
+
+CLAIM 10 — C39
+Verbatim: "89 nonsense variants have no CFTR2 classification."
+File/line: README.md:153
+Status: NOT_REPRODUCIBLE
+Documented: 89
+Fix: Same script as C36: 311 − 232 = 89 if consistent. One script resolves all four claims C36–C39.
+
+---
+
 ## Part A2 — Blocker Resolution
 **Date:** 2026-07-30
 

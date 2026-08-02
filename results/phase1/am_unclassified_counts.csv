@@ -1,0 +1,4 @@
+am_class,count_raw,count_dedup_lp_only,note
+likely_pathogenic,705,546,from_cftr2_results_annotated_csv_unclassified
+ambiguous,357,,from_cftr2_results_annotated_csv_unclassified
+likely_benign,1349,,from_cftr2_results_annotated_csv_unclassified

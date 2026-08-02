@@ -1,0 +1,3 @@
+source,total_vcc,likely_pathogenic,ambiguous,likely_benign,note
+data/varying_consequence_am.csv,72,41,19,12,derived_from_cftr2_results_csv_snapshot_72_variants
+data/cftr2_results_annotated.csv,82,50,19,13,derived_from_cftr2_results_annotated_csv_snapshot_82_variants

@@ -40,9 +40,12 @@ chr7	117480099	A	G	hg38	P13569	ENST00000003084.10	Q2R	0.1896	likely_benign
 ```
 
 **Observation status of the 1,278:**
-- In patient VCF (observed in ≥1 patient in this cohort): **322 (25.2%)**
-- Not in patient VCF (never observed in this cohort): **956 (74.8%)**
-- With gnomAD allele frequency > 0: **0 (0%)**
+
+**RETRACTED (2026-08-02, Check 10):** The phrasing "patient VCF" and "patient cohort" was false. `All_Variants_VEP.Gene.vcf` is not a patient cohort VCF. Per `audit/AUDIT_REPORT.md:151`, it is the CFTR region of the ClinVar variant database (February 2025 release), processed as: ClinVar download → bcftools extract chr7:117480000–117670000 → bcftools normalize → VEP v115.1 annotation (GRCh38.p14, Ensembl 115). It carries no patient-level data.
+
+- In ClinVar VEP VCF: **322 (25.2%)** ← presence in ClinVar CFTR region, not patient observation
+- Not in ClinVar VEP VCF: **956 (74.8%)**
+- With gnomAD allele frequency > 0: **291 (22.8%)** ← corrected (Check 4; was "0 (0%)", retracted)
 - No ClinVar data in committed artifacts (no ClinVar query exists in the path to the 1,278)
 
 **CFTR2 status of the 1,278:**
@@ -57,7 +60,9 @@ H954P (0.367), Y913C (0.379), A613T (0.393), Q30P (0.412), P1021L (0.427), I601F
 
 These 12 are CFTR2-confirmed CF-causing variants that AlphaMissense classified as ambiguous. Any "rescue" finding for these variants from Phase 2 is circular: they are already known to cause disease.
 
-**Accurate description:** The 1,278 are the AM-ambiguous subset of all theoretically possible CFTR missense single-nucleotide variants. 74.8% have never been observed in any patient in this cohort. None have gnomAD population frequency data. ClinVar status is unknown for all but a small fraction.
+**Accurate description:** The 1,278 are the AM-ambiguous subset of all theoretically possible CFTR missense single-nucleotide variants. 74.8% have never been observed in any patient in this cohort. ClinVar status is unknown for all but a small fraction.
+
+**RETRACTED (2026-08-02, Check 4):** The sentence "None have gnomAD population frequency data" was an unsourced assertion with no generating code. It is withdrawn. Computed result from gnomAD v4 (gnomad_r4, GRCh38, position-matched): **291 of 1,278 have gnomAD AF > 0**; 952 are absent from gnomAD v4 entirely. See `results/gnomad_cftr_lookup.csv` (1,279 lines including header). The prior assertion that the 1,278 are all unobserved is false.
 
 **Inaccurate descriptions in docs (do not edit yet — listed for correction decision):**
 - `docs/alphagenome_batch_report.md:90`: "Full 1,278 Ambiguous VUS" — VUS implies clinical observation; 74.8% have no observation record
@@ -74,7 +79,7 @@ Both populations start from `data/cftr_alphamissense.tsv`.
 | | 7 priority variants | 1,278 AM-ambiguous |
 |---|---|---|
 | AM class filter | `am_class == 'likely_pathogenic'` (score > 0.564) | `am_class == 'ambiguous'` (score 0.34–0.564) |
-| Additional filter | Cross-reference with patient VCF: only those with gnomAD AF > 0 | None |
+| Additional filter | Cross-reference with ClinVar VEP VCF: only those with 1KG AF > 0 in CSQ field 34 (mislabelled "gnomAD" in docs; see Check 4) | None |
 | AM score range | 0.651–0.976 | 0.340–0.564 |
 | Overlap | Zero — disjoint by AM class | — |
 | Fraction observed in VCF | 7/7 (100%; that is the selection criterion) | 322/1,278 (25.2%) |

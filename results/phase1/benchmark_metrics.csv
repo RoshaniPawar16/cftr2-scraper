@@ -1,0 +1,7 @@
+tool,auc,ap,n,n_pos,n_neg,note
+AlphaMissense,0.946123,0.990477,286,247,39,individual_tool
+CADD,0.77629,0.939335,286,247,39,individual_tool
+PolyPhen,0.826067,0.958621,286,247,39,individual_tool
+SIFT,0.678034,0.908615,286,247,39,individual_tool
+AlphaMissense_MCC,0.68805,,286,247,39,MCC_at_threshold_0.564
+Ensemble_CV,0.92671,0.983184,286,247,39,5fold_stratified_CV_seed42_coef_am=1.9074_cadd=0.2790_pp=-0.1175
