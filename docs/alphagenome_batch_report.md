@@ -2,7 +2,9 @@
 
 **Model:** AlphaGenome v0.6.1  |  **Genome:** hg38  |  **Tissue:** Lung (UBERON:0002048)
 **Outputs scored:** RNA-seq (`GeneMaskLFCScorer`), ATAC-seq (`CenterMaskScorer` 501 bp), Splice site usage (`GeneMaskSplicingScorer`)
-**Window:** 1 Mb centred on variant  |  **Scores:** raw + quantile (normalised rank across all human variants)
+**Window:** 1 Mb centred on variant  |  **Scores:** raw + quantile (rank against common variants, MAF > 0.01 in any gnomAD v3 population)
+
+> **Calibration and reproducibility note.** This run was submitted on 28 May 2026. AlphaGenome updated its quantile calibration from chromosome-22-only to genome-wide on 18 June 2026 (announced 11 June; see https://www.alphagenomecommunity.com/t/updating-variant-score-quantiles/929). All quantile values in this document used the chromosome-22 background. Raw scores are unaffected for most variants. Full regeneration (2 August 2026) found 75 of 1,278 variants with changed raw scores; cause not determinable from available records (no API changelog covers SNVs in this period). A determinism test on the 10 most-changed variants scored them twice in the same session, 6 minutes apart: both runs agreed exactly. Longer-interval stability is untested — a rerun at 7-day separation is required before the raw score changes can be attributed unambiguously to a one-time backend change rather than periodic variation. The full 1,278-variant dataset (with `raw_changed` flag) is in `results/alphagenome/quantiles_genomewide_2026-08.csv`.
 
 ---
 
@@ -22,8 +24,8 @@
 
 ## Score Summary
 
-**Quantile score**: normalised rank of the variant effect relative to all human variants for that output type.  
-A quantile of 0.99 means the variant's effect is larger than 99% of all scored variants — tissue-specific.
+**Quantile score**: rank of the variant effect within a background of common variants (MAF > 0.01 in any gnomAD v3 population) for that output type.  
+A quantile of 0.99 means the variant's score matches the 99th percentile of that common-variant background — not of all human variation — tissue-specific.
 
 | Variant | AM | RNA raw | RNA q | ATAC raw | ATAC q | Splice raw | Splice q |
 |---------|-----|---------|-------|----------|--------|------------|----------|
@@ -71,7 +73,7 @@ A quantile of 0.99 means the variant's effect is larger than 99% of all scored v
 
 Raw log2FC measures the absolute signal change at a locus. Quantile scores normalise this against the genome-wide distribution of variant effects for that output type, making scores comparable across output types and variants.
 
-- **Quantile ≥ 0.95**: variant effect is in the top 5% of all human variants for that tissue/output — strong evidence of functional impact beyond protein-level effect.
+- **Quantile ≥ 0.95**: variant effect scores above the 95th percentile of common variants (MAF > 0.01 in gnomAD v3) for that tissue/output — note that coding variants inside gene bodies routinely clear this threshold by construction, so this is not in itself strong evidence of functional impact.
 - **Quantile 0.80–0.95**: notable but not extreme — warrants further investigation.
 - **Quantile < 0.80**: effect is within typical background variation.
 
@@ -79,11 +81,13 @@ Raw log2FC measures the absolute signal change at a locus. Quantile scores norma
 
 AlphaMissense scores protein-level pathogenicity only. High quantile scores on ATAC or splice outputs identify variants with regulatory or splicing mechanisms that protein-sequence models cannot detect.
 
-- **His1054Gln** — ATAC quantile 0.950: strongest chromatin accessibility signal. AlphaMissense 0.901 — regulatory disruption may contribute independently of protein misfolding.
+> **Historical figures only.** The seven variants below were the original priority candidates. They were subsequently found to have been selected on 1000 Genomes allele frequencies (all singletons or doubletons in 2,504 persons), not gnomAD, and four rank below the 1st percentile of the 1,278 cohort on center-mask rescoring. The quantile scores below used the chromosome-22 calibration (run 28 May 2026, predating the 18 June 2026 genome-wide update). These figures are retained for audit traceability; they are not current priority candidates.
 
-- **Arg104Gly** — Splice quantile 0.993: highest splicing impact. AlphaMissense score 0.8448 captures protein effect but not this splicing mechanism.
+- **His1054Gln** — ATAC quantile 0.950 (chr22-calibrated), splice quantile 0.948. AlphaMissense 0.901.
 
-- **Arg1097Cys** — lowest AlphaMissense score (0.6513). ATAC quantile 0.905, splice quantile 0.720. If either is elevated, it provides a regulatory/splicing explanation for pathogenicity that protein scoring alone does not.
+- **Arg104Gly** — Splice quantile 0.993 (chr22-calibrated). AlphaMissense 0.8448.
+
+- **Arg1097Cys** — ATAC quantile 0.905, splice quantile 0.720 (chr22-calibrated). AlphaMissense 0.6513.
 
 ---
 
@@ -140,7 +144,7 @@ Highest priority group: variants with simultaneous chromatin accessibility and s
 
 These groups operationalise the core limitation identified in McDonald et al. 2024: AlphaMissense cannot distinguish regulatory or splicing mechanisms from protein-level effects. Variants in the regulatory or dual-mechanism rescue groups may be pathogenic via CFTR expression reduction or aberrant splicing rather than protein misfolding — mechanisms that are relevant for selecting modulators or assessing residual CFTR function.
 
-The 56 dual-mechanism variants are the strongest candidates for reclassification from VUS to likely pathogenic pending functional validation.
+The 56 dual-mechanism variants used the chromosome-22 calibration and the gene-mask scorer, whose scores are set by the nearest canonical splice site rather than variant-specific effect. These figures are retained as historical context; the group is not interpreted as a priority candidate set.
 
 ---
 

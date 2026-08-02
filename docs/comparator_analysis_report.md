@@ -50,6 +50,8 @@
 
 **Count: 58 variants** (4.5% of all 1,278)
 
+> **Audit note.** The SPLICE quantile > 0.95 component of this definition clears 58.4% of the cohort by construction (coding variants ranked against a common-variant background). The 693 discordant count (SPLICE q > 0.95 AND SpliceAI < 0.2) sits at 693 observed vs 717 expected under independence (χ² p = 0.20). The 58 rescue group inherits both limitations: the ATAC signal component is more interpretable, but the SPLICE component is not. These figures are retained for audit traceability; they are not interpreted as a validated candidate group.
+
 These variants carry strong DNA regulatory or splicing signals in AlphaGenome that are not flagged by either CADD or SpliceAI. If these signals reflect real biology, they represent variants that current clinical in silico tools would classify as low-risk but which AlphaGenome suggests merit functional follow-up.
 
 **Top 10 by ATAC quantile** (deduplicated by protein variant; multiple genomic variants encoding the same amino acid substitution are collapsed to the highest-scoring entry):
@@ -113,7 +115,7 @@ These variants are the most important for understanding the differences between 
 | Mechanism captured | General deleteriousness | Canonical/cryptic splice sites | Regulatory, chromatin, splicing |
 | Context window | Variant-level annotations | ±50 bp | 1 Mb genomic window |
 | Tissue specificity | None (genome-wide) | None (gene-level) | Yes (lung UBERON:0002048) |
-| Normalization | PHRED-scaled rank | Raw delta score | Genome-wide quantile rank |
+| Normalization | PHRED-scaled rank | Raw delta score | Quantile rank vs common variants (gnomAD v3, MAF > 0.01) |
 | Captures ESE/ESS | No | No | Yes (via gene masking) |
 | Captures chromatin effects | No | No | Yes (ATAC scorer) |
 
