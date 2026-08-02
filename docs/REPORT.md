@@ -1,6 +1,6 @@
 # AlphaMissense outperforms standard pathogenicity predictors for CFTR variant classification: a benchmarking study
 
-**Roshani Pawar**
+**[author names omitted from working document]**
 
 ---
 
