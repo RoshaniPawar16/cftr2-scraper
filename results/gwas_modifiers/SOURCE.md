@@ -64,24 +64,28 @@ Added columns (14):
 
 **orientation values:**
 
-Palindromic SNPs (A/T or C/G) cannot have strand resolved from alleles
-alone. For these, the complement of REF is the same as ALT, so a mismatch
-is indistinguishable from a strand flip without MAF comparison to a
-reference panel. Palindromic categories are therefore **lower confidence**
-than their non-palindromic counterparts. They are kept as distinct values
-in the column — never merged with `REF_ok` or `ALT_as_hg38ref` — so that
-B2 can apply separate handling.
+**Palindromic SNPs (A/T or C/G) are strand-unresolvable from alleles
+alone.** The classifier assigns `REF_ok_palindromic` when source REF
+matches the hg38 reference base, and `ALT_as_hg38ref_palindromic` when
+source ALT matches. This confirms which allele label agrees with hg38 but
+does NOT resolve effect direction: a source coded on the opposite strand
+would produce the same allele labels for a palindromic SNP, with betas
+pointing to the opposite biological allele. The 7,308 `REF_ok_palindromic`
+sites are **unresolved**, not confirmed. Resolution requires MAF comparison
+against a reference panel (e.g. gnomAD). These categories are kept
+distinct in the column and must not be merged with `REF_ok` or
+`ALT_as_hg38ref`.
 
-| Value | Count | Meaning | Confidence |
+| Value | Count | Meaning | Beta usable directionally? |
 |---|---|---|---|
-| REF_ok | 41,863 | Source REF matches hg38 reference allele | High |
-| REF_ok_palindromic | 7,308 | As above, but A/T or C/G — strand unresolvable from alleles | Lower |
-| ALT_as_hg38ref | 618 | Source ALT matches hg38 ref — alleles swapped, beta reversal needed | High |
-| ALT_as_hg38ref_palindromic | 150 | As above, A/T or C/G — strand unresolvable; reversal needed but less certain | Lower |
-| strand_flip | 2 | Source REF is complement of hg38 ref | High |
-| strand_flip_swap | 1 | Source ALT is complement of hg38 ref | High |
-| non_snv | 2,119 | Indel; orientation check not applicable | — |
-| unknown | 2,792 | No Ensembl data; orientation could not be determined | — |
+| REF_ok | 41,863 | Source REF matches hg38 ref | Yes |
+| ALT_as_hg38ref | 618 | Source ALT matches hg38 ref; alleles swapped | Yes, after ×−1 |
+| strand_flip | 2 | Source REF is complement of hg38 ref | Yes |
+| strand_flip_swap | 1 | Source ALT is complement of hg38 ref | Yes, after ×−1 |
+| REF_ok_palindromic | 7,308 | Source REF matches hg38 ref, A/T or C/G site | **No — unresolved; MAF check needed** |
+| ALT_as_hg38ref_palindromic | 150 | Source ALT matches hg38 ref, A/T or C/G site | **No — unresolved; MAF check needed** |
+| non_snv | 2,119 | Indel | Not applicable |
+| unknown | 2,792 | No Ensembl data | **No — orientation unknown** |
 | **Total** | **54,853** | | |
 
 ---
@@ -92,20 +96,17 @@ B2 can apply separate handling.
 They have NOT been flipped. B2 must apply the correction before any
 directional analysis.**
 
-| orientation | Beta action | Note |
-|---|---|---|
-| `REF_ok` | No flip | Source REF is hg38 ref; standard coding |
-| `ALT_as_hg38ref` | **Multiply beta.fix and beta.ran by −1** | Source ALT is hg38 ref; effect alleles are swapped |
-| `strand_flip` | No flip | Complement coding; same biological allele is the effect allele |
-| `strand_flip_swap` | **Multiply beta.fix and beta.ran by −1** | Complement AND swap |
-| `REF_ok_palindromic` | No flip, but **flag** | Reference alleles agree; however strand ambiguity means direction is lower confidence without MAF check |
-| `ALT_as_hg38ref_palindromic` | **Multiply by −1, but flag** | Alleles appear swapped; lower confidence — same strand ambiguity |
-| `unknown` | **Do not use directionally** | No hg38 reference data |
-| `non_snv` | **Do not use directionally** | Indel |
+| orientation | Beta action |
+|---|---|
+| `REF_ok` | Use as-is |
+| `ALT_as_hg38ref` | Multiply beta.fix and beta.ran by −1 |
+| `strand_flip` | Use as-is |
+| `strand_flip_swap` | Multiply beta.fix and beta.ran by −1 |
+| `REF_ok_palindromic` | **Do not use directionally — strand unresolved** |
+| `ALT_as_hg38ref_palindromic` | **Do not use directionally — strand unresolved** |
+| `unknown` | **Do not use directionally — no hg38 reference data** |
+| `non_snv` | Not applicable |
 
-For palindromic sites (`REF_ok_palindromic`, `ALT_as_hg38ref_palindromic`):
-the beta action listed is the best available inference from allele
-comparison alone. Before using these betas directionally in any analysis,
-MAF concordance with a reference panel should be checked to resolve strand.
-They are retained in the output rather than excluded; exclusion is B2's
-decision.
+Palindromic and unknown sites (7,458 + 215 in clean SNV set respectively;
+see B1_REPORT.md) must not be used in any analysis that depends on effect
+direction until MAF comparison against gnomAD resolves strand.
