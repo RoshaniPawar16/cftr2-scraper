@@ -64,16 +64,25 @@ Added columns (14):
 
 **orientation values:**
 
-| Value | Meaning |
-|---|---|
-| REF_ok | Source REF matches hg38 reference allele — standard coding |
-| REF_ok_palindromic | As above, but A/T or C/G SNP (strand indeterminate) |
-| ALT_as_hg38ref | Source ALT matches hg38 ref — alleles are swapped relative to hg38 |
-| ALT_as_hg38ref_palindromic | As above, A/T or C/G SNP |
-| strand_flip | Source REF is complement of hg38 ref |
-| strand_flip_swap | Source ALT is complement of hg38 ref |
-| non_snv | Indel; orientation check not applicable |
-| unknown | No Ensembl data available |
+Palindromic SNPs (A/T or C/G) cannot have strand resolved from alleles
+alone. For these, the complement of REF is the same as ALT, so a mismatch
+is indistinguishable from a strand flip without MAF comparison to a
+reference panel. Palindromic categories are therefore **lower confidence**
+than their non-palindromic counterparts. They are kept as distinct values
+in the column — never merged with `REF_ok` or `ALT_as_hg38ref` — so that
+B2 can apply separate handling.
+
+| Value | Count | Meaning | Confidence |
+|---|---|---|---|
+| REF_ok | 41,863 | Source REF matches hg38 reference allele | High |
+| REF_ok_palindromic | 7,308 | As above, but A/T or C/G — strand unresolvable from alleles | Lower |
+| ALT_as_hg38ref | 618 | Source ALT matches hg38 ref — alleles swapped, beta reversal needed | High |
+| ALT_as_hg38ref_palindromic | 150 | As above, A/T or C/G — strand unresolvable; reversal needed but less certain | Lower |
+| strand_flip | 2 | Source REF is complement of hg38 ref | High |
+| strand_flip_swap | 1 | Source ALT is complement of hg38 ref | High |
+| non_snv | 2,119 | Indel; orientation check not applicable | — |
+| unknown | 2,792 | No Ensembl data; orientation could not be determined | — |
+| **Total** | **54,853** | | |
 
 ---
 
@@ -83,27 +92,20 @@ Added columns (14):
 They have NOT been flipped. B2 must apply the correction before any
 directional analysis.**
 
-The rule:
+| orientation | Beta action | Note |
+|---|---|---|
+| `REF_ok` | No flip | Source REF is hg38 ref; standard coding |
+| `ALT_as_hg38ref` | **Multiply beta.fix and beta.ran by −1** | Source ALT is hg38 ref; effect alleles are swapped |
+| `strand_flip` | No flip | Complement coding; same biological allele is the effect allele |
+| `strand_flip_swap` | **Multiply beta.fix and beta.ran by −1** | Complement AND swap |
+| `REF_ok_palindromic` | No flip, but **flag** | Reference alleles agree; however strand ambiguity means direction is lower confidence without MAF check |
+| `ALT_as_hg38ref_palindromic` | **Multiply by −1, but flag** | Alleles appear swapped; lower confidence — same strand ambiguity |
+| `unknown` | **Do not use directionally** | No hg38 reference data |
+| `non_snv` | **Do not use directionally** | Indel |
 
-- `orientation == 'REF_ok'` or `'REF_ok_palindromic'`: source REF is the
-  hg38 reference allele → beta is the effect of the ALT allele relative to
-  REF. **No flip needed.**
-
-- `orientation == 'ALT_as_hg38ref'` or `'ALT_as_hg38ref_palindromic'`:
-  source ALT is the hg38 reference allele → the effect allele in the source
-  is what hg38 calls the reference. **Multiply beta.fix and beta.ran by −1
-  before using directionally.**
-
-- `orientation == 'strand_flip'`: complement coding; effect allele is the
-  same biological allele. **No flip needed.**
-
-- `orientation == 'strand_flip_swap'`: complement AND swap. **Multiply
-  beta by −1.**
-
-- `orientation == 'unknown'` or `'non_snv'` or palindromic variants:
-  direction is indeterminate. **Do not use beta directionally.**
-
-768 rows in B1_lifted_hg38.csv.gz have `ALT_as_hg38ref` or
-`ALT_as_hg38ref_palindromic` (618 + 150). These are all five-loci
-variants; none are in B1_chr16_lifted_hg38.csv.gz (chr16 counts not
-separately verified).
+For palindromic sites (`REF_ok_palindromic`, `ALT_as_hg38ref_palindromic`):
+the beta action listed is the best available inference from allele
+comparison alone. Before using these betas directionally in any analysis,
+MAF concordance with a reference panel should be checked to resolve strand.
+They are retained in the output rather than excluded; exclusion is B2's
+decision.
