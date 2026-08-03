@@ -1,8 +1,6 @@
-# data/ — ignore everything; exceptions below
+# data/ — ignore everything; vendored GWAS clone provenance in audit/gwas_provenance.md
 data/*
-!data/gwas/
-data/gwas/*
-!data/gwas/SOURCE.md
+data/gwas/
 
 # intermediate Ensembl lookup cache — regenerable from script
 results/gwas_modifiers/B1_ensembl_cache.json.gz
