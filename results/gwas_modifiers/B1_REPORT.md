@@ -4,9 +4,16 @@
 **Branch:** integrity-audit-2026-07  
 **Input:** `data/gwas/GWAS_results/gwasImpute2_hg19_SAKNORM_all_meta_fixed_chrPeaks1mb.txt`  
 **Source:** github.com/danghunccf/CF-GWAS-dataMiningPaper commit eba42429  
-**Citations (both required):**  
+**Citations:**  
   Corvol et al. Nat Commun 6:8382 (2015). DOI: 10.1038/ncomms9382  
   Panjwani et al. NPJ Genom Med 3:8 (2018). DOI: 10.1038/s41525-018-0047-6
+
+**Caveat on the Panjwani citation:** The danghunccf README attributes the
+updated imputation to Panjwani et al. 2018, but that paper describes a
+chromosome-7-only method (the CFTR locus). The imputation procedure and
+quality thresholds for chrX and the other four loci (chr3, chr5, chr6, chr11)
+are not documented in any available source. No imputation quality metric
+(INFO/r²) is released with these summary statistics.
 
 ---
 
@@ -134,7 +141,7 @@ They are flagged `orientation=ALT_as_hg38ref` in the main output.
 **Note on rs3103933 (MUC4/MUC20 lead SNP):** Source REF=A, ALT=G.
 Ensembl hg38 allele_string=A/C/G/T (multi-allelic in dbSNP). hg38_ref=A
 → orientation=REF_ok. This does not resolve the discrepancy noted in
-`data/gwas/SOURCE.md` between the Panjwani coding and the Corvol
+`data/gwas/SOURCE.md` between the source allele coding and the Corvol
 published minor allele; that requires checking the Corvol paper directly.
 
 ---

@@ -1,21 +1,8 @@
-# input data — not committed (private/large)
-data/All_Variants_VEP.Gene.vcf
-data/AlphaMissense_hg38.tsv.gz
-
-# downloaded and generated files
-data/cftr2_variants.xlsx
-data/cftr2_results.csv
-data/cftr2_results_annotated.csv
-data/cftr_alphamissense.tsv
-data/flagged_unclassified.csv
-data/flagged_prioritised.csv
-data/priority_candidates.csv
-data/priority_candidates_clinvar.csv
-data/varying_consequence_am.csv
-data/nonsense_variants_cftr2.csv
-
-# vendored GWAS clone — large, stays local; provenance in data/gwas/SOURCE.md
-data/gwas/
+# data/ — ignore everything; exceptions below
+data/*
+!data/gwas/
+data/gwas/*
+!data/gwas/SOURCE.md
 
 # intermediate Ensembl lookup cache — regenerable from script
 results/gwas_modifiers/B1_ensembl_cache.json.gz
