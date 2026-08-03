@@ -14,6 +14,15 @@ data/priority_candidates_clinvar.csv
 data/varying_consequence_am.csv
 data/nonsense_variants_cftr2.csv
 
+# vendored GWAS clone — large, stays local; provenance in data/gwas/SOURCE.md
+data/gwas/
+
+# intermediate Ensembl lookup cache — regenerable from script
+results/gwas_modifiers/B1_ensembl_cache.json.gz
+
+# results/gwas_modifiers/ output files ARE committed (B1 deliverables)
+# Do not add a blanket ignore for results/ — that broke Phase 1 reproducibility.
+
 # python
 __pycache__/
 *.pyc

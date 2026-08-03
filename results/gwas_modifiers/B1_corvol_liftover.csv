@@ -1,0 +1,6 @@
+rsid,locus_gene,chr_hg19,pos_hg19,chr_hg38,pos_hg38,strand,liftover_ok,source_table,paper_doi
+rs3103933,MUC4/MUC20,chr3,195485440,chr3,195758569,+,YES,Table2,10.1038/ncomms9382
+rs57221529,SLC9A3,chr5,586624,chr5,586509,+,YES,Table2,10.1038/ncomms9382
+rs116003090,HLA-DRA,chr6,32434850,chr6,32467073,+,YES,Table2,10.1038/ncomms9382
+rs10742326,EHF/APIP,chr11,34810010,chr11,34788463,+,YES,Table2,10.1038/ncomms9382
+rs5952223,AGTR2/SLC6A14,chrX,115386565,chrX,116255308,+,YES,Table2,10.1038/ncomms9382
