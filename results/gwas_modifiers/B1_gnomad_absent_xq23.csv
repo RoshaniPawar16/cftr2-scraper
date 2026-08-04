@@ -1,0 +1,13 @@
+snp,chrom,pos_hg38,ref_hg38,alt_hg38,maf_source,p_fix,orientation_b1,gnomad_id_queried,gnomad_v3_ac,gnomad_v3_an,gnomad_v3_af,gnomad_v4_ac,gnomad_v4_an,gnomad_v4_af,absent_gnomad_v3,absent_gnomad_v4,absent_both,note
+rs5952209,chrX,116193114,G,A,0.4789,3.508e-08,ALT_as_hg38ref,chrX-116193114-G-A,50741,108923,0.4658,50750,108970,0.4657,False,False,False,present_in_gnomad_v3_and_v4
+rs5905219,chrX,116193790,C,G,0.4802,3.399e-08,ALT_as_hg38ref_palindromic,chrX-116193790-C-G,51001,109555,0.4655,51015,109606,0.4654,False,False,False,present_in_gnomad_v3_and_v4
+rs5905220,chrX,116193976,A,G,0.4799,4.944e-08,ALT_as_hg38ref,chrX-116193976-A-G,51328,110303,0.4653,51340,110355,0.4652,False,False,False,present_in_gnomad_v3_and_v4
+rs5905221,chrX,116194351,G,C,0.4773,4.079e-08,ALT_as_hg38ref_palindromic,chrX-116194351-G-C,55239,110997,0.4977,55256,111049,0.4976,False,False,False,present_in_gnomad_v3_and_v4
+rs12858227,chrX,116195873,C,T,0.4792,2.638e-08,ALT_as_hg38ref,chrX-116195873-C-T,52669,110171,0.4781,52683,110223,0.478,False,False,False,present_in_gnomad_v3_and_v4
+rs5905227,chrX,116197081,A,G,0.482,1.387e-08,REF_ok,chrX-116197081-A-G,57882,110253,0.524993,57931,110309,0.52517,False,False,False,present_in_gnomad_v3_and_v4
+rs4332258,chrX,116197621,T,C,0.4879,1.137e-08,REF_ok,chrX-116197621-T-C,54850,109782,0.499627,54889,109835,0.499741,False,False,False,present_in_gnomad_v3_and_v4
+rs4421478,chrX,116198000,C,T,0.4901,9.099e-09,REF_ok,chrX-116198000-C-T,57452,110462,0.520106,57488,110510,0.520206,False,False,False,present_in_gnomad_v3_and_v4
+rs5952129,chrX,116198226,A,G,0.4917,1.139e-08,REF_ok,chrX-116198226-A-G,58441,109825,0.5321,58477,109875,0.5322,False,False,False,present_in_gnomad_v3_and_v4
+rs5952131,chrX,116198423,C,T,0.4912,1.246e-08,REF_ok,chrX-116198423-C-T,58771,110111,0.5337,58807,110156,0.5339,False,False,False,present_in_gnomad_v3_and_v4
+rs5952079,chrX,116198526,C,T,0.4897,9.303e-09,REF_ok,chrX-116198526-C-T,56331,110533,0.5096,56362,110586,0.5097,False,False,False,present_in_gnomad_v3_and_v4
+rs5952132,chrX,116198889,T,A,0.4903,8.647e-09,REF_ok_palindromic,chrX-116198889-T-A,56673,109952,0.5154,56711,110006,0.5155,False,False,False,present_in_gnomad_v3_and_v4

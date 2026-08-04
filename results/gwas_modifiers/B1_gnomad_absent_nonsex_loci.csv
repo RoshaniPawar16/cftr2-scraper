@@ -1,11 +1,11 @@
-locus,snp,chrom,pos_hg38,ref,alt,maf,p_fix,absent_gnomad_v3,note
-5p15,rs531455522,5,532496,G,A,0.1727,1.444e-11,True,21bp cluster
-5p15,rs549575980,5,532497,C,T,0.1727,1.447e-11,True,21bp cluster
-5p15,rs571230208,5,532499,T,G,0.1727,1.451e-11,True,21bp cluster
-5p15,rs373439554,5,532500,T,G,0.1727,1.455e-11,True,21bp cluster
-5p15,rs145674378,5,532509,C,T,0.1589,6.468e-11,True,21bp cluster
-5p15,rs143079949,5,532516,T,C,0.1589,6.469e-11,True,21bp cluster
-5p15,rs144116028,5,532517,G,A,0.1589,6.469e-11,True,21bp cluster
-5p15,rs112651416,5,549012,C,T,0.1899,2.008e-09,True,isolated
-6p21,rs28366348,6,32597137,A,G,0.3437,1.82e-08,True,2bp cluster
-6p21,rs28366349,6,32597139,G,T,0.3437,1.82e-08,True,2bp cluster
+locus,snp,chrom,pos_hg38,ref_hg38,alt_hg38,maf_source,p_fix,orientation_b1,gnomad_id_queried,gnomad_v3_ac,gnomad_v3_an,gnomad_v3_af,gnomad_v4_ac,gnomad_v4_an,gnomad_v4_af,absent_gnomad_v3,absent_gnomad_v4,absent_both,verification_method,note,absence_cause,empty_ac_an_af_means
+5p15,rs531455522,5,532496,G,A,0.1727,1.444e-11,REF_ok,chr5-532496-G-A,,,,,,,True,True,True,individual_retry_with_backoff,21bp cluster,cause_not_established,not_ascertained
+5p15,rs549575980,5,532497,C,T,0.1727,1.447e-11,REF_ok,chr5-532497-C-T,,,,,,,True,True,True,individual_retry_with_backoff,21bp cluster,cause_not_established,not_ascertained
+5p15,rs571230208,5,532499,T,G,0.1727,1.451e-11,REF_ok,chr5-532499-T-G,,,,,,,True,True,True,individual_retry_with_backoff,21bp cluster,cause_not_established,not_ascertained
+5p15,rs373439554,5,532500,T,G,0.1727,1.455e-11,REF_ok,chr5-532500-T-G,,,,,,,True,True,True,individual_retry_with_backoff,21bp cluster,cause_not_established,not_ascertained
+5p15,rs145674378,5,532509,C,T,0.1589,6.468e-11,REF_ok,chr5-532509-C-T,,,,,,,True,True,True,individual_retry_with_backoff,21bp cluster,cause_not_established,not_ascertained
+5p15,rs143079949,5,532516,T,C,0.1589,6.469e-11,REF_ok,chr5-532516-T-C,,,,,,,True,True,True,individual_retry_with_backoff,21bp cluster,cause_not_established,not_ascertained
+5p15,rs144116028,5,532517,G,A,0.1589,6.469e-11,REF_ok,chr5-532517-G-A,,,,,,,True,True,True,individual_retry_with_backoff,21bp cluster,cause_not_established,not_ascertained
+5p15,rs112651416,5,549012,C,T,0.1899,2.008e-09,REF_ok,chr5-549012-C-T,,,,,,,True,True,True,individual_retry_with_backoff,isolated,cause_not_established,not_ascertained
+6p21,rs28366348,6,32597137,A,G,0.3437,1.82e-08,REF_ok,chr6-32597137-A-G,,,,,,,True,True,True,individual_retry_with_backoff,2bp cluster,cause_not_established,not_ascertained
+6p21,rs28366349,6,32597139,G,T,0.3437,1.82e-08,REF_ok,chr6-32597139-G-T,,,,,,,True,True,True,individual_retry_with_backoff,2bp cluster,cause_not_established,not_ascertained
