@@ -48,11 +48,43 @@ to `NaN` by default pandas CSV reading. In both cases the fix is either
 
 ---
 
+## Run date recovery attempt (2026-08-04)
+
+Three sources were checked:
+
+| Source | Outcome |
+|---|---|
+| `git log --follow --diff-filter=A` | First (and only) commit is the 2026-08-04 "rename null→control" fix; file was untracked before that session |
+| macOS birth time (`stat -f %SB`) | 2026-08-04 13:07:01 — same as mtime; `sed -i ''` creates a new file, resetting both |
+| Shell history | No match for b2b / tiling / alphagenome patterns |
+| `.ckpt` files | Only `.B2_scored_variants_ckpt.csv` and `rescore_centermask.csv.ckpt` exist; no B2b tiling checkpoint |
+
+**Conclusion: the original API run date is unrecoverable.** The best bound from
+adjacent files (B2_pilot_run1.csv birth time 2026-08-03 21:40) is that the
+tiling run occurred on or after 2026-08-03. No tighter bound is available.
+
+## Determinism re-score (2026-08-04T12:15:30Z)
+
+20 positions re-scored (2 per element, elements chr11.2516–chr11.2525) with
+identical scorer and tissue. Results:
+
+| Field | Value |
+|---|---|
+| alphagenome version | 0.6.1 |
+| Run UTC | 2026-08-04T12:15:30Z |
+| n scored | 20/20 |
+| Max \|orig − new\| | 1.11e-16 (floating-point noise, effectively zero) |
+| Exact matches (< 1e-6) | 20/20 |
+
+All 20 scores agree to float precision. The backend is in the same state as
+the original run. The missing run date does not affect interpretation of the
+scores in this file.
+
 ## Missing provenance to add in future runs
 
 The following fields are absent from the CSV and should be recorded as columns
 or in an accompanying metadata file for full reproducibility:
 
-- **API run date** — the date the AlphaGenome API calls were made
-- **Scorer version / model checkpoint** — if the API backend changes, raw scores may shift
+- **API run date** — the date the AlphaGenome API calls were made (now unrecoverable for this file)
+- **alphagenome package version** — added to `b2_pilot.py` and `b2_score_full.py` as `ag_version` column (2026-08-04)
 - **Tiling step size** — currently derivable but should be explicit
