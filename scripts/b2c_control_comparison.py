@@ -183,8 +183,12 @@ def sample_matched_controls(
 
     Returns
     -------
-    pd.DataFrame of n sampled control variants (or fewer if the pool is
-    too small; the caller should check and log the shortfall).
+    tuple[pd.DataFrame, str]
+        DataFrame of n sampled control variants (or fewer if the pool is
+        too small; the caller should check and log the shortfall), and a
+        string recording the sampling method: "stratified" for the normal
+        distance-bin path, "flat_degenerate" when all GW-sig variants had
+        identical distance-to-gene and stratification was not possible.
     """
     if rng is None:
         rng = np.random.default_rng(seed=RNG_SEED)
@@ -200,7 +204,7 @@ def sample_matched_controls(
     eligible = candidates[min_diffs >= excl_radius].copy()
 
     if eligible.empty:
-        return pd.DataFrame(columns=candidates.columns)
+        return pd.DataFrame(columns=candidates.columns), "stratified"
 
     # --- Quantile bins from GW-sig distances ----------------------------
     gws_dists = gws_variants["dist_to_nearest_gene"].values.astype(float)
@@ -211,6 +215,27 @@ def sample_matched_controls(
     # Widen first and last edges to include all values
     bin_edges[0]  -= 1
     bin_edges[-1] += 1
+
+    # Degenerate case: all GW-sig at same distance collapses to 1 edge
+    # after np.unique; the two ±1 shifts cancel on a single-element array.
+    # Fall back to flat sampling from the eligible pool.
+    if len(bin_edges) < 2:
+        print(
+            f"    WARNING: all GW-sig distances identical "
+            f"({int(gws_dists[0])} bp to nearest gene) — "
+            f"stratification degenerate, using flat sampling",
+            flush=True,
+        )
+        n_take = min(n, len(eligible))
+        if n_take == 0:
+            return pd.DataFrame(columns=candidates.columns), "flat_degenerate"
+        return (
+            eligible.sample(
+                n=n_take, replace=False,
+                random_state=int(rng.integers(2**31)),
+            ),
+            "flat_degenerate",
+        )
 
     def assign_bins(arr: np.ndarray) -> np.ndarray:
         return np.clip(np.digitize(arr, bin_edges) - 1, 0, len(bin_edges) - 2)
@@ -259,19 +284,19 @@ def sample_matched_controls(
         selected_parts.append(extra)
 
     if not selected_parts:
-        return pd.DataFrame(columns=candidates.columns)
+        return pd.DataFrame(columns=candidates.columns), "stratified"
 
     result = pd.concat(selected_parts).drop(columns=["_bin"])
-    return result.head(n)
+    return result.head(n), "stratified"
 
 
 # ── B1 data loading ────────────────────────────────────────────────────────────
 
 def load_b1_clean() -> pd.DataFrame:
     """Load B1 clean SNVs with hg38 positions and hg38-convention alleles."""
-    absent_snps = set(pd.read_csv(ABSENT_CSV)["snp"])
+    absent_snps = set(pd.read_csv(ABSENT_CSV, keep_default_na=False)["snp"])
 
-    df = pd.read_csv(B1_GZ, low_memory=False)
+    df = pd.read_csv(B1_GZ, low_memory=False, keep_default_na=False)
     clean = df[
         (df["is_snv"] == "YES") &
         (df["a_ok"] == "YES") &
@@ -497,6 +522,26 @@ def main() -> None:
             axis=1,
         )
 
+    # Assert no -1 values: dist_to_nearest_gene returns -1 only when no
+    # listed gene is on the same chromosome, which would silently place
+    # the variant in a mis-assigned bin.
+    _b1_neg1 = b1[b1["dist_to_nearest_gene"] == -1]
+    if len(_b1_neg1) > 0:
+        raise AssertionError(
+            f"dist_to_nearest_gene returned -1 for {len(_b1_neg1)} B1 "
+            f"variants (no listed gene on same chromosome): "
+            f"{_b1_neg1['locus'].value_counts().to_dict()}"
+        )
+    _gws_neg1 = gws_all[gws_all["dist_to_nearest_gene"] == -1]
+    if len(_gws_neg1) > 0:
+        raise AssertionError(
+            f"dist_to_nearest_gene returned -1 for {len(_gws_neg1)} "
+            f"GW-sig variants (no listed gene on same chromosome): "
+            f"{_gws_neg1['locus'].value_counts().to_dict()}"
+        )
+    print("dist_to_nearest_gene: no -1 values "
+          "(chromosome match confirmed for all variants)")
+
     # --- Select controls per locus --------------------------------------
     all_ctrl_variants: list[dict] = []
     selection_log: list[dict] = []
@@ -511,7 +556,7 @@ def main() -> None:
         n_gws = len(gws_locus)
         n_cand_before = len(candidates)
 
-        selected = sample_matched_controls(
+        selected, sampling_method = sample_matched_controls(
             candidates   = candidates,
             gws_variants = gws_locus.rename(columns={"pos_hg38": "a_pos"}),
             n            = n_gws,
@@ -522,11 +567,12 @@ def main() -> None:
         shortfall  = n_gws - n_selected
 
         selection_log.append({
-            "locus":        locus,
-            "n_gws":        n_gws,
-            "candidates":   n_cand_before,
-            "selected":     n_selected,
-            "shortfall":    shortfall,
+            "locus":           locus,
+            "n_gws":           n_gws,
+            "candidates":      n_cand_before,
+            "selected":        n_selected,
+            "shortfall":       shortfall,
+            "sampling_method": sampling_method,
         })
 
         for _, row in selected.iterrows():
@@ -548,7 +594,7 @@ def main() -> None:
         flag = f"  *** SHORTFALL {sl['shortfall']}" if sl["shortfall"] > 0 else ""
         print(f"  {sl['locus']}: {sl['n_gws']} GW-sig, "
               f"{sl['candidates']} candidates, "
-              f"{sl['selected']} selected{flag}")
+              f"{sl['selected']} selected  [{sl['sampling_method']}]{flag}")
 
     if args.dry_run:
         print(f"\nTotal controls to score: {len(all_ctrl_variants)}")
@@ -603,6 +649,8 @@ def main() -> None:
         )
 
     summ_df = pd.DataFrame(summary_rows)
+    method_map = {sl["locus"]: sl["sampling_method"] for sl in selection_log}
+    summ_df["sampling_method"] = summ_df["locus"].map(method_map)
     summ_df["run_date_utc"] = RUN_UTC
     summ_df["ag_version"]   = AG_VERSION
     summ_df.to_csv(SUMM_OUT_CSV, index=False)

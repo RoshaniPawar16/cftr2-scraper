@@ -75,11 +75,11 @@ def load_scoring_set():
     ab = pd.read_csv(ABSENT_CSV)
     artefact_snps = set(ab["snp"])
 
-    df = pd.read_csv(B1_GZ, low_memory=False)
+    df = pd.read_csv(B1_GZ, low_memory=False, keep_default_na=False)
     clean = df[
         (df["is_snv"] == "YES") &
         (df["a_ok"] == "YES") &
-        (df["routes_agree"].isin(["YES"]) | df["routes_agree"].isna())
+        (df["routes_agree"].isin(["YES", "NA"]) | df["routes_agree"].isna())
     ].copy()
     gws = clean[clean["p.fix"] < 5e-8].copy()
     gws = gws[~gws["SNP"].isin(artefact_snps)].copy()
