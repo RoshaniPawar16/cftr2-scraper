@@ -1,0 +1,247 @@
+{
+  "model": "claude-sonnet-4-6",
+  "temperature": 0,
+  "am_threshold": 0.564,
+  "note": "Recomputed on 259 deduplicated variants (keep-first by protein variant name). Original run used 292 rows (33 duplicates from one-to-many merge). String normalisation applied: llm_binary 'Non-CF-causing' equated to determination_2026 'Non CF-causing'.",
+  "set_analysis": {
+    "n_original_rows": 292,
+    "n_dedup_rows": 259,
+    "n_duplicates_removed": 33,
+    "n_parse_failures": 0,
+    "n_truncations": 0,
+    "n_scored": 259,
+    "n_set_a_am_failures": 19,
+    "n_set_b_llm_failures": 94,
+    "n_intersection": 16,
+    "jaccard_ab": 0.1649,
+    "named_a_not_b": [
+      {
+        "variant": "His954Pro",
+        "truth": "CF-causing",
+        "am_pred": "Non CF-causing",
+        "llm_pred": "CF-causing",
+        "llm_tier": "likely_pathogenic",
+        "criteria": {
+          "PM1": "met",
+          "PM2": "met",
+          "PP3": "met_supporting",
+          "BP4": "not_met",
+          "BS3": "not_evaluable"
+        }
+      },
+      {
+        "variant": "Ile506Leu",
+        "truth": "CF-causing",
+        "am_pred": "Non CF-causing",
+        "llm_pred": "CF-causing",
+        "llm_tier": "likely_pathogenic",
+        "criteria": {
+          "PM1": "met",
+          "PM2": "met",
+          "PP3": "met_supporting",
+          "BP4": "not_met",
+          "BS3": "not_evaluable"
+        }
+      },
+      {
+        "variant": "Leu997Phe",
+        "truth": "Non CF-causing",
+        "am_pred": "CF-causing",
+        "llm_pred": "Non CF-causing",
+        "llm_tier": "vus",
+        "criteria": {
+          "PM1": "met",
+          "PM2": "not_met",
+          "PP3": "met_moderate",
+          "BP4": "not_met",
+          "BS3": "not_evaluable"
+        }
+      }
+    ],
+    "named_b_not_a": [
+      {
+        "variant": "Ala1006Glu",
+        "truth": "CF-causing",
+        "am_pred": "CF-causing",
+        "llm_pred": "Non CF-causing",
+        "llm_tier": "vus",
+        "criteria": {
+          "PM1": "met",
+          "PM2": "not_met",
+          "PP3": "not_met",
+          "BP4": "not_met",
+          "BS3": "not_evaluable"
+        }
+      },
+      {
+        "variant": "Ala234Asp",
+        "truth": "CF-causing",
+        "am_pred": "CF-causing",
+        "llm_pred": "Non CF-causing",
+        "llm_tier": "vus",
+        "criteria": {
+          "PM1": "met",
+          "PM2": "met",
+          "PP3": "met_supporting",
+          "BP4": "not_met",
+          "BS3": "not_evaluable"
+        }
+      },
+      {
+        "variant": "Ala455Glu",
+        "truth": "CF-causing",
+        "am_pred": "CF-causing",
+        "llm_pred": "Non CF-causing",
+        "llm_tier": "vus",
+        "criteria": {
+          "PM1": "met",
+          "PM2": "not_met",
+          "PP3": "met_moderate",
+          "BP4": "not_met",
+          "BS3": "not_evaluable"
+        }
+      },
+      {
+        "variant": "Ala559Thr",
+        "truth": "CF-causing",
+        "am_pred": "CF-causing",
+        "llm_pred": "Non CF-causing",
+        "llm_tier": "vus",
+        "criteria": {
+          "PM1": "met",
+          "PM2": "not_met",
+          "PP3": "met_moderate",
+          "BP4": "not_met",
+          "BS3": "not_evaluable"
+        }
+      }
+    ]
+  },
+  "consistency_check": {
+    "n_checked": 20,
+    "n_agree": 18,
+    "agreement_rate": 0.9,
+    "detail": [
+      {
+        "variant": "Met952Ile",
+        "original_pred": "CF-causing",
+        "rephrased_pred": "CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "His1085Pro",
+        "original_pred": "CF-causing",
+        "rephrased_pred": "CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Gly480Cys",
+        "original_pred": "CF-causing",
+        "rephrased_pred": "CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Leu227Arg",
+        "original_pred": "Non-CF-causing",
+        "rephrased_pred": "Non-CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Ile105Asn",
+        "original_pred": "CF-causing",
+        "rephrased_pred": "CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Gln30Pro",
+        "original_pred": "Non-CF-causing",
+        "rephrased_pred": "Non-CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Tyr563Asp",
+        "original_pred": "CF-causing",
+        "rephrased_pred": "CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Asn1303Lys",
+        "original_pred": "Non-CF-causing",
+        "rephrased_pred": "Non-CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Gln98Arg",
+        "original_pred": "Non-CF-causing",
+        "rephrased_pred": "Non-CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Ile1005Arg",
+        "original_pred": "Non-CF-causing",
+        "rephrased_pred": "CF-causing",
+        "agree": false
+      },
+      {
+        "variant": "Asp110Tyr",
+        "original_pred": "CF-causing",
+        "rephrased_pred": "CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Gly1249Arg",
+        "original_pred": "CF-causing",
+        "rephrased_pred": "CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Gly314Arg",
+        "original_pred": "CF-causing",
+        "rephrased_pred": "CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Trp1282Gly",
+        "original_pred": "CF-causing",
+        "rephrased_pred": "CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Gln552Pro",
+        "original_pred": "CF-causing",
+        "rephrased_pred": "CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Gly628Arg",
+        "original_pred": "CF-causing",
+        "rephrased_pred": "CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Ser492Phe",
+        "original_pred": "Non-CF-causing",
+        "rephrased_pred": "Non-CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Gly85Glu",
+        "original_pred": "Non-CF-causing",
+        "rephrased_pred": "Non-CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "Phe587Ile",
+        "original_pred": "CF-causing",
+        "rephrased_pred": "CF-causing",
+        "agree": true
+      },
+      {
+        "variant": "His954Pro",
+        "original_pred": "CF-causing",
+        "rephrased_pred": "Non-CF-causing",
+        "agree": false
+      }
+    ]
+  }
+}
