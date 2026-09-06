@@ -37,7 +37,7 @@ AlphaMissense is a credible tool for prioritising unclassified CFTR variants. It
 - Validation set is imbalanced. 253 CF-causing vs 39 Non CF-causing. AUC is robust to this but the F1 on Non CF-causing variants should be interpreted carefully.
 - Population frequency data was available for only 117 of 3,220 variants. Most are too rare for gnomAD.
 - AlphaMissense scores missense variants only. Nonsense, frameshift and splicing variants are outside its scope.
-- One VCF from one cohort. Findings should be validated on a larger dataset before clinical use.
+- One ClinVar gene-region VCF. Findings should be validated on a larger dataset before clinical use.
 
 ## Full documentation
 

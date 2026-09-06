@@ -2,7 +2,7 @@
 
 ## Why this exists
 
-The CFTR2 pipeline matched 656 of 3,220 variants. 80% had no clinical classification.
+The CFTR2 pipeline matched 656 of 3,220 variants. 80% had no CFTR2 classification.
 
 CFTR2 only includes variants seen in enough CF patients to characterise. Most CFTR variants submitted to ClinVar are rare: they exist in clinical reporting databases but have not been seen in enough CF patients to receive a CFTR2 classification.
 
@@ -166,7 +166,7 @@ Two are classified as varying clinical consequence: Ser1455Ter and Gln1476Ter. B
 
 **Purpose.** Test whether rule-based ACMG/AMP reasoning fails on different variants than AlphaMissense — that is, whether the two methods have complementary error profiles on the same benchmark.
 
-**Method.** Five criteria (PM1, PM2, PP3, BP4, BS3) applied by claude-sonnet-4-6 at temperature 0. PP3 weighted at ClinGen-calibrated supporting strength per Pejaver et al. 2022. Evidence restricted to each variant's own data (AlphaMissense score, CADD, PolyPhen, SIFT, allele frequency). Design committed in d4d1f10 before results were run. PP3 calibration finding: LP classification was unreachable under strict 5-criterion combining; adopting the Pejaver 2022 calibrated PP3 strength made LP reachable (`docs/STATUS.md`).
+**Method.** Five criteria (PM1, PM2, PP3, BP4, BS3) applied by claude-sonnet-4-6 at temperature 0. PP3 at ClinGen-calibrated strength (supporting, or moderate when computational evidence is strong and concordant) per Pejaver et al. 2022. Evidence restricted to each variant's own data (AlphaMissense score, CADD, PolyPhen, SIFT, allele frequency). Design committed in d4d1f10 before results were run. PP3 calibration finding: LP classification was unreachable under strict 5-criterion combining; adopting the Pejaver 2022 calibrated PP3 strength made LP reachable (`docs/STATUS.md`).
 
 **Results on 259 deduplicated variants** (`results/acmg_llm/experiment_summary_dedup.json`):
 
@@ -187,9 +187,9 @@ LLM self-consistency (same variant, rephrased prompt, n = 20): 18/20 (90%).
 
 ## Limitations
 
-- Class imbalance in the validation set. 253 CF-causing vs 39 Non CF-causing. Results should be interpreted with that in mind.
+- Class imbalance in the validation set. 253 CF-causing vs 39 Non CF-causing before deduplication; 226 vs 33 after removing 33 duplicated rows. Results should be interpreted with that in mind.
 - 311 VCF variants could not be converted to single-letter format. These are likely non-missense variants (frameshifts, nonsense) and were excluded from AlphaMissense matching.
-- Population frequency data was only available for 117 of 3,220 variants. Most are too rare for gnomAD.
+- Population frequency data was only available for 117 of 3,220 variants. Most have no 1000 Genomes allele frequency in the VCF.
 - AlphaMissense does not model compound heterozygosity, splicing effects, or regulatory context.
 
 ## Files
