@@ -33,7 +33,7 @@ Final status counts across all entries in the ledger:
 
 The following numbers survived verification and are safe to quote, with their source files:
 
-**AlphaMissense benchmark** (`results/phase1/am_validation_metrics.csv`): AUC 0.9549, AP 0.9924 on n=259 deduplicated CFTR2-labelled variants (253 CF-causing, 6 Non CF-causing). Reproducible from `scripts/phase1_build_cohort.py` and `scripts/phase1_benchmark.py`.
+**AlphaMissense benchmark** (`results/phase1/am_validation_metrics.csv`): AUC 0.9549, AP 0.9924 on n=259 deduplicated CFTR2-labelled variants (226 CF-causing, 33 Non CF-causing). Reproducible from `scripts/phase1_build_cohort.py` and `scripts/phase1_benchmark.py`. The class split (226/33) reflects deduplication by protein variant name from `results/acmg_llm/per_variant_log.jsonl`; an earlier version of this document incorrectly stated 253 CF-causing, 6 Non CF-causing.
 
 **DeLong pairwise comparisons** (`results/phase1/delong_tests.csv`): AM vs PolyPhen-2 Z=3.18 p=0.0015; AM vs CADD Z=3.57 p=0.0004; AM vs SIFT Z=6.78 p<0.0001. All more significant than previously reported (2.88/0.0040, 3.28/0.0011, 5.87/<0.0001) because the original implementation omitted the covariance term required by the DeLong method. The direction and ranking are unchanged.
 
@@ -79,7 +79,7 @@ AlphaGenome updated its quantile calibration on 18 June 2026. The project's run 
 ## What was retracted
 
 **The 693 discordant variants.**  
-Definition: AlphaGenome SPLICE quantile > 0.95 AND SpliceAI delta < 0.2. Observed 693 against 717 expected under independence (chi-squared p = 0.20). The group is at the chance level. Additionally, the 0.95 threshold clears 58.4% of the cohort because it compares rare coding variants against a common-variant background — the discordant count is the expected consequence of that mismatch, not a finding. The group cannot be presented as evidence of AlphaGenome detecting splice effects invisible to SpliceAI.
+Definition: AlphaGenome SPLICE quantile > 0.95 AND SpliceAI delta < 0.2 (strict). Observed 693 against 713.7 expected under independence (2×2 χ²(1) = 32.4, p = 1.3 × 10⁻⁸; observed significantly below expected). Source: `results/alphagenome/quantiles_genomewide_2026-08.csv` × `results/comparator_scores.csv`; N = 1,278; marginals: n(SPLICE q > 0.95) = 747, n(SpliceAI < 0.2) = 1,221. An earlier version of this document stated "717 expected (chi-squared p = 0.20)"; this did not reproduce — the correct expected is 713.7 and the group is significantly depleted relative to independence, not at chance level. The retraction stands: the discordant count is not evidence that AlphaGenome detects splice effects invisible to SpliceAI (the group is depleted, not enriched, compared to independence expectation). Additionally, the 0.95 threshold clears 58.4% of the cohort because it compares rare coding variants against a common-variant background.
 
 **The seven priority variants.**  
 Selected on 1000 Genomes allele frequency under the mistaken assumption that the field was gnomAD. All seven are singletons or doubletons in 2,504 individuals (AF ≈ 0.0002–0.0004). Four rank below the 1st percentile of the 1,278 cohort on center-mask rescoring. The selection has no basis in the data as described.

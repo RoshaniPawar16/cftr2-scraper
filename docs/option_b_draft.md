@@ -14,7 +14,7 @@
 
 **DNase hypersensitive sites.** Twelve DHS elements mapped in primary human tracheal epithelium were obtained from Stolzenburg et al. (2017; Nucleic Acids Res 45:8773–8784; GSE52179). <!-- results/gwas_modifiers/B2b_tiling_scores_PROVENANCE.md, Source: DHS elements --> Of the twelve, two are luciferase-confirmed strong enhancers (chr11.2516, DNase peak score 615; chr11.2521, DNase peak score 970), one is luciferase-confirmed with no detectable enhancer activity (chr11.2525, DNase peak score 579), one is a luciferase-confirmed weak enhancer (chr11.2526, DNase peak score 577), and eight are uncharacterised. DHS element coordinates were lifted from hg19 to hg38 prior to scoring.
 
-**AlphaGenome version and calibration.** All scoring used AlphaGenome v0.6.1 with the genome-wide quantile calibration introduced on 18 June 2026. Scoring date for all 574 variant–tissue pairs: 2026-08-04. <!-- results/gwas_modifiers/B2_scored_variants.csv, ag_version and ag_calibration columns; results/gwas_modifiers/B2b_tiling_scores_PROVENANCE.md, Determinism re-score section -->
+**AlphaGenome version and calibration.** All scoring used AlphaGenome v0.6.1 with the genome-wide quantile calibration introduced on 18 June 2026. Scoring date for all 574 variant–tissue pairs: 2026-08-04. <!-- results/gwas_modifiers/B2c_summary.csv, ag_version column; results/gwas_modifiers/B2_scored_variants.csv, ag_calibration and ag_run_date columns; results/gwas_modifiers/B2b_tiling_scores_PROVENANCE.md, Determinism re-score section -->
 
 ---
 
@@ -40,7 +40,7 @@ Note: the `routes_agree` column encodes the value `'NA'` as a literal string for
 
 **Artefact exclusion.** Ten variants absent from both gnomAD v3 and gnomAD v4 were excluded: eight from 5p15 and two from 6p21 (rs28366348, rs28366349). <!-- results/gwas_modifiers/B1_gnomad_absent_nonsex_loci.csv --> Seven of the eight excluded 5p15 variants fall within a 21-bp window at adjacent positions with identical minor allele frequency at neighbouring bases; the cause of their absence from gnomAD is not established from available data and may reflect imputation artefact. After exclusion, **548 GWS SNVs** were taken forward. <!-- results/gwas_modifiers/B1_gnomad_absent_nonsex_loci.csv, absence_cause column -->
 
-**REF/ALT orientation.** Of the 49,930 clean SNVs, 618 have ALT coded as the hg38 reference allele (orientation = ALT_as_hg38ref); an additional 150 are ALT_as_hg38ref and palindromic. Beta sign reversal is required for these variants before any directional analysis. No directional analysis was performed in this work. <!-- results/gwas_modifiers/B1_REPORT.md, Step 4 -->
+**REF/ALT orientation.** Of the 49,930 clean SNVs, 459 have ALT coded as the hg38 reference allele (orientation = ALT_as_hg38ref); an additional 117 are ALT_as_hg38ref and palindromic. (618 and 150 are the counts for all rows with Ensembl data, n = 49,942, per `results/gwas_modifiers/B1_REPORT.md` Step 4; 459 and 117 are the counts within the clean-SNV filter.) Beta sign reversal is required for these variants before any directional analysis. No directional analysis was performed in this work. <!-- results/gwas_modifiers/B1_REPORT.md, Step 4 -->
 
 ---
 

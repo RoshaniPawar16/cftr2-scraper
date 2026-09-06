@@ -50,7 +50,7 @@
 
 **Count: 58 variants** (4.5% of all 1,278)
 
-> **Audit note.** The SPLICE quantile > 0.95 component of this definition clears 58.4% of the cohort by construction (coding variants ranked against a common-variant background). The 693 discordant count (SPLICE q > 0.95 AND SpliceAI < 0.2) sits at 693 observed vs 717 expected under independence (χ² p = 0.20). The 58 rescue group inherits both limitations: the ATAC signal component is more interpretable, but the SPLICE component is not. These figures are retained for audit traceability; they are not interpreted as a validated candidate group.
+> **Audit note.** The SPLICE quantile > 0.95 component of this definition clears 58.4% of the cohort by construction (coding variants ranked against a common-variant background). The 693 discordant count (SPLICE q > 0.95 AND SpliceAI < 0.2, strict) sits at 693 observed vs 713.7 expected under independence (2×2 χ²(1) = 32.4, p = 1.3 × 10⁻⁸; observed below expected; an earlier version stated "717 expected, χ² p = 0.20" which did not reproduce — see AUDIT_RECORD.md). The discordant group is significantly depleted, not at chance level; it cannot support a claim that AlphaGenome detects splice effects invisible to SpliceAI. The 58 rescue group inherits both limitations: the ATAC signal component is more interpretable, but the SPLICE component is not. These figures are retained for audit traceability; they are not interpreted as a validated candidate group.
 
 These variants carry strong DNA regulatory or splicing signals in AlphaGenome that are not flagged by either CADD or SpliceAI. If these signals reflect real biology, they represent variants that current clinical in silico tools would classify as low-risk but which AlphaGenome suggests merit functional follow-up.
 

@@ -116,4 +116,22 @@ Liu et al. focus on a single non-coding variant in a blood group gene. They do n
 
 ---
 
-*Compiled 2026-05-28. All papers accessed via PubMed, PMC, bioRxiv, and alphagenomedocs.com.*
+*Compiled 2026-05-28; updated 2026-08-28. All papers accessed via PubMed, PMC, bioRxiv, and alphagenomedocs.com.*
+
+---
+
+## 5. Garcia-Gonzalez and Gogolewski 2026 — Trends in Genetics
+
+**Citation:** Garcia-Gonzalez E, Gogolewski K. *Trends in Genetics*, 2026.
+*(Full title and DOI to be confirmed from meeting materials — cited in direction meeting.)*
+
+### What they did
+To be completed when full citation is available.
+
+### How it relates to our work
+Cited in the project direction meeting as relevant context for the regulatory variant interpretation approach. Full relevance to be documented once the paper is reviewed.
+
+### Gap our work fills
+To be completed.
+
+---
