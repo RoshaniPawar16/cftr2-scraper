@@ -4,7 +4,7 @@
 
 The CFTR2 pipeline matched 656 of 3,220 variants. 80% had no clinical classification.
 
-CFTR2 only includes variants seen in enough patients to characterise. Most variants in a real VCF are rare. They exist in population databases but have never been studied at scale in CF patients. That is not a flaw. It is just the nature of rare variant data.
+CFTR2 only includes variants seen in enough CF patients to characterise. Most CFTR variants submitted to ClinVar are rare: they exist in clinical reporting databases but have not been seen in enough CF patients to receive a CFTR2 classification.
 
 But it raises a question. What are those 2,564 variants?
 
@@ -13,6 +13,14 @@ AlphaMissense predicts pathogenicity for every possible human missense variant. 
 We checked that first. AUC 0.946 on 292 labelled CFTR variants. Good enough to use. We then ran it on the unclassified variants and found 705 predicted likely pathogenic with no clinical classification anywhere. We also looked at the 72 variants CFTR2 itself marks as uncertain. That turned out to be the most interesting part.
 
 Requires `cftr2_results.csv` from `cftr2_scraper.ipynb`.
+
+## Data provenance
+
+The variant set is the CFTR region of the ClinVar database (February 2025 release, GRCh38).
+Pipeline: ClinVar full download → `bcftools view -r 7:117480000-117670000` → `bcftools norm` → VEP v115.1 annotation on GRCh38.p14.
+The VCF contains 5,923 data lines; the scraper extracts 3,220 unique missense protein changes by applying a protein-change regex to the CSQ annotation and deduplicating (`scripts/cftr2_scraper_analysis.py`, lines 46–58).
+The VCF carries no patient-level data.
+See [audit/COHORT_PROVENANCE.md](audit/COHORT_PROVENANCE.md).
 
 ## What is AlphaMissense
 
@@ -25,7 +33,7 @@ AlphaMissense is a pathogenicity predictor from Google DeepMind. It assigns a sc
 3. Merges scores into the CFTR2 results
 4. Validates AlphaMissense predictions against CFTR2 ground truth
 5. Flags unclassified variants predicted likely pathogenic
-6. Cross-references flags with gnomAD population frequency from the VCF
+6. Cross-references flags with population frequency from the VCF (1000 Genomes Phase 3, field AF_TGP; `notebooks/alphamissense.ipynb` cell 17, `AF_INDEX = 34`)
 7. Analyses the "varying clinical consequence" group
 
 ## Results
@@ -42,7 +50,9 @@ AlphaMissense is a pathogenicity predictor from Google DeepMind. It assigns a sc
 
 AlphaMissense agrees with CFTR2 clinical classifications at AUC 0.946. The weaker F1 on Non CF-causing is expected. Only 39 such variants were available.
 
-Note on class imbalance: 253 CF-causing vs 39 Non CF-causing. The overall accuracy is partly inflated by this. The AUC is the more reliable metric here.
+**Self-audit correction.** After removing 33 duplicated rows (one-to-many merge on protein variant name), AUC is 0.955 on 259 unique variants (`results/phase1/am_validation_metrics.csv`). The corrected class split is 226 CF-causing vs 33 Non CF-causing. Comparator AUCs in the table below were computed on the pre-deduplication 286-variant cohort and were not re-run.
+
+Note on class imbalance: 253 CF-causing vs 39 Non CF-causing (pre-deduplication counts). The overall accuracy is partly inflated by this. The AUC is the more reliable metric here.
 
 ### Comparison against CADD, PolyPhen, and SIFT
 
@@ -88,7 +98,7 @@ Of the 2,564 variants not in CFTR2, 2,411 had AlphaMissense scores.
 | likely_pathogenic | 705 |
 | ambiguous | 357 |
 
-Of the 705 flagged, only 7 had gnomAD population frequency data in the VCF. Those are the highest-priority candidates: predicted pathogenic, observed in the general population, never classified by CFTR2.
+Of the 705 flagged, only 7 had population frequency data in the VCF. Population frequency came from 1000 Genomes Phase 3 (field AF_TGP, `notebooks/alphamissense.ipynb` cell 17, `AF_INDEX = 34`) — not gnomAD as stated in earlier versions of this document. See [audit/COHORT_PROVENANCE.md](audit/COHORT_PROVENANCE.md).
 
 We cross-referenced all 7 against ClinVar. Every one of them is unresolved.
 
@@ -108,7 +118,7 @@ Leu986Pro and Arg1097Cys are the strongest candidates. Clinical disagreement alr
 
 These 7 variants are not in CFTR2, are observed in the general population, have no clinical consensus, and score high on a model validated at AUC 0.946 on this gene. They are candidates for functional follow-up.
 
-The remaining 539 flagged variants are too rare to appear in gnomAD. They may be family-private mutations or sequencing artifacts.
+The remaining 539 flagged variants have no population frequency entry in the VCF.
 
 ### Varying clinical consequence
 
@@ -151,6 +161,29 @@ The plot shows clear separation between classes. The ambiguous variants sit near
 Two are classified as varying clinical consequence: Ser1455Ter and Gln1476Ter. Both sit near the C-terminus of a 1,480 amino acid protein. Ser1455Ter truncates the last 25 residues, Gln1476Ter truncates only the last 4. That minimal truncation explains the clinical uncertainty.
 
 89 nonsense variants have no CFTR2 classification. They are novel stop codons not seen in enough patients to characterise.
+
+## Side experiment: ACMG/AMP criteria via LLM (pre-registered)
+
+**Purpose.** Test whether rule-based ACMG/AMP reasoning fails on different variants than AlphaMissense — that is, whether the two methods have complementary error profiles on the same benchmark.
+
+**Method.** Five criteria (PM1, PM2, PP3, BP4, BS3) applied by claude-sonnet-4-6 at temperature 0. PP3 weighted at ClinGen-calibrated supporting strength per Pejaver et al. 2022. Evidence restricted to each variant's own data (AlphaMissense score, CADD, PolyPhen, SIFT, allele frequency). Design committed in d4d1f10 before results were run. PP3 calibration finding: LP classification was unreachable under strict 5-criterion combining; adopting the Pejaver 2022 calibrated PP3 strength made LP reachable (`docs/STATUS.md`).
+
+**Results on 259 deduplicated variants** (`results/acmg_llm/experiment_summary_dedup.json`):
+
+| | |
+|---|---|
+| Set A — AlphaMissense wrong | 19 |
+| Set B — LLM wrong | 94 |
+| A ∩ B — both wrong | 16 |
+| Jaccard(A, B) | 0.165 |
+
+The 3 variants where AlphaMissense fails but the LLM is correct (A \ B): His954Pro, Ile506Leu, Leu997Phe — all CF-causing variants AlphaMissense scored below threshold.
+
+LLM self-consistency (same variant, rephrased prompt, n = 20): 18/20 (90%).
+
+**Interpretation.** The rule layer largely reproduced AlphaMissense's errors and added its own; hard thresholds discard evidence the continuous score retains.
+
+**Status.** Side experiment, not the project's main direction. Script: [`scripts/acmg_llm_experiment.py`](scripts/acmg_llm_experiment.py). Results: [`results/acmg_llm/`](results/acmg_llm/).
 
 ## Limitations
 
